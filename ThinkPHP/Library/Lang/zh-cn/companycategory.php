@@ -1,0 +1,1 @@
+<?php$array = array(	'COMPANYCATEGORY'=>'商家分类管理',	'COMPANYCATEGORY_INDEX'=>'商家分类列表',    'COMPANYCATEGORY_ADD'=>'商家分类添加',	'COMPANYCATEGORY_EDIT'=>'商家分类修改');return $array;?>

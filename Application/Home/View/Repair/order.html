@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>屏幕</title>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/pingmu-2.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/city-picker.css">
+    <script src="__PUBLIC__/Home/js/jquery.min.js" type="text/javascript"></script>
+    <style media="screen">
+    #d-tit{
+      line-height: 4rem!important;
+      font-size: 4rem!important;
+    }
+    #d-content{
+      height: 75%;
+    }
+    #d-content #d-bg {
+      font-size: 3rem;
+    }
+    #d-cancel,#d-confirm{
+      line-height: 3rem!important;
+      font-size: 3rem!important;
+    }
+    #date-wrapper h3{
+      font-size: 3rem!important;
+    }
+    a{
+      -webkit-tap-highlight-color:transparent;
+    }
+    span{
+      color: grey;
+    }
+    select{
+      color: grey;
+      -webkit-appearance: none;
+      background: url() no-repeat right ;
+      background-size:;
+    }
+    input{
+      -webkit-appearance: none;
+    }
+    </style>
+
+    <script type="text/javascript">
+    // 前台验证
+    function stripscript(s) {
+        var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]");
+            var rs = "";
+        for (var i = 0; i < s.length; i++) {
+            rs = rs + s.substr(i, 1).replace(pattern, '');
+        }
+        return rs;
+    }
+      //提交验证
+      function sm(){
+        var problem=$('#problem').val();
+        var time=$('#start-date').val();
+        var address=$('#address').val();
+        var province=$('.province').find("option:selected").attr('data-title');
+        var city=$('.city').find("option:selected").attr('data-title');
+        var area=$('.district').find("option:selected").attr('data-title');
+        $('#province').val(province);
+        $('#city').val(city);
+        $('#area').val(area);
+        var address=stripscript(address);
+        var tel=$('#tel').val();
+        var regtel=/^1[34578]\d{9}$/;
+        if (problem==''||problem==null) {
+          alert('请选择故障');
+        }else if(time==''||time==null) {
+          alert('请选择服务时间');
+        }else if(address==''||address==null) {
+          alert('请填写地址');
+        }else if(!regtel.test(tel)){
+          alert('请正确输入手机号');
+        }else{
+          $('#form').submit();
+        }
+      }
+      //选择故障后修改页面维修价格
+      function get_price(){
+        var id=$('#problem').val();
+        var id=parseInt(id);
+        var price=$('#'+id).attr('data-id');
+        if( price==0){
+          $('.showprice').html('检测后报价');
+        }else{
+          $('.showprice').html('￥'+price);          
+        }
+      }
+    </script>
+    <script type="text/javascript">
+        function F_Open_dialog()
+        {
+            document.getElementById("btn_file").click();
+        }
+    </script>
+
+</head>
+<body>
+<form name=""id="form" action="{:U('Repair/repairorder')}" method="post">
+    <div id="all">
+        <div id="title">
+          <div id="zuojianjiao">
+            <p style="line-height:8rem;">
+              <a href="{:U('Repair/index')}">
+                <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+              </a>
+            </p>
+          </div>
+          <div>
+            <p style="line-height:8rem;">
+              {$qname}
+            </p>
+          </div>
+        </div>
+<!------------------------------------------------------->
+        <div id="content">
+            <div id="con-one">
+                <div><img src="{$phone.img}" style="width: 10rem;height: 13rem;margin-top:3rem;margin-left: 3.5rem; background: 100% 100%;float: left"></div>
+                <div>
+                    <p>故障：{$qname}</p>
+                    <p>型号：{$phone.name}</p>
+                    <p>维修报价:<nobr class="showprice">待估价</nobr></p>
+                </div>
+            </div>
+            <div id="con-two">
+                <div id="con-two-k">
+                    <div>
+                       <span>选择故障</span>
+                    </div>
+                    <div style="width: 90%">
+                        <select id="problem" name="qid" style="width: 100%;height: 5rem;font-size: 2.2rem;color: grey;" onchange="get_price();">
+                            <option value="0">请选择</option>
+                            <foreach item="ql" name="qlist">
+                              <option  value="{$ql.id}">{$ql.qname}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                    <div style="display:none;" id="0" data-id="0"> </div>
+                    <foreach item="ql_p" name="qlist">
+                      <div style="display:none;" id="{$ql_p.id}" data-id="{$ql_p.repair_price}"> </div>
+                    </foreach>
+                </div>
+            </div>
+            <!---------------------------------------------->
+            <div id="con-three">
+                <div id="con-three-k">
+                    <div>
+                        <span>服务时间</span>
+                    </div>
+                    <!-- <h3 style="font-size: 2.2rem;margin-left: 5%;">时间选择：</h3> -->
+
+                    <!--<nobr style="font-size: 2.2rem">预约时间：</nobr>-->
+                    <input type="text" id="start-date" name="service_time" placeholder="选择时间" data-options='{"type":"YYYY-MM-DD hh:mm:ss","beginYear":2008,"endYear":2018}' style="width:86%;height:5rem;font-size: 2.2rem;margin-left: 6%">
+
+                    <script src="__PUBLIC__/Home/js/jquery203.min.js" type="text/javascript"></script>
+
+                </div>
+            </div>
+            <!------------------------------------------------>
+            <div id="con-four">
+                <div id="con-four-k">
+                    <div>
+                        <span>服务地址</span>
+                    </div>
+
+                    <div class="city-picker-select"></div>
+                    <!-- end .city-picker-select -->
+                    <script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+                    <script type="text/javascript" src="__PUBLIC__/Home/js/citydata.js"></script>
+                    <script type="text/javascript" src="__PUBLIC__/Home/js/cityPicker-1.0.0.js?v=1"></script>
+                    <script type="text/javascript">
+                        $(function () {
+
+                            //原生城市-无联动
+                            var select = $('.city-picker-select').cityPicker({
+                                dataJson: cityData,
+                                renderMode: false,
+                                linkage: false
+                            });
+
+                            //设置城市
+                            select.setCityVal([{
+                                'id': '140000',
+                                'name': '辽宁省'
+                            }, {
+                                'id': '140100',
+                                'name': '沈阳市'
+                            }, {
+                                'id': '140105',
+                                'name': '大东区'
+                            }]);
+                        });
+                    </script>
+
+                    <div id="inp">
+                        <input id="address" type="text" name="service_address" placeholder="小区街道、门牌号" style="font-size: 2rem">
+                        <input style="display:none;" id="province" type="text" name="province" value="">
+                        <input style="display:none;" id="city" type="text" name="city" value="">
+                        <input style="display:none;" id="area" type="text" name="area" value="">
+                    </div>
+                    <!-- <div class="a"><a href="#">确认</a></div> -->
+
+                </div>
+            </div>
+            <!---------------------------------------------------->
+            <div id="con-five">
+                <div id="con-five-k">
+                    <!--<input type="text" name="" placeholder="手机号码">-->
+
+                    <span>联系电话</span>
+                    <input id="tel" type="tel" name="tel" placeholder="手机号码">
+                </div>
+            </div>
+            <!---------------------------------------------------->
+            <div id="con-six">
+                <div id="con-six-k">
+                    <div>
+                        <!-- <span>问题描述</span> -->
+                    </div>
+                    <div>
+                        <textarea placeholder="问题描述" name="remark" style="width:99.5%;height: 11rem;font-size: 3rem;border: none;text-align: left;color: #000000"></textarea>
+                        <table style="width: 85%;height: 4rem;margin: 0 auto">
+                            <!-- <tr>
+                            <td><input type="file" id="btn_file" style="display:none"></td> -->
+                            <!-- <td><button type="button" onclick="F_Open_dialog()" style="width: 6rem;height: 3rem">上传照片</button></td>
+                            <td style="text-align: right">
+                                <button type="button" onclick="F_Open_dialog()" style="width: 6rem;height: 3rem">上传视频</button>
+                            </td> -->
+                            <!-- </tr> -->
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------------------------->
+            <div id="con-seven">
+                <div>总金额:<nobr style="color:orangered;" class="showprice">待定</nobr></div>
+                <input type="hidden" id="gid" name="gid" value="{$phone.id}">
+                <a onclick="sm();">立即预约</a>
+            </div>
+
+
+        </div>
+    </div>
+</form>
+</body>
+<script>
+    (function(){
+        /*
+         * #可以通过pc端拖拽使用
+         * #允许单个配置
+         */
+        var defaults,
+                d = new Date(),
+                nowYear = d.getFullYear(),
+                nowMonth = d.getMonth() + 1,
+                domDate,
+                createDate,
+                emptyStr = "<li></li>",
+                domHm = '<div class="t4">时</div><div class="t5">分</div>',
+                domHm2 = '<ol id="d-hours"></ol><ol id="d-minutes"></ol>',
+                domS = '<div class="t6">秒</div>',
+                domS2 = '<ol id="d-seconds"></ol>',
+                isTouch = "ontouchend" in document ? true : false,
+                tstart = isTouch ? "touchstart" : "mousedown",
+                tmove = isTouch ? "touchmove" : "mousemove",
+                tend = isTouch ? "touchend" : "mouseup",
+                tcancel = isTouch ? "touchcancel" : "mouseleave";
+
+        opts = {
+            beginYear: 2010,
+            endYear: 2020,
+            type:'YYYY-MM-DD',
+            limitTime:false
+        };
+        //dom渲染
+        domDate = '<div id="date-wrapper"><h3>选择日期</h3><div id="d-content"><div id="d-tit"><div class="t1">年</div><div class="t2">月</div>' + '<div class="t3">日</div></div><div id="d-bg"><ol id="d-year"></ol><ol id="d-month"></ol>' + '<ol id="d-day"></ol>' + '</div></div><a id="d-cancel" href="javascript:">取消</a><a id="d-confirm" href="javascript:">确定</a></div><div id="d-mask"></div>';
+        var css = '<style type="text/css">a{text-decoration:none;}ol,li{margin:0;padding:0}li{list-style-type:none}#date-wrapper{position:fixed;top:20%;left:50%;width:90%;margin-left:-45%;z-index:56;text-align:center;background:#fff;border-radius:3px;padding-bottom:15px;display:none}#d-mask{position:fixed;width:100%;height:100%;top:0;left:0;background:#000;filter:alpha(Opacity=50);-moz-opacity:.5;opacity:.5;z-index:55;display:none}#date-wrapper h3{line-height:50px;background:#79c12f;color:#fff;font-size:20px;margin:0;border-radius:3px 3px 0 0}#date-wrapper ol,#d-tit>div{width:16.6666666%;float:left;position:relative}#d-content{padding:10px}#d-content #d-bg{background:#f8f8f8;border:1px solid #e0e0e0;border-radius:0 0 5px 5px;height:120px;overflow:hidden;margin-bottom:10px;position:relative}#d-cancel,#d-confirm{border-radius:3px;float:left;width:40%;line-height:30px;font-size:16px;background:#dcdddd;color:#666;margin:0 5%}#d-confirm{background:#79c12f;color:#fff}#date-wrapper li{line-height:40px;height:40px;cursor:pointer;position:relative}#d-tit{background:#f8f8f8;overflow:hidden;border-radius:5px 5px 0 0;line-height:30px;border:1px solid #e0e0e0;margin-bottom:-1px}#date-wrapper ol{webkit-overflow-scrolling:touch;position:absolute;top:0;left:0}#date-wrapper ol:nth-child(2){left:16.6666666%}#date-wrapper ol:nth-child(3){left:33.3333332%}#date-wrapper ol:nth-child(4){left:49.9999998%}#date-wrapper ol:nth-child(5){left:66.6666664%}#date-wrapper ol:nth-child(6){left:83.333333%}#d-content #d-bg:after{content:"";height:40px;background:#ddd;position:absolute;top:40px;left:0;width:100%;z-index:1}#date-wrapper li span{position:absolute;width:100%;z-index:99;height:100%;left:0;top:0}#date-wrapper.three ol,.three #d-tit>div{width:33.333333%}#date-wrapper.three ol:nth-child(2){left:33.333333%}#date-wrapper.three ol:nth-child(3){left:66.666666%}#date-wrapper.four ol,.four #d-tit>div{width:25%}#date-wrapper.four ol:nth-child(2){left:25%}#date-wrapper.four ol:nth-child(3){left:50%}#date-wrapper.four ol:nth-child(4){left:75%}#date-wrapper.five ol,.five #d-tit>div{width:20%}#date-wrapper.five ol:nth-child(2){left:20%}#date-wrapper.five ol:nth-child(3){left:40%}#date-wrapper.five ol:nth-child(4){left:60%}#date-wrapper.five ol:nth-child(5){left:80%}</style>';
+        $("head").append(css);
+        $("head").append(css);
+        $('body').append(domDate);
+
+        createDate = {
+            ymd:function(begin,end){
+                var domYear = '',
+                        domMonth = '',
+                        domDay = '';
+                //dom 年 月 日
+                for (var i = begin; i <= end; i++){domYear += '<li><span>' + i + '</span></li>';}
+                $('#d-year').append(emptyStr + domYear + emptyStr);
+
+                for (var j = 1; j <= 12; j++) {j = j<10?'0'+j:j;domMonth += '<li><span>' + j + '</span></li>';}
+                $('#d-month').append(emptyStr + domMonth + emptyStr);
+
+                var day = createDate.bissextile(nowYear,nowMonth);
+                for (var k = 1; k <= day; k++) {k = k<10?'0'+k:k;domDay += '<li><span>' + k + '</span></li>';}
+                $('#d-day').append(emptyStr + domDay + emptyStr);
+            },
+            hm:function(){
+                var domHours = '',domMinutes = '';
+                for (var i = 0; i <= 23; i++) {i = i<10?'0'+i:i;domHours += '<li><span>' + i + '</span></li>';}
+                $('#d-hours').append(emptyStr + domHours + emptyStr);
+
+                for (var j = 0; j <= 59; j++) {j = j<10?'0'+j:j;domMinutes += '<li><span>' + j + '</span></li>';}
+                $('#d-minutes').append(emptyStr + domMinutes + emptyStr);
+
+            },
+            s:function(){
+                var domSeconds = '';
+                for (var i = 0; i <= 59; i++) {i = i<10?'0'+i:i;domSeconds += '<li><span>' + i + '</span></li>';}
+                $('#d-seconds').append(emptyStr + domSeconds + emptyStr);
+            },
+            bissextile:function(year,month){
+                var day;
+                if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+                    day = 31
+                } else if (month == 4 || month == 6 || month == 11 || month == 9) {
+                    day = 30
+                } else if (month == 2) {
+                    if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) { //闰年
+                        day = 29
+                    } else {
+                        day = 28
+                    }
+
+                }
+                return day;
+            },
+            slide:function(el){
+                //滑动
+                var T,mT,isPress = false;
+                $(document).on(tstart,'#date-wrapper ol', function(e){
+                    var e = e.originalEvent;
+                    e.stopPropagation();
+                    e.preventDefault();
+                    T = e.pageY || e.touches[0].pageY;
+                    if(!isTouch){isPress = true;}
+                })
+                $(document).on(tmove,'#date-wrapper ol', function(e){
+                    var e = e.originalEvent,that = $(this);
+                    e.stopPropagation();
+                    e.preventDefault();
+                    if(!isTouch && !isPress){return false};
+                    mT = e.pageY || e.touches[0].pageY;
+                    that.css('top', that.position().top + (mT - T) + 'px');
+                    T = mT;
+                    if($('#d-bg').hasClass('limitTime')){
+                        if(that.attr('id') == 'd-year' && that.position().top > yTop){
+                            that.css('top', yTop + 'px');
+                        }else if(that.attr('id') == 'd-month' && that.position().top > mTop){
+                            that.css('top', mTop + 'px');
+                        }else if(that.attr('id') == 'd-day' && that.position().top > dTop){
+                            that.css('top', dTop + 'px');
+                        }
+                    }
+                    if (that.position().top > 0) that.css('top', '0');
+                    if (that.position().top < -(that.height() - (120))) that.css('top', '-' + (that.height() - (120)) + 'px');
+                })
+                $(document).on(tend,'#date-wrapper ol', function(e){
+                    var e = e.originalEvent,that = $(this);
+                    e.stopPropagation();
+                    e.preventDefault();
+                    isPress = false;
+                    dragEnd(that);
+                })
+                $(document).on(tcancel,'#date-wrapper ol', function(e){
+                    var e = e.originalEvent,that = $(this);
+                    e.stopPropagation();
+                    e.preventDefault();
+                    isPress = false;
+                    dragEnd(that);
+                })
+                function dragEnd(that){
+                    //滚动调整
+                    var t = that.position().top;
+                    that.css('top',Math.round(t/40)*40+'px');
+                    //定位active
+                    t = Math.round(Math.abs($(that).position().top));
+                    var li = that.children('li').get(t/40+1);
+                    $(li).addClass('active').siblings().removeClass('active');
+                    //修正日期
+                    var id = that.attr('id');
+                    if(id == 'd-month' || id == 'd-year'){
+                        var day = createDate.bissextile($('#d-year .active').text(),$('#d-month .active').text());
+                        if(day != ($('#d-day li').length-2)){
+                            var thisActive = $('#d-day .active').text();
+                            thisActive > day&&(thisActive = day);
+                            var str = '';
+                            for (var i = 1; i <= day; i++) {
+                                if (i == thisActive) {
+                                    str += '<li class="active"><span>' + i + '</span></li>';
+                                } else {
+                                    str += '<li><span>' + i + '</span></li>';
+                                }
+                            }
+                            $('#d-day').html(emptyStr + str + emptyStr);
+                            if(Math.abs($('#d-day').position().top) > $('#d-day').height()-120)$('#d-day').css('top','-'+($('#d-day').height()-120)+'px');
+                        }
+                    }
+                }
+            },
+            show:function(isShow){
+                var domMain = $('#date-wrapper'),
+                        domMask = $('#d-mask');
+                if (isShow) {
+                    domMain.show();
+                    domMask.show();
+                } else {
+                    domMain.hide();
+                    domMask.hide();
+                }
+            },
+            resetActive:function(){
+                var d = new Date();
+                $('#date-wrapper ol').each(function() {
+                    var e = $(this),
+                            eId = e.attr('id');
+                    e.children('li').each(function() {
+                        var lie = $(this),liText = lie.text() == ''? 'x':lie.text();
+                        if (eId == 'd-year' && liText == d.getFullYear()) {
+                            lie.addClass('active').siblings().removeClass('active');
+                            return false;
+                        } else if (eId == 'd-month' && liText == (d.getMonth() + 1)) {
+                            lie.addClass('active').siblings().removeClass('active');
+                            return false;
+                        } else if (eId == 'd-day' && liText == d.getDate()) {
+                            lie.addClass('active').siblings().removeClass('active');
+                            return false;
+                        } else if (eId == 'd-hours' && liText == d.getHours()) {
+                            lie.addClass('active').siblings().removeClass('active');
+                            return false;
+                        } else if (eId == 'd-minutes' && liText == d.getMinutes()) {
+                            lie.addClass('active').siblings().removeClass('active');
+                            return false;
+                        } else if (eId == 'd-seconds' && liText == d.getSeconds()) {
+                            lie.addClass('active').siblings().removeClass('active');
+                            return false;
+                        }
+                    })
+                })
+            },
+            toNow:function(refresh){
+                if (!refresh) {
+                    $('#date-wrapper ol').each(function() {
+                        var liTop = -($(this).children('.active').position().top -40);
+                        $(this).animate({
+                                    top: liTop
+                                },
+                                600);
+                        if($(this).attr('id') == 'd-year'){
+                            yTop = liTop;
+                        }else if($(this).attr('id') == 'd-month'){
+                            mTop = liTop;
+                        }else if($(this).attr('id') == 'd-day'){
+                            dTop = liTop;
+                        }
+                    })
+                } else {
+                    $('#date-wrapper ol').each(function() {
+                        $(this).animate({
+                                    top: 0
+                                },
+                                0);
+                    })
+                }
+            },
+            clear:function(){
+                createDate.toNow(true);
+                createDate.show(false);
+            }
+        }
+        createDate.slide();
+        var opt,activeEl;
+        function DateTool(obj){
+            var that = $(obj)
+            that.bind('click',function() {
+                if (!$('#date-wrapper').is(':visible')) {
+                    if(that.get(0).tagName == 'INPUT'){that.blur();}
+                    if(activeEl != obj){
+                        $('#date-wrapper ol').empty();
+                        activeEl = obj;
+                        opt = null;
+                        opt = $.extend({},opts,that.data('options'));
+                        console.log(opt);
+                        createDate.ymd(opt.beginYear,opt.endYear);
+                        if(opt.type == "YYYY-MM-DD hh:mm:ss"){
+                            $('#d-tit div:gt(2)').remove();
+                            $('#d-bg ol:gt(2)').remove();
+                            $('#d-tit').append(domHm+domS);
+                            $('#d-bg').append(domHm2+domS2);
+                            createDate.hm();
+                            createDate.s();
+                            $('#date-wrapper').attr('class','');
+                        }else if(opt.type == "YYYY-MM-DD hh:mm"){
+                            $('#d-tit div:gt(2)').remove();
+                            $('#d-bg ol:gt(2)').remove();
+                            $('#d-tit').append(domHm);
+                            $('#d-bg').append(domHm2);
+                            createDate.hm();
+                            $('#date-wrapper').attr('class','five');
+                        }else{
+                            $('#d-tit div:gt(2)').remove();
+                            $('#d-bg ol:gt(2)').remove();
+                            $('#date-wrapper').attr('class','three');
+                        }
+                    }
+                    createDate.resetActive();
+                    createDate.show(true);
+                    createDate.toNow(false);
+                    $('#d-confirm').attr('d-id', obj);
+                    $('#d-bg').removeClass('limitTime');
+                    if(opt.limitTime){$('#d-bg').addClass('limitTime')}
+                }
+            });
+        }
+        jQuery.date = function(obj){
+            return new DateTool(obj);
+        }
+        //取消
+        $(document).on('click','#d-cancel',function(){
+            createDate.clear();
+        })
+        //确定
+        $(document).on('click','#d-confirm',function(){
+            var y = $('#d-year .active').text(),
+                    m = $('#d-month .active').text(),
+                    d = $('#d-day .active').text(),
+                    h = $('#d-hours .active').text(),
+                    min = $('#d-minutes .active').text(),
+                    s = $('#d-seconds .active').text(),
+                    str,
+                    that = $($(this).attr('d-id'));
+            if(opt.type == "YYYY-MM-DD hh:mm:ss"){
+                str = y+'-'+m+'-'+d+' '+h+':'+min+':'+s;
+            }else if(opt.type == "YYYY-MM-DD hh:mm"){
+                str = y+'-'+m+'-'+d+' '+h+':'+min;
+            }else{
+                str = y+'-'+m+'-'+d;
+            }
+
+            //赋值
+            console.log('id:' + $(this).attr('d-id'),'时间:' + str);
+            if(that.get(0).tagName == 'INPUT'){
+                that.val(str);
+            }else{
+                that.text(str);
+            }
+            createDate.toNow(true);
+            createDate.show(false);
+        })
+    })(jQuery)
+
+    $.date('#start-date');
+    $.date('#end-date');
+    $.date('#other-date');
+</script>
+</html>

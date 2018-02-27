@@ -1,0 +1,1 @@
+<?php$array = array(    'ONLINE' => '在线寄卖管理',    'ONLINE_INDEX' => '在线寄卖列表',    'ONLINE_ADD' => '在线寄卖添加',    'ONLINE_EDIT' => '在线寄卖修改');return $array;?>

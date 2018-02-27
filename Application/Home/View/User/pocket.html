@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的钱包</title>
+    <link href="__PUBLIC__/Home/css/wodeqianbao.css" rel="stylesheet">
+    <style media="screen">
+    a{
+      -webkit-tap-highlight-color:transparent;
+    }
+    </style>
+    <script src="__PUBLIC__/Home/js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      // 获取总金额
+      $(document).ready(function(){
+      var useful=$('#useful').attr("data-id");
+      var wait=$('#wait').attr("data-id");
+      var total=parseInt(useful)+parseInt(wait);
+      $("#total").html('￥'+total+'元');
+    });
+    </script>
+</head>
+<body>
+  <div id="all">
+      <div id="top">
+        <div id="title">
+            <div id="zuojianjiao">
+              <p style="line-height:8rem;">
+                <a href="{:U('User/index')}">
+                  <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+                </a>
+              </p>
+            </div>
+            <div>
+              <p style="line-height:8rem;">
+                  我的钱包
+              </p>
+            </div>
+        </div>
+          <div id="top-zhanghu">
+              <div id="zhanghu">
+                  <div>当前账户总额</div>
+                  <div id="total"></div>
+              </div>
+          </div>
+      </div>
+          <!------------------------------------------------------->
+
+          <div id="content">
+              <div id="con-one">
+                  <div id="con-one-left">
+                      <p>可用余额</p>
+                      <p id="useful" data-id="{$user_info.user_money_useful}">￥{$user_info.user_money_useful}元</p>
+                  </div>
+                  <div id="con-one-right">
+                      <p>待入账金额</p>
+                      <p id="wait" data-id="{$user_info.user_money_wait}">￥{$user_info.user_money_wait}元</p>
+                  </div>
+              </div>
+              <div id="con-two">
+                  <div>您有<strong style="color:blackr">￥{$user_info.user_money_wait}</strong>已打入钱包待入账金额，成交后将自动转入可用金额，最终金额以质检结果为准</div>
+              </div>
+              <div id="con-four"><div><a href="#">提现</a></div></div>
+          </div>
+
+  </div>
+</body>
+</html>

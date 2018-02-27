@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>发表话题</title>
+    <link href="__PUBLIC__/Home/css/topic.css" rel="stylesheet">
+    <script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+</head>
+<style media="screen">
+  .say{
+    width: 100%;
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 7rem;
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-color: #ff5711;
+    border-radius: 40px;
+  }
+  .show{
+    margin-left: 1rem;
+  }
+  a{
+    -webkit-tap-highlight-color:transparent;
+  }
+</style>
+<script type="text/javascript">
+  function up(){
+    var num=$('input').size();
+    if(num==7){
+      alert('最多上传6张图片~');
+      return ;
+    } else if(num == 1) {
+      var input = document.createElement("input");
+      var num=$('input').size();
+      input.type = 'file';
+      input.name = 'photo[]';
+      input.style.display ='none';
+      // input.setAttribute("onchange",PreviewImage);
+      var picInut = document.getElementById('picInput');
+      picInut.appendChild(input);
+      $('input:last').on('change',function(){
+          PreviewImage(this);
+      });
+      $('input:first').click();
+    }else{
+      $('input:last').click();
+      var input = document.createElement("input");
+      input.type = 'file';
+      input.name = 'photo[]';
+      input.style.display ='none';
+      // input.setAttribute("onchange",PreviewImage);
+      var picInut = document.getElementById('picInput');
+      picInut.appendChild(input);
+      $('input:last').on('change',function(){
+        PreviewImage(this);
+      });
+    }
+
+  }
+  // 预览图片js
+  function PreviewImage(imgFile)
+  {
+      var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+      filextension=filextension.toLowerCase();
+      if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+      {
+          alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+          imgFile.focus();
+      }
+      else
+      {
+          var path;
+          if(document.all)//IE
+          {
+              imgFile.select();
+              path = document.selection.createRange().text;
+              document.getElementById("imgPreview").innerHTML="";
+              document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+          }
+          else//FF
+          {
+              path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+              //path = imgFile.files[0].getAsDataURL();// FF 3.0
+              $('#imgPreview').append("<img id='img1' width='160px' height='130px' class='show' src='"+path+"'/>");
+              //document.getElementById("img1").src = path;
+          }
+      }
+  }
+
+  function IsNull(str) {
+      return (Trim(str) == "") ? false : true;
+  }
+  function Trim(str) {
+      return str.replace(/(^\s*)|(\s*$)/g, "");
+  }
+  function replaceHTML(str){
+    str = str.replace(/<[^>].*?>/g,"");
+    str = str.replace(/&nbsp;/g,"");
+    return str;
+  }
+  function sm(){
+    var content = document.getElementById("send_content").value;
+      if(!IsNull(replaceHTML(content))){
+        alert('请填写内容');
+        return false;
+      }
+  }
+</script>
+<body>
+   <div id="all">
+     <div id="title">
+         <div id="zuojianjiao">
+           <p style="line-height:8rem;">
+             <a href="{:U('Comment/index')}">
+               <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+             </a>
+           </p>
+         </div>
+         <div>
+           <p style="line-height:8rem;">
+             发布
+           </p>
+         </div>
+     </div>
+       <!---------------------------------->
+       <form id="form" method="post" enctype="multipart/form-data" action="{:U('Comment/second')}">
+           <div class="textarea">
+               <textarea id="send_content" name="content" placeholder="你想说点什么..."></textarea>
+           </div>
+           <!-- 图片上传 -->
+           <div class="pick_img" id="picInput">
+               <input id="upimg" type="file" name="photo[]" value="" style="display:none;" onchange="PreviewImage(this);" multiple="multiple">
+               <div id="imgPreview" style='float: left;'>
+
+               </div>
+               <img src="__PUBLIC__/Home/img/qietu/comment/add.png" alt="" onclick="up();">
+           </div>
+           <div class="line">
+
+           </div>
+           <div class="bottom">
+             <button onclick="sm();" name="button" class="say">确认发表</button>
+           </div>
+       </form>
+   </div>
+   <!-- 图片预览js -->
+   <script>
+
+       function addPic1(){
+        var addBtn =  document.getElementById('addBtn');
+        var input = document.createElement("input");
+        input.type = 'file';
+        input.name = 'myfile[]';
+        var picInut = document.getElementById('picInput');
+        picInut.appendChild(input);
+        if(picInut.children.length == 3){
+            addBtn.disabled = 'disabled';
+        }
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<include file="Public:header" title="$msgTitle" />
+
+    <div class="middle-box text-center animated fadeInDown">
+        <h2>{$msgTitle}</h2>
+        <h3 class="font-bold">{$message}</h3>
+        <div class="error-desc">
+            
+                               您的操作已经完成...
+            <notpresent name="closeWin" >
+            <br/>系统将在 <strong style="color:blue;" class="wait-second">{$waitSecond}</strong> 秒后自动返回
+            <p><a href="<?php echo($jumpUrl); ?>" class="btn btn-primary m-t">返回</a></p>
+            </notpresent>
+        </div>
+    </div>
+<script type="text/javascript">
+<if condition="$jumpUrl neq ''">
+var timeout = 0;
+var waitSecond = parseInt({$waitSecond});
+var refreshFun = function(){
+	timeout++;
+	if(waitSecond <= timeout)
+		location.href = "{$jumpUrl}";
+	else
+	{
+		$('.wait-second').html(waitSecond - timeout);
+		setTimeout(refreshFun,1000);
+	}
+};
+setTimeout(refreshFun,1000);
+</if>
+</script>
+<include file="Public:footer" />
+
+

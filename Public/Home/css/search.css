@@ -1,0 +1,63 @@
+*{margin:0;padding:0;list-style:none;text-decoration:none;font-family:"微软雅黑"}
+/*标题部分*/
+.title{
+
+}
+.title_left{
+  width: 28%;
+  height: 3rem;
+  float: left;
+}
+.title_left img{
+  float: left;
+  width: 1.5rem;
+  margin-top: 0.6rem;
+  margin-left: 10px;
+}
+.title_left p{
+  color: white;
+  line-height: 3rem;
+  float: left;
+}
+.title_right{
+  text-align: center;
+  height: 3rem;
+  width: 42%;
+  float: left;
+}
+.title_right p{
+  color: white;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+/*搜索框下面*/
+.words_1{
+  width: 100%;
+  margin-top: 8rem;
+  float: left;
+  text-align: center;
+  color: #aeaaaa;
+  margin-bottom: 2rem;
+}
+.cate_one{
+  font-size: 1rem;
+  float: left;
+  margin-left: 19%;
+  margin-bottom: 3rem;
+  color: #00ccff;
+  font-weight: bold;
+}
+/*搜索框样式*/
+.input_search{
+  width: 80%;
+  height: 30px;
+  background:none;
+  outline:none;
+  border:0px;
+  color: white;
+  float: left;
+  margin-left: 1rem;
+  font-size: 16px;
+}

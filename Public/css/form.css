@@ -1,0 +1,85 @@
+@CHARSET "UTF-8";
+/*表单验证*/
+.onShow,.onFocus,.onError,.onCorrect,.onLoad,.onTime {
+	display: inline-block;
+	display: -moz-inline-stack;
+	zoom: 1;
+	*display: inline;
+	vertical-align: middle;
+	background: url(../images/msg_bg.png) no-repeat;
+	color: #444;
+	line-height: 18px;
+	padding: 2px 10px 2px 23px;
+	margin-left: 10px;
+	_margin-left: 5px
+}
+
+.onShow {
+	background-position: 3px -147px;
+	border-color: #40B3FF;
+	color: #959595;
+}
+
+.onFocus {
+	background-position: 3px -147px;
+	border-color: #40B3FF;
+}
+
+.onError {
+	background-position: 3px -47px;
+	border-color: #40B3FF;
+	color: red
+}
+
+.onCorrect {
+	background-position: 3px -247px;
+	border-color: #40B3FF;
+}
+
+.onLamp {
+	background-position: 3px -200px
+}
+
+.onTime {
+	background-position: 3px -1356px
+}
+
+/* choose */
+.choosetext {
+	float: left;
+	margin-top: 20px;
+	margin-left: 45px;
+	height: 24px;
+	font-size: 14px;
+}
+
+.choosebox {
+	padding: 0 0 0 0;
+}
+
+.choosebox li {
+	float: left;
+	margin-left: 10px;
+	margin-right: 0px;
+	display: inline;
+}
+
+.choosebox li a {
+	float: left;
+	background: #fff;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	height: 14px;
+	line-height: 14px;
+	padding: 4px 12px;
+	display: block;
+}
+
+.choosebox li a.current {
+	background: url(../images/right-icon.gif) no-repeat 100% 100%;
+	border: 1px solid #A10000;
+}
+
+.choosebox li input {
+	display: none;
+}

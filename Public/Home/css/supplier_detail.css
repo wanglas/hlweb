@@ -1,0 +1,148 @@
+*{margin:0;padding:0;list-style:none;text-decoration:none;font-family:"微软雅黑"}
+/*标题部分*/
+.title{
+
+}
+.title_left{
+  width: 28%;
+  height: 3rem;
+  float: left;
+}
+.title_left img{
+  float: left;
+  width: 1.5rem;
+  margin-top: 0.6rem;
+  margin-left: 10px;
+}
+.title_left p{
+  color: white;
+  line-height: 3rem;
+  float: left;
+}
+.title_right{
+  text-align: center;
+  height: 3rem;
+  width: 42%;
+  float: left;
+}
+.title_right p{
+  color: white;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 3rem;
+
+}
+/*产品列表*/
+.one{
+  width:100%;
+  height:7rem;
+  border-bottom: 1px solid #e1d1d1;
+  background-color: #eeeeee;
+}
+.one_left{
+  float:left;
+}
+.one_left img{
+  width: 4rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.one_right{
+  float:left;
+  width: 68%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.one_right img{
+  width:2rem;
+  float:right;
+  position:relative;
+  bottom: 1.5rem;
+}
+.p_1{
+  font-size: 18px;
+  margin-top: 1rem;
+}
+.p_3{
+  font-size: 14px;
+}
+/*筛选框*/
+.choose{
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+.choose_in{
+  width: 95%;
+  height: 30px;
+  margin: 0 auto;
+  border: 1.5px solid #ecebeb;
+  border-radius: 5px;
+}
+.in_left{
+  width: 50%;
+  height: 100%;
+  float: left;
+  color: white;
+  background-color: #00ccff
+}
+.in_left p{
+  height: 100%;
+}
+.in_right{
+  width: 50%;
+  height: 100%;
+  float: left;
+  color: #00ccff;
+}
+.in_right p{
+  height: 100%;
+}
+.img{
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.img img{
+  width:100%;
+  height: 144px;
+}
+/*图片下信息*/
+.lianxi{
+  display: none;
+}
+.info{
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid #e3e0e0;
+}
+.p_4{
+  float: left;
+  line-height: 3rem;
+  margin-left: 2%;
+}
+.p_5{
+  float: right;
+  line-height: 3rem;
+  margin-right: 2%;
+}
+/*文章介绍*/
+.jianjie{
+  width:100%;
+  text-align: center;
+}
+.article{
+  width: 94%;
+  margin-left: 3%;
+}
+.article p{
+  width: 100%;
+  text-indent: 2rem;
+}
+/*iphone5*/
+@media(max-width:320px){
+  .one_right{
+    width:62%;
+  }
+}

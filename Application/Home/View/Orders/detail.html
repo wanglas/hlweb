@@ -1,0 +1,180 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>诚心家品</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/order_detail.css">
+<script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
+<script>
+function wxpay(){
+var money = $('#paymoney').text();
+var o_sonid=$('#o_sonid').attr('data-id');
+var o_sonid=parseInt(o_sonid);
+var money =parseFloat(money);
+var id = $('.this').find('.index_id').val();
+	if(money){
+		$.ajax({
+			url:"{:U('Orders/wxpay')}",
+			data:{
+				money:money,
+				id:o_sonid,
+			},
+			dataType:"json",
+			type:"POST",
+			success:function(data){
+				WeixinJSBridge.invoke('getBrandWCPayRequest',data,function(res){
+							if(res.err_msg == 'get_brand_wcpay_request:ok'){
+							window.location.reload();
+							}
+						});
+			}
+
+		})
+	}else{
+		alert('请确定金额！');
+	}
+}
+</script>
+</head>
+<body>
+<!--该盒子一直包括到店长推荐-->
+<script>
+</script>
+<div class="width100 hidden bj_fff" style="">
+	<!--搜索框-->
+	<div class="width100 hidden bj_fff" style="height:3rem;background-color:#00ccff;">
+		<div class="title">
+			<div class="title_left">
+        <a href="{:U('User/ordercenter')}">
+          <img src="__PUBLIC__/Home/images/return.png" alt="">
+        </a>
+			</div>
+			<div class="title_right">
+				<p>订单详情</p>
+			</div>
+		</div>
+	</div>
+<!-- 订单开始 -->
+  <!-- 订单状态 -->
+	<if condition="$detail['pay_status'] eq 0">
+		<div class="pay_type" style="background-color:#acacac" onclick="wxpay();">
+			<p>去付款</p>
+		</div>
+	</if>
+	<if condition="$detail['pay_status'] eq 2">
+		<div class="pay_type">
+			<p>已付款</p>
+		</div>
+	</if>
+  <!-- 状态结束 -->
+<div class="addr">
+  <div class="addr_left">
+    <img src="__PUBLIC__/Home/images/location.png" alt="">
+  </div>
+  <div class="addr_right">
+    <p>收货人:{$detail.realname}</p>
+    <p>收货地址：{$detail.address}{$detail.address_detail}</p>
+  </div>
+</div>
+<div class="jiange"></div>
+<div class="one">
+  <div class="one_left">
+    <img src="__ROOT__/Uploads/{$detail.image_path}" alt="">
+  </div>
+  <a href="goods_detail.html" style="color: black;">
+    <div class="one_right">
+      <p class="p_1">{$detail.goods_name}</p>
+			<p class="p_2">共
+				<sapn>{$detail.goods_number}</span>
+					{$detail.goods_sale_way_name}</p>
+      <p class="p_3">￥{$detail.order_money}</p>
+    </div>
+  </a>
+</div>
+<!-- 统计部分 -->
+<div class="info_total">
+  <div class="info">
+    <p class="p_4">商品单价</p>
+    <p class="p_5">￥{$detail.goods_price}</p>
+  </div>
+  <div class="info">
+    <p class="p_4">运费</p>
+    <p class="p_5">￥0.00</p>
+  </div>
+  <div class="info">
+    <p class="p_4">总价</p>
+    <p class="p_5">￥{$detail.order_money}</p>
+  </div>
+  <div class="info">
+    <p class="p_4" style="font-size:1.2rem;">应付款</p>
+    <p class="p_5" style="color:orange" >￥<span id="paymoney" style="color:orange">{$detail.order_money}</span></p>
+  </div>
+</div>
+<!-- 统计结束 -->
+<div class="jiange"></div>
+<div class="time_info">
+  <p>订单编号：<span id="o_sonid" data-id="{$detail.id}">{$detail.order_sn}</span></p>
+  <p>创建时间：{$detail.create_time|date="Y-m-d H:i:s",###}</p>
+	<!-- 支付状态 -->
+	<if condition="$detail['pay_status'] eq 0">
+	  <p>支付状态：未付款</p>
+	</if>
+	<if condition="$detail['pay_status'] eq 2">
+		<p>付款时间：{$detail.payment_notify_time|date="Y-m-d H:i:s",###}</p>
+	</if>
+	<!-- 订单状态 -->
+	<if condition="$detail['order_status'] eq 0">
+		<p>订单状态：未确认</p>
+	</if>
+	<if condition="$detail['order_status'] eq 1">
+		<p>订单状态：已确认</p>
+	</if>
+	<if condition="$detail['order_status'] eq 2">
+		<p>订单状态：已取消</p>
+	</if>
+	<if condition="$detail['order_status'] eq 3">
+		<p>订单状态：无效</p>
+	</if>
+	<if condition="$detail['order_status'] eq 4">
+		<p>订单状态：退货</p>
+	</if>
+	<!-- 配送状态 -->
+	<if condition="$detail['shipping_status'] eq 0">
+		<p>配送状态：未发货</p>
+	</if>
+	<if condition="$detail['shipping_status'] eq 1">
+		<p>配送状态：已发货</p>
+		<p>物流公司：<span>{$detail.express_name}</span></p>
+		<p>物流单号：<span id="mytext">{$detail.express}</span>
+			  				<!-- <button  id="copy_input" style="margin-left:2rem;">复制单号</button> -->
+		</p>
+		<p>Tips：亲，复制单号后<a href="http://m.kuaidi100.com/index.jsp?from=openv" style="text-decoration: underline;">点击查询</span></p>
+	</if>
+	<if condition="$detail['shipping_status'] eq 2">
+		<p>配送状态：已收货</p>
+	</if>
+	<if condition="$detail['shipping_status'] eq 4">
+		<p>配送状态：退货</p>
+	</if>
+</div>
+
+</body>
+<!-- <script type="text/javascript">
+		$(function(){
+			$('#copy_input').zclip({        　 //copy_input表示 按钮
+			path: 'ZeroClipboard.swf',
+			copy: function(){
+				alert(1);　　　　　　　　　　//复制内容
+					return $('#mytext').text();  　 //mytext表示 内容
+			},
+			afterCopy: function(){ //复制成功
+					// $("<span id='msg'/>").insertAfter($('#copy_input')).text('复制成功');
+					alert('复制成功');
+			}
+			});
+		});
+</script> -->
+</html>

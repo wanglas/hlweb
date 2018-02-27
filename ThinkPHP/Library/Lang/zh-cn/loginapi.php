@@ -1,0 +1,1 @@
+<?php$array = array(	'LOGINAPI'=>'登录接口管理',		'LOGINAPI_INDEX'=>'登录接口列表',        'LOGINAPI_ADD'=>'登录接口添加',	'LOGINAPI_EDIT'=>'登录接口修改');return $array;?>

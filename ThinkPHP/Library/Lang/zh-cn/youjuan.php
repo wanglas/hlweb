@@ -1,0 +1,1 @@
+<?php$array = array(	'YOUJUAN'=>'优惠卷管理',	'YOUJUAN_INDEX'=>'优惠卷列表',	'YOUJUAN_ADD'=>'优惠卷添加',	'YOUJUAN_EDIT'=>'分配用户',	'USER' =>'分配用户',);return $array;?>

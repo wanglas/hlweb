@@ -1,0 +1,1 @@
+<?php$array = array(    'STATISTICS' => '统计管理',    'STATISTICS_INDEX' => '商品销售统计',    'STATISTICS_INDEX1' => '商品订座统计',);return $array;?>

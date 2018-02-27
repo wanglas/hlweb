@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>诚心家品</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/add_bankcard.css"/>
+    <script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    //清空input文本框
+    function clear(){
+      $('input').val("");
+    }
+    //提交事件
+      function sm(){
+        var name=$('#name').val();
+        var number=$('#number').val();
+        var idcard =$('#idcard').val();
+        var regname=/^([\u4E00-\u9FA5]+|[a-zA-Z]+)$/;   //姓名验证
+        var regnumber=/\d{15}|\d{19}/;              //验证银行卡号
+        var regidcard = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;  //验证身份证号
+        if(!regname.test(name)){
+          alert('请输入正确姓名');
+          clear();
+        }else if(regnumber.test(number)=== false){
+            alert("银行卡号输入错误");
+            $('#number').val("");
+            return  false;
+        }else if(!regidcard.test(idcard)){
+          alert('请输入正确身份证号');
+          $('#idcard').val("");
+        }else{
+          $('form').submit();
+        }
+    }
+    </script>
+</head>
+<body>
+  <div class="width100 hidden bj_fff" style="height:4rem;background-color:#00ccff;">
+		<div class="title">
+			<div class="title_left">
+        <a href="javascript:history.go(-1);">
+          <img src="__PUBLIC__/Home/images/return.png" alt="">
+        </a>
+			</div>
+			<div class="title_right">
+				<p>添加银行卡</p>
+			</div>
+		</div>
+	</div>
+  <form class="" action="{:U('Bank/add')}" method="post">
+    <div class="section">
+      <div class="section_one">
+        <p class="info">持卡人</p>
+        <input id="name" type="text" name="name" placeholder="请填写持卡人真实姓名">
+      </div>
+      <div class="section_one">
+        <p class="info">身份证号</p>
+        <input id="idcard" type="text" name="idcard" placeholder="请填写持卡人身份证号">
+      </div>
+      <div class="section_one">
+        <p class="info">银行卡号</p>
+        <input id="number" type="text" name="cardnum" placeholder="请填写银行卡号">
+      </div>
+    </div>
+  </form>
+  <div class="button">
+    <a onclick="sm();">
+      <p class="tj">
+        确定添加
+      </p>
+    </a>
+  </div>
+  <div class="tips">
+    <p>Tips：</p>
+    <p>请填写真实信息，才能提现。</p>
+    <p>仅支持储蓄卡，请不要填写信用卡。</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+<?php$array = array(	'ABOUTUS'=>'关于我们管理',	'ABOUTUS_INDEX'=>'关于我们',);return $array;?>

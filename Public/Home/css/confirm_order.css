@@ -1,0 +1,292 @@
+*{margin:0;padding:0;list-style:none;text-decoration:none;font-family:"微软雅黑"}
+/*标题部分*/
+.title{
+
+}
+.title_left{
+  width: 28%;
+  height: 3rem;
+  float: left;
+}
+.title_left img{
+  float: left;
+  width: 1.5rem;
+  margin-top: 0.6rem;
+  margin-left: 10px;
+}
+.title_left p{
+  color: white;
+  line-height: 3rem;
+  float: left;
+}
+.title_right{
+  text-align: center;
+  height: 3rem;
+  width: 42%;
+  float: left;
+}
+.title_right p{
+  color: white;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+/*筛选框*/
+.choose{
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+.choose_in{
+  width: 95%;
+  height: 30px;
+  margin: 0 auto;
+  border: 1.5px solid #ecebeb;
+  border-radius: 5px;
+}
+.in_left{
+  width: 50%;
+  height: 100%;
+  float: left;
+  color: white;
+  background-color: #00ccff
+}
+.in_left p{
+  height: 100%;
+}
+.in_right{
+  width: 50%;
+  height: 100%;
+  float: left;
+  color: #00ccff;
+}
+.in_right p{
+  height: 100%;
+}
+/*产品列表*/
+.one{
+  width:100%;
+  height:7rem;
+  border-bottom: 1px solid #eeebeb;
+}
+.one_left{
+  float:left;
+}
+.one_left img{
+  width: 6rem;
+  margin:10px;
+}
+.one_right{
+  float:left;
+  width: 66%;
+}
+.one_right img{
+  width:3rem;
+  float:right;
+  position:relative;
+  right: 0;
+  bottom: 10px;
+}
+.p_1{
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.p_2{
+  margin-top: 5px;
+}
+.p_3{
+  font-size: 14px;
+  margin-top: 5px;
+  float: left;
+}
+.address{
+  height: 4rem;
+  padding-left: 0.5rem;
+  padding-top: 1rem;
+}
+.info{
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid #e3e0e0;
+}
+.p_4{
+  float: left;
+  line-height: 3rem;
+  margin-left: 2%;
+}
+.p_5{
+  float: right;
+  line-height: 3rem;
+  margin-right: 7%;
+}
+/*表单*/
+form{
+  width:100%;
+}
+textarea{
+  width: 96%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: grey;
+}
+.words{
+  width: 100%;
+  height: 6rem;
+}
+.btn_whole{
+  width: 36%;
+  height: 2rem;
+  color: white;
+  background-color: #00ccff;
+  margin-top:2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  float: right;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+/*select{
+  width: 90%;
+  margin: 0 auto;
+  line-height: 4rem;
+}*/
+.sel_mask{                    /*将<a></a>相对定位*/
+           position:relative;
+           width:70%;
+           height:25px;
+           background:#24A0D8;
+           border-radius: 5px;
+           box-shadow:1px 1px 5px #169BD5;
+           display:inline-block;
+           text-decoration: none;
+          margin-left: 2rem;
+       }
+       .sel_mask:hover{         /*添加hover效果*/
+           background:#169BD5;
+       }
+       .sel_mask select{        /*以相同大小将<select></select>绝对定位*/
+           top:0px;
+           left:0px;
+           position:absolute;
+           width:100%;
+           height:25px;
+       }
+       .sel_mask select option[selected]{
+           font-weight:bold
+       }
+       .sel_mask select option:nth-child(even) {
+           background-color:#A7DAEF;
+       }
+       .sel_mask select option{
+           color:black;
+       }
+       .sel_mask span{     /*显示内容*/
+           position: absolute;
+           top:3px;
+           left:5px;
+           right: 20px;
+           display: inline-block;
+           color:#fff;
+           overflow:hidden;
+           text-overflow: ellipsis;
+           white-space:nowrap;
+       }
+       .sel_mask img{          /*箭头图标*/
+           display: inline-block;
+           position: absolute;
+           top:2px;
+           right: 5px;
+       }
+       * {
+                       margin: 0;
+                       padding: 0;
+                       border: 0;
+                       outline: 0
+                   }
+
+                   ul,
+                   li {
+                       list-style: none;
+                   }
+
+                   a {
+                       text-decoration: none;
+                   }
+
+                   a:hover {
+                       cursor: pointer;
+                       text-decoration: none;
+                   }
+
+                   a:link {
+                       text-decoration: none;
+                   }
+
+                   img {
+                       vertical-align: middle;
+                   }
+
+                   .btn-numbox {
+                        margin-top: 20px;
+                       overflow: hidden;
+                   }
+
+                   .btn-numbox li {
+                       float: left;
+                   }
+
+                   .btn-numbox li .number,
+                   .kucun {
+                       display: inline-block;
+                       font-size: 12px;
+                       color: #808080;
+                       vertical-align: sub;
+                   }
+
+                   .btn-numbox .count {
+                       overflow: hidden;
+                       margin: 0 16px 0 -20px;
+                   }
+
+                   .btn-numbox .count .num-jian,
+                   .input-num,
+                   .num-jia {
+                       display: inline-block;
+                       width: 28px;
+                       height: 28px;
+                       line-height: 28px;
+                       text-align: center;
+                       font-size: 18px;
+                       color: #999;
+                       cursor: pointer;
+                       border: 1px solid #e6e6e6;
+                   }
+
+                   .btn-numbox .count .num-jia {
+                       margin-left: 1px;
+                   }
+
+                   .btn-numbox .count .input-num {
+                       width: 58px;
+                       height: 26px;
+                       color: #333;
+                       border-left: 0;
+                       border-right: 0;
+                   }
+/*iphone5适配*/
+@media(max-width:375px){
+  .one_right{
+    height: 100%;
+  }
+}
+@media(max-width:320px){
+  .one_right{
+    height: 100%;
+    width: 61%;
+  }
+}

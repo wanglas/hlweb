@@ -1,0 +1,165 @@
+*{margin:0;padding:0;list-style:none;text-decoration:none;font-family:"微软雅黑"}
+/*标题部分*/
+.title{
+
+}
+.title_left{
+  width: 28%;
+  height: 3rem;
+  float: left;
+}
+.title_left img{
+  float: left;
+  width: 1.5rem;
+  margin-top: 0.6rem;
+  margin-left: 10px;
+}
+.title_left p{
+  color: white;
+  line-height: 3rem;
+  float: left;
+}
+.title_right{
+  text-align: center;
+  height: 3rem;
+  width: 42%;
+  float: left;
+}
+.title_right p{
+  color: white;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 3rem;
+
+}
+/*每一一条分类样式*/
+
+.cate{
+  width: 100%;
+  height:2rem;
+  padding-top: 15px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.cate_in{
+  margin: 0 auto;
+  border-left: 8px solid #00ccff;
+  'box-sizing': 'border-box'
+}
+.cate_in p{
+  margin-left: 7px;
+}
+
+.cate_in_2{
+  margin: 0 auto;
+  border-left: 8px solid #99cc33;
+  'box-sizing': 'border-box'
+}
+.cate_in_2 p{
+  margin-left: 7px;
+}
+
+.cate_in_3{
+  margin: 0 auto;
+  border-left: 8px solid #99cc33;
+  'box-sizing': 'border-box'
+}
+.cate_in_3 p{
+  margin-left: 7px;
+}
+/*品牌辽宁*/
+.liaoning{
+  width: 100%;
+}
+.liaoning img{
+  width: 100%;
+}
+/*千乡百品*/
+.total_cate{
+  width:98%;
+  margin-left: 3%;
+  height: 15rem;
+}
+.total_cate_one{
+  width: 30%;
+  margin-right: 13px;
+  float: left;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.total_cate_one img{
+  width: 100%;
+  height: 7rem;
+}
+.words{
+  width: 100%;
+  height: 1.5rem;
+  background-color:#4d4c4c;
+  opacity: 0.8;
+  position: absolute;
+  top: 5.5rem;
+}
+.words p{
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+/*礼尚往来*/
+.img_c{
+  width: 100%;
+}
+.lswl_contain{
+  width: 98%;
+  height: 2.5rem;
+  float: left;
+  background-color:#4d4c4c;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 0;
+}
+.lswl_one{
+  width: 98%;
+  margin-top: 1rem;
+  position: relative;
+  margin-left: 2%;
+}
+.lswl_words{
+  width: 80%;
+  height: 2.5rem;
+  float: left;
+  position: relative;
+
+}
+.lswl_one img{
+  width: 98%;
+  height: 144px;
+}
+.lswl_words p{
+  position: relative;
+  color:white;
+  font-size: 14px;
+  margin-left: 15px;
+}
+.words_right{
+  float: left;
+  color: white;
+  position: relative;
+  line-height: 2.5rem;
+  margin:0 auto;
+  font-size: 14px;
+}
+
+/*各个屏幕适配*/
+@media(max-width:375px){
+  .total_cate_one{
+    width: 29%;
+    margin-right: 15px;
+  }
+}
+
+@media(max-width:320px){
+  .total_cate_one{
+    width:45%;
+  }
+}

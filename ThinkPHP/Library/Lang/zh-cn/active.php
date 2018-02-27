@@ -1,0 +1,1 @@
+<?php$array = array(    'ACTIVE' => '活动管理',    'ACTIVE_INDEX' => '活动列表',    'ACTIVE_ADD' => '活动添加',    'ACTIVE_EDIT' => '活动修改');return $array;?>

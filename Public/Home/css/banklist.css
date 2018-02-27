@@ -1,0 +1,68 @@
+
+.top-header{ background-color: #f60; width: 100%; overflow: hidden; position: relative; display: table;}
+.top-header h3{ font-size: 1.6em; padding: 1em; margin: 0 30%;   white-space: nowrap; text-align: center; overflow: hidden; text-overflow: ellipsis; display: block; color: #fff; font-weight: normal; display: table-cell;}
+.top-header a:first-child{width: 14%; display: table-cell;  padding:0 4%;vertical-align: middle;}
+.top-header a:last-child{ width: 14%; display:table-cell;padding:0 4%; vertical-align: middle;}
+.top-header img{ width: 100%;  display: block;}
+body{ background-color: #f2f2f2;}
+.title_left{
+  width: 28%;
+  height: 4rem;
+  float: left;
+}
+.title_left img{
+  float: left;
+  width: 2rem;
+  margin-top: 1rem;
+  margin-left: 10px;
+}
+.title_left p{
+  color: white;
+  line-height: 3rem;
+  float: left;
+}
+.title_right{
+  text-align: center;
+  height: 3rem;
+  width: 42%;
+  float: left;
+}
+.title_right p{
+  color: white;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+.add{
+  float: right;
+  width: 2.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+/*银行卡*/
+.card{
+  width: 90%;
+  margin: 0 auto;
+  background-image: url('../images/bankcard_bg.jpg');
+  background-size: cover;
+  margin-top: 1rem;
+  color: white;
+  padding-top: 1rem;
+  height: 9rem;
+  border-radius: 10px;
+}
+.bank_name{
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0rem 0rem 1rem 2rem;
+}
+.bank_type{
+  font-size: 1.3rem;
+  margin: 1rem 0rem 1rem 2rem;
+}
+.bank_num{
+  float: left;
+  font-size: 1.3rem;
+  margin: 0rem 0rem 1rem 2rem;
+}

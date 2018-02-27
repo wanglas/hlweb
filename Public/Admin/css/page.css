@@ -1,0 +1,30 @@
+/*thinkphp 分页样式*/
+div.page1 {
+    margin-top: 20px;
+    margin-right: 10px;
+    float: right;
+    color: #666;
+}
+
+div.page1 span.current , div.page1 a{
+    border: 1px solid #dcdcdc;
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 3px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+div.page1 span.current{
+    background: #ff5c5c none repeat scroll 0 0 !important;
+    border-color: #ff5c5c;
+    color: #ffffff !important;
+    display: block;
+    float: left;
+    font-size: 12px;
+    cursor: pointer;
+}
+div.page1 a.prev,div.page1 a.next{
+    padding: 3px 4px;
+}

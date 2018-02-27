@@ -1,0 +1,1 @@
+<?php$array = array(    'TUAN' => '团购管理',    'TUAN_INDEX' => '团购列表',    'TUAN_ADD' => '添加团购',    'TUAN_EDIT' => '团购修改');return $array;?>

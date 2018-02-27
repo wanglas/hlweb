@@ -1,0 +1,1 @@
+<?php$array = array(    'JIORDER' => '积分商城订单管理',    'JIORDER_INDEX' => '积分商城订单列表',    'JIORDER_EDIT' => '积分商城订单修改');return $array;?>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>实名认证</title>
+    <link href="__PUBLIC__/Home/css/shimingrenzheng.css" rel="stylesheet">
+    <style media="screen">
+    a{
+      -webkit-tap-highlight-color:transparent;
+    }
+    </style>
+    <script src="__PUBLIC__/Home/js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    //清空input文本框
+    function clear(){
+      $('input').val("");
+    }
+  //  验证是否为空
+   function isnull(info){
+     if (info='' || info==null){
+       alert('请输入数据');
+       return false;
+     }
+   }
+    //提交事件
+      function sm(){
+        var real_name=$('#real_name').val();
+        var idcard=$('#idcard').val();
+        var regid = /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/;
+        //验证真实姓名
+        isnull(real_name);
+        isnull(idcard);
+        var reg=/^([\u4E00-\u9FA5]+|[a-zA-Z]+)$/;
+        //验证身份证号
+        if(!reg.test(real_name)){
+          alert('你真的叫这个名字么~');
+          clear();
+        }else if(regid.test(idcard) === false){
+            alert("身份证输入不合法");
+            $('#idcard').val("");
+            return  false;
+        }else{
+          $('#form').submit();
+        }
+    }
+    // 预览图片js
+    function PreviewImage(imgFile)
+    {
+        var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+        filextension=filextension.toLowerCase();
+        if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+        {
+            alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+            imgFile.focus();
+        }
+        else
+        {
+            var path;
+            if(document.all)//IE
+            {
+                imgFile.select();
+                path = document.selection.createRange().text;
+                document.getElementById("imgPreview").innerHTML="";
+                document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+            }
+            else//FF
+            {
+                path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+                //path = imgFile.files[0].getAsDataURL();// FF 3.0
+                $('#imgPreview').append("<img id='img1' width='400px' height='320px' class='show' src='"+path+"'/>");
+                //document.getElementById("img1").src = path;
+            }
+        }
+    }
+    function PreviewImage2(imgFile)
+    {
+        var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+        filextension=filextension.toLowerCase();
+        if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+        {
+            alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+            imgFile.focus();
+        }
+        else
+        {
+            var path;
+            if(document.all)//IE
+            {
+                imgFile.select();
+                path = document.selection.createRange().text;
+                document.getElementById("imgPreview2").innerHTML="";
+                document.getElementById("imgPreview2").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+            }
+            else//FF
+            {
+                path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+                //path = imgFile.files[0].getAsDataURL();// FF 3.0
+                $('#imgPreview2').append("<img id='img1' width='400px' height='320px' class='show' src='"+path+"'/>");
+                //document.getElementById("img1").src = path;
+            }
+        }
+    }
+    // 身份证正面
+    function up_1(){
+        $('#upimg_1').click();
+        $('#upimg_1').on('change',function(){
+            $('#img_1').hide();
+        });
+    }
+    // 身份证反面
+    function up_2(){
+        $('#upimg_2').click();
+        $('#upimg_2').on('change',function(){
+            $('#img_2').hide();
+        });
+    }
+    </script>
+</head>
+<body>
+
+    <div id="all">
+      <div id="title">
+        <div id="zuojianjiao">
+          <p style="line-height:8rem;">
+            <a href="{:U('User/account')}">
+              <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+            </a>
+          </p>
+        </div>
+        <div>
+          <p style="line-height:8rem;">
+            实名认证
+          </p>
+        </div>
+      </div>
+        <!--------------------------------------------->
+
+        <div id="top">
+            <div>
+                <p>为了保证资金安全，请先进行实名认证</p>
+                <p>认证后，交易钱款打入该实名信息的银行卡，防止他人盗取</p>
+            </div>
+        </div>
+        <form method="post" id="form" action="{:U('User/identify')}" enctype="multipart/form-data">
+        <div id="content">
+            <div>
+                <input id="real_name" type="text" name="real_name" placeholder="请输入真实姓名">
+                <div class="line"></div>
+                <input id="idcard" type="text" name="idcard" placeholder="请输入身份证号">
+                <div class="line"></div>
+                <div class="photo">
+                  <div class="photo_one">
+                    身份证照片
+                  </div>
+                  <div class="photo_two">
+                    <!-- 正面 -->
+                    <div class="photo_two_left">
+                      <input id="upimg_1" type="file" name="photo[]" value="" style="display:none;" onchange="PreviewImage(this);" multiple="multiple">
+                      <div id="imgPreview" style='float: left;'>
+
+                      </div>
+                      <img id="img_1" src="__PUBLIC__/Home/img/add_2.png" alt="" style="width:25rem;height:20rem;" onclick="up_1();">
+                      <p>身份证正面</p>
+                    </div>
+                    <!-- 反面 -->
+                    <div class="photo_two_right">
+                      <input id="upimg_2" type="file" name="photo[]" value="" style="display:none;" onchange="PreviewImage2(this);" multiple="multiple">
+                      <div id="imgPreview2" style='float: left;'>
+
+                      </div>
+                      <img id="img_2" src="__PUBLIC__/Home/img/add_2.png" alt="" style="width:25rem;height:20rem;" onclick="up_2();">
+                      <p>身份证反面</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <a onclick="sm();">提交审核</a>
+            </div>
+        </div>
+        </form>
+    </div>
+
+</body>
+</html>

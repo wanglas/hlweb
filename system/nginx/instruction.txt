@@ -1,0 +1,1 @@
+1.重启服务 service nginx restart

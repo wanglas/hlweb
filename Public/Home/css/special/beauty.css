@@ -1,0 +1,71 @@
+ol{
+        counter-reset: li; /* 创建一个计数器 */
+        list-style: none; /* 清除列表默认的编码*/
+        *list-style: decimal; /* 让IE6/7具有默认的编码 */
+        font: 15px 'trebuchet MS', 'lucida sans';
+        padding: 0;
+        margin-bottom: 4em;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+			}
+
+			ol ol{
+				margin: 0 0 0 2em; /* 给二级列表增加一定的左边距*/
+			}
+/*rectangle list*/
+.rectangle-list a {
+  position: relative;
+  display: block;
+  padding: 0.4em 0.4em 0.4em 0.8em;
+  *padding: 0.4em;
+  margin: 0.5em 0 0.5em 2em;
+  background: #ddd;
+  color: #444;
+  text-decoration: none;
+  /*transition动画效果*/
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.rectangle-list a:hover {
+  background: #eee;
+}
+
+.rectangle-list a::before {
+
+  content: counter(li);
+  counter-increment: li;
+
+  position: absolute;
+  left: -2.5em;
+  top: 50%;
+  margin-top: -1em;
+  background: #00ccff;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.rectangle-list a::after {
+  position: absolute;
+  content:"";
+  border: 0.5em solid transparent;
+  left: -1em;
+  top: 50%;
+  margin-top: -0.5em;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.rectangle-list a:hover::after {
+  left: -0.5em;
+  border-left-color: #00ccff;
+}

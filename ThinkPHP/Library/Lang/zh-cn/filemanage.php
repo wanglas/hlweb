@@ -1,0 +1,1 @@
+<?php$array = array(    'FILEMANAGE' => '文件管理',    'FILEMANAGE_INDEX' => '文件列表',    'REPLACEWORDS_ADD' => '替换词添加',    'REPLACEWORDS_EDIT' => '替换词编辑',    'FILEMANAGE_ZIP' => '文件打包',    'FILEMANAGE_RENAME' => '文件重命名',    'FILEMANAGE_ADD' => '新建文档',    'FILEMANAGE_ADDWENJIAN'=>'新建文件夹',    'FILEMANAGE_UPLOAD' =>'上传文件',    'FILEMANAGE_EDIT'=>'文件编辑',);return $array;?>

@@ -1,0 +1,1 @@
+<?phpreturn array(	'JIFEN'	=>	'积分商品管理',	'JIFEN_INDEX'	=>	'积分商品列表',	'JIFEN_ADD'	=>	'积分商品添加',	'JIFEN_EDIT'	=>	'积分商品添加',);?>

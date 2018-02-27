@@ -1,0 +1,1 @@
+<?php$array = array(       'VIPGROUP' => '用户组管理',       'VIPGROUP_INDEX' => '用户组列表',        'VIPGROUP_ADD' => '添加用户组',       'VIPGROUP_EDIT' => '编辑用户组',);return $array;?>

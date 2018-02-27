@@ -1,0 +1,1 @@
+<?phpreturn array(    'ATTACHMENT' => '附件列表管理',    'ATTACHMENT_INDEX' => '附件列表',);?>

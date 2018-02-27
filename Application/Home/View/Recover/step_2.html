@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>填写信息</title>
+    <link href="__PUBLIC__/Home/css/huishoufangshi-2.css" rel="stylesheet">
+    <style media="screen">
+      a{
+        -webkit-tap-highlight-color:transparent;
+      }
+    </style>
+    <script src="__PUBLIC__/Home/js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+     function  clear(){
+       $('input').val("");
+     }
+      function sm(){
+         var name=$('#user_name').val();
+         var tel=$('#user_tel').val();
+         var regname=/^([\u4E00-\u9FA5]+|[a-zA-Z]+)$/;
+         var regtel=/^1[34578]\d{9}$/;
+         if(name==''||name==null){
+           alert('请输入姓名');
+         }else if(!regname.test(name)){
+             alert('请正确输入姓名');
+             clear();
+           }else if(!regtel.test(tel)){
+            alert('请输入正确电话号');
+            $('#user_tel').val("");
+           }else{
+             $('#form').submit();
+           }
+      }
+    </script>
+</head>
+<body>
+    <div id="all">
+        <div id="title">
+            <div id="nav-top">
+              <div id="zuojianjiao">
+                <p style="line-height:8rem;">
+                  <a href="{:U('Recover/index',array('id'=>1))}">
+                    <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p style="line-height:8rem;">
+                  填写信息
+                </p>
+              </div>
+            </div>
+            <div id="nav-bottom">
+                <div>
+                    <ul>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>……</span>
+                        </li>
+                        <li>
+                            <span style="background-color:#ff6a07"></span>
+                        </li>
+                        <li>
+                            <span>……</span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>……</span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <span>回收方式</span>
+                        </li>
+                        <li>
+                            <span>填写信息</span>
+                        </li>
+                        <li>
+                            <span>提交成功</span>
+                        </li>
+                        <li>
+                            <span>打款到钱包</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------->
+
+        <form id="form" method="post" action="{:U('Recover/step_3')}">
+        <div id="content">
+            <div id="con-one">
+                <span>收款人</span>
+            </div>
+            <div id="con-two">
+                <input type="text" id="user_name" placeholder="输入您的姓名" name="user_name">
+            </div>
+            <div id="con-three">
+                <input type="text" id="user_tel" placeholder="输入手机号(用于查询订单)" name="user_tel">
+            </div>
+            <!-- 待定 -->
+            <!-- <div id="con-four">
+                <input type="text" placeholder="输入手机验证码" name="yzm">
+            </div> -->
+            <div id="con-five">
+                <span>回收明细</span>
+                <span><img src="__PUBLIC__/Home/img/xiajianjiao.png" style="width: 3rem;height: 4rem; background: 100% 100%;padding-top: 1.5rem;"></span>
+            </div>
+            <div id="con-six">
+                <span>{$order.goodname}</span>
+                <span style="color: #ff6b09;">￥{$order.total_price}</span>
+            </div>
+        </div>
+      </form>
+        <!--------------------------------------------->
+
+        <div id="bottom">
+            <div>回收总价<span style="color: orangered">￥{$order.total_price}</span></div>
+            <div>
+                <a onclick="sm();">提交订单</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

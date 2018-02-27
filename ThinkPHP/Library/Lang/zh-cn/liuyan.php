@@ -1,0 +1,1 @@
+<?php$array = array(    'LIUYAN' => '商户留言管理',    'LIUYAN_INDEX' => '商户留言列表',    'LIUYAN_EDIT' => '商户留言审核',);return $array;?>

@@ -1,0 +1,55 @@
+<include file="Public:header" />
+<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>
+                            <div class="btn btn-success">
+                              <a href="{:U('Adminer/add')}" style="color:white;"><span class="bold">新增</span></a>
+                            </div>
+
+                            </h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <!-- addData_attribute:{$Think.lang.ADD}:id, -->
+                        <table class="table">
+                          <tread>
+                            <tr width="100%">
+                              <th width="20%">编号</th>
+                              <th width="25%">管理员</th>
+                              <th width="25%">是否启用</th>
+                              <th width="20%">操作</th>
+                            </tr>
+                          </tread>
+                          <tbody>
+                            <foreach name="list" item="vo">
+                              <tr>
+                                <td>{$vo.id}</td>
+                                <td>{$vo.name}</td>
+                                <td><php>if ($vo[status]==1){echo '启用';}</php><php>if ($vo[status]==0) {echo '禁用';}</php></td>
+                                <!-- <td><if condition="$vo[status] eq 1">启用<else condition="$vo[status] eq 0" />禁用</if> </td> -->
+                                <!-- 用[] -->
+                                <td>
+                                    <a href="{:U('Adminer/edit',array('id'=>$vo[id]))}">编辑</a>&nbsp;&nbsp;
+                                    <a href="{:U('Adminer/delete',array('id'=>$vo[id]))}">删除</a>
+                                </td>
+                              </tr>
+                          </foreach>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div class="pager">{$page}</div>
+</div>
+<include file="Public:footer" />

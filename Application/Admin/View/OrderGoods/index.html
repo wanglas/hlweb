@@ -1,0 +1,110 @@
+<include file="Public:header" />
+<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>搜索	</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                     <!-- 搜索 -->
+                        <form action="{:U('OrderGoods/index')}" role="form" class="form-inline" method="post">
+                            <div class="form-group">
+                            <label for="exampleInputEmail2" class="sr-only">名称</label>
+                            <input type="text" placeholder="订单编号"  name="sn" value="" class="form-control">
+                            </div>
+                            <input class="btn btn-w-m btn-success" type="submit" value="搜索" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>
+                            <!-- <div class="btn btn-success">
+                              <a href="{:U('OrderGoods/add')}" style="color:white;"><span class="bold">新增</span></a>
+                            </div> -->
+                            </h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <!-- addData_attribute:{$Think.lang.ADD}:id, -->
+                        <table class="table">
+                          <tread>
+                            <tr width="100%">
+                              <th >编号</th>
+                              <th >订单编号</th>
+                              <th >商品名称</th>
+                              <th >数量</th>
+                              <th >单价</th>
+                              <th >总价</th>
+                              <th >下单人姓名</th>
+                              <th >下单人电话</th>
+                              <th >收货区域</th>
+                              <th >详细地址</th>
+                              <th >下单时间</th>
+                              <th >是否付款</th>
+                              <th >订单状态</th>
+                              <th >操作</th>
+                            </tr>
+                          </tread>
+                          <tbody>
+                            <foreach name="list" item="vo">
+                              <tr>
+                                <td>{$vo.id}</td>
+                                <td>{$vo.order_sn}</td>
+                                <td>{$vo.goods_name}</td>
+                                <td>{$vo.goods_number}{$vo.goods_sale_way_name}</td>
+                                <td>{$vo.goods_price}</td>
+                                <td>{$vo.order_money}</td>
+                                <td>{$vo.realname}</td>
+                                <td>{$vo.tel}</td>
+                                <td>{$vo.address}</td>
+                                <td>{$vo.address_detail}</td>
+                                <td>{:date('Y-m-d H:i:s',$vo[create_time])}</td>
+                                <td>
+                                  <if condition="$vo['pay_status'] eq 0"><span style="color:red;font-weight:bold;">未付款</span></if>
+                                  <if condition="$vo['pay_status'] eq 2"><span style="color:green;font-weight:bold;">已付款</span></if>
+                                </td>
+                                <td>
+                                  <if condition="$vo['shipping_status'] eq 0">未发货订单</if>
+                                  <if condition="$vo['shipping_status'] eq 1"><span style="color:green;font-weight:bold;">已发货订单<span></if>
+                                  <if condition="$vo['shipping_status'] eq 2">已收货订单</if>
+                                  <if condition="$vo['shipping_status'] eq 4">退货订单</if>
+                                </td>
+                                <!-- <td><if condition="$vo[rstatus] eq 1">启用<else condition="$vo[rstatus] eq 0" />禁用</if> </td> -->
+                                <!-- 用[] -->
+                                <td>
+                                    <a href="{:U('OrderGoods/edit',array('id'=>$vo['id']))}">编辑</a>&nbsp;&nbsp;
+                                    <a href="{:U('OrderGoods/delete',array('id'=>$vo['id']))}">删除</a>
+                                </td>
+                              </tr>
+                          </foreach>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div class="page1">{$page}</div>
+</div>
+<include file="Public:footer" />

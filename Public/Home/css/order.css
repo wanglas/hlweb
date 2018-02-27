@@ -1,0 +1,158 @@
+*{margin:0;padding:0;list-style:none;text-decoration:none;font-family:"微软雅黑"}
+/*标题部分*/
+.title{
+
+}
+.title_left{
+  width: 28%;
+  height: 3rem;
+  float: left;
+}
+.title_left img{
+  float: left;
+  width: 1.5rem;
+  margin-top: 0.6rem;
+  margin-left: 10px;
+}
+.title_left p{
+  color: white;
+  line-height: 3rem;
+  float: left;
+}
+.title_right{
+  text-align: center;
+  height: 3rem;
+  width: 42%;
+  float: left;
+}
+.title_right p{
+  color: white;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 3rem;
+
+}
+/*筛选框*/
+.choose{
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+.choose_in{
+  width: 95%;
+  height: 30px;
+  margin: 0 auto;
+  border: 1.5px solid #ecebeb;
+  border-radius: 5px;
+}
+.in_left{
+  width: 50%;
+  height: 100%;
+  float: left;
+  color: white;
+  background-color: #00ccff
+}
+.in_left p{
+  height: 100%;
+}
+.in_right{
+  width: 50%;
+  height: 100%;
+  float: left;
+  color: #00ccff;
+}
+.in_right p{
+  height: 100%;
+}
+/*产品列表*/
+.one{
+  width:100%;
+  height:7rem;
+  border-bottom: 1px solid #eeebeb;
+}
+.one_left{
+  float:left;
+}
+.one_left img{
+  width: 6rem;
+  margin:10px;
+  margin-bottom: 0;
+}
+.one_right{
+  float:left;
+  width: 66%;
+  margin-top: 1rem;
+}
+.one_right img{
+  width:3rem;
+  float:right;
+  position:relative;
+  right: 0;
+  bottom: 10px;
+}
+
+
+.p_1{
+  font-size: 16px;
+}
+.p_2{
+  font-size: 14px;
+  margin-top: 5px;
+}
+.p_3{
+  font-size: 14px;
+  margin-top: 5px;
+  float: left;
+}
+.p_6{
+  font-size: 14px;
+  margin-top: 5px;
+  float: right;
+  color: #3ac623;
+}
+
+.one_b{
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+.one_b_container p{
+  float: left;
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 14px;
+}
+.p_4{
+  margin-left: 0%;
+}
+.p_5{
+  border: 1px solid #00ccff;
+  margin-left: 3%;
+}
+.jiange{
+  height: 0.2rem;
+  background-color: #ece5e5;
+}
+a{
+  color: black;
+}
+/*iphone6适配*/
+@media(max-width:375px){
+  .p_5{
+    margin-left: 1%;
+  }
+}
+/*iphone5适配*/
+@media(max-width:320px){
+  .one_right{
+    width: 61%;
+  }
+  .p_4{
+    margin-left: 2%;
+  }
+  .p_5{
+    margin-left: 1%;
+  }
+}

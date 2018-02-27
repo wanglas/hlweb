@@ -1,0 +1,1 @@
+<?php$array = array(    'COMPANY_INDEX' => '门店列表',    'COMPANY' => '门店管理',    'COMPANY_ADD' => '添加门店',    'COMPANY_EDIT' => '修改门店',    'PROMOTION' => '门店促销',    'GONGGAO' => '门店公告',	'DIAN' => '前台预览',    'TUJI' => '门店图集',    'COMPANY_TUJI' => '门店图集',    'COMPANY_GOODS' => '门店商品',    'COMPANY_DIAN'=>'店铺首页',);return $array;?>

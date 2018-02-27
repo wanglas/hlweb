@@ -1,0 +1,1 @@
+<?php$array = array(    'PAYMENT' => '商品接口',    'PAYMENT_INDEX' => '商品接口列表',    'PAYMENT_ADD' => '商品接口添加',    'PAYMENT_EDIT' => '商品接口修改');return $array;?>

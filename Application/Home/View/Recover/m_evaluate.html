@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>手机估价</title>
+    <link href="__PUBLIC__/Home/css/shoujigujia.css" rel="stylesheet">
+
+    <script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/bootstrap_select.js"></script>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/select.css">
+    <!-- 3.0 -->
+    <link href="__PUBLIC__/Home/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="__PUBLIC__/Home/css/bootstrap/bootstrap.min.js"></script>
+    <style media="screen">
+      .every{
+        margin-top: 3rem;
+      }
+      .form-control{
+        width: 100%;
+        font-size: 38px;
+      }
+      a{
+         -webkit-tap-highlight-color:transparent;     
+      }
+    </style>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('.selectpicker').selectpicker({
+                'selectedText': 'cat'
+            });
+
+            // $('.selectpicker').selectpicker('hide');
+        });
+    </script>
+    <!-- 表单提交代码 -->
+    <script type="text/javascript">
+      function sm(){
+        var data = new Array();
+        var change_price =new Array();
+        //对选中的option进行操作
+        $("option:selected").each(function(){
+          var id=$(this).attr('data-id');
+          var detail_price=$(this).attr('id'); //价格
+           data.push(parseInt(id));            //id数组
+           change_price.push(parseInt(detail_price));  //每项价格数组
+          });
+        if ($.inArray(0,data)==-1) {
+          //0代表select没有选择，如果返回-1说明0在数组中不存在，所有select都已经被选择。
+            var price=parseInt($('.phonename').attr('id'));
+            var result = 0;
+            var total_price;
+            for(var i=0;i<change_price.length;i++){
+              result += change_price[i];
+              }
+            //得出手机总估价价格
+            var total_price=result+price;
+            $('.total_price').val(total_price);
+            $("input[name=ids]").val(data);
+            $('#form').submit();
+          }else {
+            alert('您好像还有数据没有填写完整');
+          }
+      }
+    </script>
+    <!-- css -->
+    <style media="screen">
+      .btn{
+        font-size: 5rem;
+        height: 128px;
+      }
+      li a{
+        font-size: 5rem;
+      }
+      .every{
+        height: 16rem;
+      }
+    </style>
+</head>
+<body>
+<div id="all">
+    <div id="title">
+      <div id="zuojianjiao">
+        <p style="line-height:128px;">
+          <a href="{:U('Recover/index',array('id'=>1))}">
+            <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+          </a>
+        </p>
+      </div>
+      <div>
+        <p style="line-height:128px;">
+          手机回收
+        </p>
+      </div>
+    </div>
+    <!---------------------------------------------->
+ <form id="form" method="post" action="{:U('Recover/show')}">
+    <div id="content">
+          <div id="con-one">
+            <div class="phonename" id="{$phone.price}">{$phone.name}</div>
+            <!-- 一层循环顶级属性-->
+            <foreach name="info" item="io">
+              <if condition="$io['pid']==0">
+                <div class="every">
+                <label  style="font-size: 4.4rem;font-weight: bold;margin-top: 1rem">{$io.name}</label><br>
+                <div>
+                  <select  class="form-control" style="width:100%; height:8rem;">
+                    <option data-id="0">请选择</option>
+                    <!-- 二层循环子属性循环 -->
+                    <foreach name="info" item="it">
+                      <if condition="$it['pid']==$io['id']">
+                        <option class='property' data-id="{$it.id}" id="{$it.price}">{$it['name']}</option>
+                      </if>
+                    </foreach>
+                  </select>
+                </div>
+              </div>
+              </if>
+            </foreach>
+          </div>
+        <div id="con-two">
+            <a onclick="sm();" target="_self">
+              <p style="line-height:10rem;">
+                查看预估价
+              </p>
+            </a>
+        </div>
+     </div>
+    <!-- 手机估价价格 -->
+     <input class="total_price" type="hidden" name="total_price" value="">
+    <input  type="hidden" name="phone_id" value="{$phone.id}">
+    <input  type="hidden" name="ids" value="{$phone.id}">
+   </form>
+</div>
+</body>
+</html>

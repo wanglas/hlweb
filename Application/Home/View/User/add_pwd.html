@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>诚心家品</title>
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/add_bankcard.css"/>
+  <script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    //清空input文本框
+    function clear(){
+      $('input').val("");
+    }
+    //提交事件
+      function sm(){
+        var pwd=$('#user_pwd').val();
+        var cpwd=$('#confirm_pwd').val();
+        if(pwd==''||pwd==null){
+          alert('您还没有填写密码');
+          clear();
+      }else if(cpwd==''||cpwd==null){
+        alert('您还没有确认密码！');
+        clear();
+      }else if(pwd==cpwd){
+         document.getElementById('form').submit();
+      }else {
+        alert('两次输入密码不一致');
+        clear();
+      }
+    }
+    </script>
+</head>
+<body>
+  <div class="width100 hidden bj_fff" style="height:4rem;background-color:#00ccff;">
+		<div class="title">
+			<div class="title_left">
+        <a href="javascript:history.go(-1);">
+          <img src="__PUBLIC__/Home/images/return.png" alt="">
+        </a>
+			</div>
+			<div class="title_right">
+				<p>设置登录密码</p>
+			</div>
+		</div>
+	</div>
+  <form id="form" class="" action="{:U('User/add_pwd')}" method="post">
+    <div class="section">
+      <div class="section_one">
+        <p class="info">登录密码</p>
+        <input id="user_pwd" type="password" name="user_pwd" placeholder="登录密码">
+      </div>
+      <div class="section_one">
+        <p class="info">确认密码</p>
+        <input id="confirm_pwd" type="password" name="confirm_pwd" placeholder="确认密码">
+      </div>
+    </div>
+  </form>
+  <div class="button">
+    <a onclick="sm();">
+      <p class="tj">
+        确定
+      </p>
+    </a>
+  </div>
+  <div class="tips">
+    <p>Tips：</p>
+    <p>请妥善保管您的密码</p>
+    <p>^-^</p>
+  </div>
+
+</body>
+</html>

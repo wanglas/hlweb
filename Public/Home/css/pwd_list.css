@@ -1,0 +1,79 @@
+*{margin:0;padding:0;list-style:none;text-decoration:none;font-family:"微软雅黑"}
+/*标题部分*/
+.title{
+
+}
+.title_left{
+  width: 28%;
+  height: 3rem;
+  float: left;
+}
+.title_left img{
+  float: left;
+  width: 1.5rem;
+  margin-top: 0.6rem;
+  margin-left: 10px;
+}
+.title_left p{
+  color: white;
+  line-height: 3rem;
+  float: left;
+}
+.title_right{
+  text-align: center;
+  height: 3rem;
+  width: 42%;
+  float: left;
+}
+.title_right p{
+  color: white;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 3rem;
+
+}
+/*产品列表*/
+.one{
+  width:100%;
+  height:3rem;
+  border-bottom: 1px solid #f8f5f5;
+  background-color: #eeeeee;
+}
+.one_left{
+  float:left;
+}
+.one_left img{
+  width: 4rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-radius: 400px;
+}
+.one_right{
+  float:left;
+  width: 98%;
+}
+.one_right img{
+  width:1rem;
+  float:right;
+  position:relative;
+  bottom: 1rem;
+}
+.p_1{
+  font-size: 16px;
+  margin-top: 10px;
+}
+.p_2{
+  color: #e78258;
+  margin-top: 5px;
+}
+.p_3{
+  font-size: 14px;
+  margin-top: 5px;
+  float: left;
+}
+@media(max-width:320px){
+  .one_right{
+    width:98%;
+  }
+}

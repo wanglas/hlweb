@@ -1,0 +1,1 @@
+<?php$array = array(    'ARTICLECATEGORY' => '频道列表管理',    'ARTICLECATEGORY_INDEX' => '频道列表',    'ARTICLECATEGORY_ADD' => '频道添加',    'ARTICLECATEGORY_EDIT' => '频道修改');return $array;?>

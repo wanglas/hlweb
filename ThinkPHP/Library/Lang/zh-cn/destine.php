@@ -1,0 +1,1 @@
+<?php$array = array(    'DESTINE' => '材质管理',    'DESTINE_INDEX' => '材质列表',    'DESTINE_ADD' => '材质添加',    'DESTINE_EDIT' => '材质修改');return $array;?>

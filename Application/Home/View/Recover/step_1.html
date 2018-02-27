@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择回收方式</title>
+    <link href="__PUBLIC__/Home/css/huishoufangshi.css" rel="stylesheet">
+    <style media="screen">
+      a{
+        -webkit-tap-highlight-color:transparent;
+      }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="title">
+            <div id="nav-top">
+              <div id="zuojianjiao">
+                <p style="line-height:8rem;">
+                  <a href="{:U('Recover/index',array('id'=>1))}">
+                    <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p style="line-height:8rem;">
+                  选择回收方式
+                </p>
+              </div>
+            </div>
+
+
+            <div id="nav-bottom">
+                <div>
+                    <ul>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>……</span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>……</span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>……</span>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <span>回收方式</span>
+                        </li>
+                        <li>
+                            <span>填写信息</span>
+                        </li>
+                        <li>
+                            <span>提交成功</span>
+                        </li>
+                        <li>
+                            <span>打款到钱包</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------->
+
+        <div id="content">
+            <div id="con-one">
+                <span>请选择回收方式</span>
+            </div>
+            <div id="con-two">
+                <div>
+                    <p>快递回收</p>
+                    <p>全国快递包邮(纸包快递费，其他费用自理)</p>
+                </div>
+                <div><img src="__PUBLIC__/Home/img/right.jpg" style="width: 5rem;height: 5rem;background: 100% 100%"></div>
+            </div>
+            <div id="con-three">
+                <span>请确保您的及其来源合法，本网保证不收取任何脏机</span>
+            </div>
+        </div>
+        <div id="bottom">
+            <div>回收总价<span style="color: orangered">￥{$total_price}</span></div>
+            <div>
+                <a href="{:U('Recover/step_2')}" target="_self">下一步</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>诚心家品</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/supplier.css">
+<script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
+</head>
+
+<body>
+<!--该盒子一直包括到店长推荐-->
+<div class="width100 hidden bj_fff" style="">
+	<!--搜索框-->
+	<div class="width100 hidden bj_fff" style="height:3rem;background-color:#00ccff;">
+		<div class="title">
+			<div class="title_left">
+        <a href="javascript:history.go(-1);">
+          <img src="__PUBLIC__/Home/images/return.png" alt="">
+        </a>
+			</div>
+			<div class="title_right">
+				<p>供应商</p>
+			</div>
+		</div>
+	</div>
+<!--个人列表  -->
+<foreach name="list" item="vo">
+  <div class="one" style="background-color:white;">
+    <div class="one_left">
+      <img src="__ROOT__/Uploads/{$vo['img']}" alt="">
+    </div>
+    <a href="{:U('Supplier/detail',array('id'=>$vo['id']))}" style="color: black;">
+      <div class="one_right" style="padding-left:1rem;">
+        <p class="p_1">{$vo.company_name}</p>
+        <p>{$vo.address}</p>
+        <p>{$vo.leader} : {$vo.tel}</p>
+        <img src="__PUBLIC__/Home/images/right_arrow.png" >
+      </div>
+    </a>
+  </div>
+</foreach>
+</div>
+
+</body>
+</html>

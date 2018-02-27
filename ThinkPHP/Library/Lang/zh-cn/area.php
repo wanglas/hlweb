@@ -1,0 +1,1 @@
+<?php$array = array(    'AREA' => '前台管理',    'AREA_INDEX' => '地址列表',    'AREA_ADD' => '地址添加',    'AREA_EDIT' => '地址修改');return $array;?>

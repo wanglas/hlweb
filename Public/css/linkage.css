@@ -1,0 +1,10 @@
+
+
+.linkage_box{border:1px solid #ccc;padding:5px 10px; position:absolute;top:20px;left:10px;background:#fff; z-index:9;}
+.linkage_box span{display:inline-block;margin-right:10px;height:30px;line-height:30px; cursor:pointer;color:#369;}
+.linkage_box .close{position:absolute;top:5px;right:5px;width:16px;height:16px;background:url(../images/ico.png) no-repeat 98% -16px; text-indent:-99px;overflow:hidden;padding:0px}
+
+.linkage_select{display:inline-block; cursor:pointer;font-size:12px;padding:2px 25px 2px 0px;background:url(../images/down.png) no-repeat 77% 6px; position:relative;}
+
+
+.select_text{border:rgba(163, 163, 163, 0.53) 1px solid;height:20px;padding:1px 10px;}

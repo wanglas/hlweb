@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+#gotoTop{
+	display:none;
+	position:fixed;
+	top:75%;
+	left:50%;
+	cursor:pointer;
+	margin-top:-50px;
+	margin-left:520px;
+	width: 64px;
+	height:64px;
+	line-height: 100;
+	overflow: hidden;
+	background: url(../images/gTopa.png) no-repeat;
+}
+#gotoTop{
+	_position:absolute;
+	_top:expression_r(documentElement.scrollTop + documentElement.clientHeight * 1/4 + "px");
+}

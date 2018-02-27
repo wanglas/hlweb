@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>评估价格</title>
+    <link href="__PUBLIC__/Home/css/pinggujiage.css" rel="stylesheet">
+    <script src="__PUBLIC__/Home/js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      function sm(){
+         $('#form').submit();
+      }
+    </script>
+    <style media="screen">
+      .row{
+        width: 100%;
+        height: 5rem;
+        text-align: center;
+        line-height: 5rem;
+        font-size: 38px;
+        border-bottom: 0.1rem solid #959595;
+      }
+      span{
+        font-weight:bold;
+      }
+      p{
+        font-weight:bold;
+      }
+      a{
+        -webkit-tap-highlight-color:transparent;
+      }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="title">
+          <div id="zuojianjiao">
+            <p style="line-height:8rem;">
+              <a href="{:U('Recover/index',array('id'=>1))}">
+                <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+              </a>
+            </p>
+          </div>
+          <div>
+            <p style="line-height:8rem;">
+              评估价格
+            </p>
+          </div>
+        </div>
+        <!-------------------------------------------------->
+        <div id="content">
+          <!-- 价格提交表单 -->
+          <form id="form" class="" action="{:U('Recover/step_1')}" method="post">
+             <div id="con-top">
+                 <span>
+                     <img src="{$phone.img}" style="width: 10rem;height: 13rem;background: 100% 100%;float: left;margin-top: 1rem;margin-left: 3rem">
+                 </span>
+                 <span>
+                     <p style="margin-left:2.2rem;">{$phone.name}</p>
+                     <p style="margin-left:2.2rem;"><nobr style="color: black">￥{$total_price}</nobr></p>
+                     <p style="margin-left:2.2rem;margin-top:1rem;font-size:2.2rem;">最终成交价以工程师检测为准</p>
+                 </span>
+                 <span><a href="{:U('Recover/m_evaluate')}">重新估评</a></span>
+             </div>
+             <input type="hidden" name="phone_id" value="{$phone.id}">
+             <input type="hidden" name="total_price" value="{$total_price}">
+           </form>
+           <!-- 待定 -->
+            <div id="con-graph">
+                <div>设备信息</div>
+                <div class="property_content">
+                  <foreach name="arr" item="arr">
+                    <div class="row">
+                      <p style="width:30%;float: left; color: grey;font-weight:bold;">
+                        {$arr.pname}
+                      </p>
+                      <p style="width:15%;float: left;font-weight:bold;">
+                        {$arr.name}
+                      </p>
+                    </div>
+                  </foreach>
+                  <div class="row">
+
+                  </div>
+                </div>
+            </div>
+            <div id="huishouliucheng">
+                <div>回收流程</div>
+                <div>
+                    <ul>
+                        <li>
+                            <span>1</span>
+                            <span>提交订单</span>
+                        </li>
+                        <li>………</li>
+                        <li>
+                            <span>2</span>
+                            <span>快递机器</span>
+                        </li>
+                        <li>………</li>
+                        <li>
+                            <span>3</span>
+                            <span>专业质检</span>
+                        </li>
+                        <li>………</li>
+                        <li>
+                            <span>4</span>
+                            <span>快递收款</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="huishoufangshi">回收方式</div>
+            <div>
+                <span>快递回收</span>
+                <span>货到付款，xxx(根据服务方提供的要求填写此处)</span>
+            </div>
+            <div id="button">
+                <div><a onclick="sm();">立即回收</a></div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

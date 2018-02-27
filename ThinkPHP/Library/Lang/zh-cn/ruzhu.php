@@ -1,0 +1,1 @@
+<?php$array = array(    'RUZHU' => '入住申请管理',    'RUZHU_INDEX' => '入住申请列表',    'RUZHU_ADD' => '入住申请添加',    'RUZHU_EDIT' => '入住申请修改');return $array;?>

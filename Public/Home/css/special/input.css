@@ -1,0 +1,15 @@
+INPUT
+{
+border-left: #fff 1px solid;
+border-top: #fff 1px solid;
+border-right: #fff 1px solid;
+border-bottom: #fff 1px solid;
+margin: 0px 0px 15px 10px;
+padding-left: 10px;
+background: #ccc;
+float: left;
+font-size: 1em;
+line-height: 1.5em;
+height: 20px;
+text-align: left;
+} 

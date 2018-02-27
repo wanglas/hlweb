@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="诚心佳品" />
+    <meta name="keywords" content="诚心佳品" />
+    <title>诚心佳品</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/shoppingcar.css">
+    <script type="text/javascript" src="__PUBLIC__/Home/js/auto-size.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/layer.js"></script>
+    <script type="text/javascript">
+      //购物车操作
+      $(function(){
+        //删除商品操作
+        var doDelCart = "{:U('Cart/delGoods')}";
+         $('.del').click(function() {
+             var sid = $(this).attr('sid');
+             var pid = $(this).attr('pid');
+         	layer.confirm('确认删除', {
+              title:false,
+         	    btn: ['确认','取消'], //按钮
+              shade:false,
+            },
+          function(index){
+         		layer.close(index);
+                 $.post(doDelCart, {sid: sid, pid: pid}, function(data) {
+                     if (data.status == 1) {
+                          layer.msg('删除成功', function(){});
+                         window.location.href = window.location.href;
+                     }
+                     if(data.status == 2) {
+                         layer.msg('服务器开小差了~', function(){});
+                     }
+                 }, 'json')
+         		},
+            function(){
+         	  }
+          );
+         });
+            //直接修改input框来修改数字
+          $('input').change(function(){
+            var id=$(this).attr('data-id');
+            var v = $('#'+id).val();
+            var sid=$('#'+id).attr('sid');
+         if (isNaN(v)) {
+           layer.msg('请输入有效数字！', function(){});
+           $('#'.id).focus();
+           return false;
+         }else{
+           $.post(updateCart, {sid: sid, pid: id ,num:v}, function(data) {
+               if (data.status == -1) {
+                  layer.msg('请输入有效数字！', function(){});
+               }
+               if(data.status == 1) {
+                  layer.msg('更新成功~', function(){});
+               }
+               if(data.status == 0) {
+                  layer.msg('更新失败，请重试', function(){});
+               }
+           }, 'json')
+         }
+          })
+      });
+    </script>
+    <style media="screen">
+      .layui-layer-dialog{
+        font-size: 14px;
+      }
+    </style>
+</head>
+<body>
+	<div class="fix_head">
+		<a href="javascript:history.go(-1);" class="back">
+			<img src="__PUBLIC__/Home/images/return.png">
+		</a>
+		<p>购物车</p>
+		<a href="{:U('Index/index')}" class="home">
+			<img src="__PUBLIC__/Home/images/home.png">
+		</a>
+	</div>
+	<div class="sc_h"></div>
+  <form action="{:U('Cart/order')}" method="post" >
+  <foreach name="cart" item="cart">
+  	<div class="lb">
+  		<div class="check">
+  			<div class="xz" data="0" data-id="{$cart.id}"></div>
+        <input type="text" name="gid_arr[]" value="" style="display:none">
+  		</div>
+  		<img src="__ROOT__/Uploads/{$cart.img}" class="spt">
+  		<div class="mid">
+  			<p class="name">{$cart.name}</p>
+  			<!-- <p class="color">颜色:红色</p> -->
+  			<div class="jj">
+  				<span class="jia update" data-id="{$cart.id}">-</span>
+  				<input class="num" name="num" value="{$cart.num}" id="{$cart.id}" sid="{$cart.sid}" data-id="{$cart.id}">
+  				<span class="jian update" data-id="{$cart.id}">+</span>
+  			</div>
+  		</div>
+  		<div class="jgq">
+  			<div class="price"><p>￥<span class="pri">{$cart.price}</span></p></div>
+  			<!-- <div class="price_de"><p><del>￥30.00</del></p></div> -->
+  			<img src="__PUBLIC__/Home/images/del.jpg" class="del" sid="{$cart.sid}" pid="{$cart.id}">
+  		</div>
+  	</div>
+  </foreach>
+	<div class="fix_bottom">
+		<div id="qx" data="0"></div><span style="float:left;line-height:0.8rem;">全选</span>
+		<div class="zjq">
+		    <p class="p1">合计:￥
+		        <span id="zj" >0</span>
+		    </p>
+		</div>
+      <a id="js">结算(<span id="zsl">0</span>)</a>
+	</div>
+</form>
+	<script type="text/javascript">
+		$(function(){
+			js();
+			$(".xz").click(function(){
+				var a = $(this).attr("data");
+				if (a==0) {
+					$(this).css("background-image","url(__PUBLIC__/Home/images/check_on.jpg)");
+					$(this).attr("data",1);
+				}else{
+					$(this).css("background-image","url(__PUBLIC__/Home/images/check.jpg)");
+					$(this).attr("data",0)
+					$("#qx").attr("data",0);
+					$("#qx").css("background-image","url(__PUBLIC__/Home/images/check.jpg)");
+				}
+				js();
+
+			})
+			$("#qx").click(function(){
+				var a = $(this).attr("data");
+				if (a==0) {
+					$(".xz").attr("data",1);
+				$(this).css("background-image","url(__PUBLIC__/Home/images/check_on.jpg)");
+				$(".xz").css("background-image","url(__PUBLIC__/Home/images/check_on.jpg)");
+				$(this).attr("data",1);
+				}else{
+					$(".xz").attr("data",0);
+				$(this).css("background-image","url(__PUBLIC__/Home/images/check.jpg)");
+				$(".xz").css("background-image","url(__PUBLIC__/Home/images/check.jpg)");
+					$(this).attr("data",0);
+				}
+				js();
+			})
+			$(".jian").click(function(){
+        //加一
+        var updateCart="{:U('Cart/updateCart')}";
+               var id=$(this).attr('data-id');
+               var v = $('#'+id).val();
+               var v=parseInt(v)+1;
+               $('#'+id).val(v);
+               var sid=$('#'+id).attr('sid');
+            if (isNaN(v)) {
+              layer.msg('请输入有效数字！', function(){});
+              $('#'+id).val(0);
+              $('#'.id).focus();
+              return false;
+            }else{
+              $.post(updateCart, {sid: sid, pid: id ,num:v}, function(data) {
+                  if (data.status == -1) {
+                     layer.msg('请输入有效数字！', function(){});
+                  }
+                  if(data.status == 1) {
+                     layer.msg('更新成功~', function(){});
+                  }
+                  if(data.status == 0) {
+                     layer.msg('更新失败，请重试', function(){});
+                  }
+              }, 'json')
+            }
+
+				js();
+			})
+			$(".jia").click(function(){
+        //减一
+        var updateCart="{:U('Cart/updateCart')}";
+               var id=$(this).attr('data-id');
+               var v = $('#'+id).val();
+               var v=parseInt(v)-1;
+               $('#'+id).val(v);
+               var sid=$('#'+id).attr('sid');
+            if (parseInt(v)<0 && parseInt(v)==0) {
+              layer.msg('请输入有效数字!');
+              $('#'+id).val('1');
+              $('#'+id).focus();
+              return false;
+            }else{
+              $.post(updateCart, {sid: sid, pid: id ,num:v}, function(data) {
+                  if (data.status == -1) {
+                     layer.msg('请输入有效数字！', function(){});
+                     $('#'+id).val('1');
+                  }
+                  if(data.status == 1) {
+                     layer.msg('更新成功~', function(){});
+                  }
+                  if(data.status == 0) {
+                     layer.msg('更新失败，请重试', function(){});
+                  }
+              }, 'json')
+            }
+
+        js();
+			})
+			$(".del").click(function(){
+				js();
+			})
+      //清算价格
+			 function js(){
+				var num=0;
+				var conut=0;
+				$(".xz").each(function(){
+					if ($(this).attr("data")==1) {
+						var b = $(this).parent().next().next().find(".num").val();
+						var jg = $(this).parent().next().next().next().find(".pri").text();
+						conut+=parseInt(b);
+		    			num+=b*jg;
+					}
+				})
+		  	$('#zj').html(num);
+		  	$('#zsl').html(conut);
+			}
+      //结算函数
+      $('#js').click(function(){
+        //新建数组存储商品id
+        var gid_arr=new Array();
+        var order="{:U('Cart/order')}";
+        $(".xz").each(function(){
+          if ($(this).attr("data")==1) {
+            var gid=$(this).attr('data-id');
+            var gid=parseInt(gid);
+            gid_arr.push(gid);
+            $(this).next().val(gid);
+            var gid_input=$("[name='gid_arr[]']").val();
+          }else{
+            //记得清空input中数据（点完又取消的情况）
+            $(this).next().val(0);
+          }
+        });
+        if(gid_arr.length==0){
+          layer.msg('亲，您还没有选择要购买的商品~');
+        }else{
+          $('form').submit();
+        }
+      })
+
+		})
+
+	</script>
+</body>
+</html>

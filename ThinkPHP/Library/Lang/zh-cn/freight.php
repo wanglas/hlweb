@@ -1,0 +1,1 @@
+<?php$array = array(    'FREIGHT' => '运费管理',    'FREIGHT_INDEX' => '运费列表',    'FREIGHT_ADD' => '运费添加',    'FREIGHT_EDIT' => '运费修改');return $array;?>

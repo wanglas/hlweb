@@ -1,0 +1,1 @@
+<?php$array = array(    'SCNOTICES' => '促销/活动管理',    'SCNOTICES_INDEX' => '促销/活动列表',    'SCNOTICES_ADD' => '促销/活动添加',    'SCNOTICES_EDIT' => '促销/活动修改',);return $array;?>

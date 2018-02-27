@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>诚心家品</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/health_detail.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/special/beauty.css">
+<script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
+<style media="screen">
+	body{
+		    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+	}
+	p{    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;}
+</style>
+</head>
+
+<body>
+<!--该盒子一直包括到店长推荐-->
+<script>
+$("body").css({background:""})
+</script>
+<div class="width100 hidden bj_fff" style="">
+	<!--搜索框-->
+	<div class="width100 hidden bj_fff" style="height:3rem;background-color:#00ccff;">
+		<div class="title">
+			<div class="title_left">
+        <a href="javascript:history.go(-1);">
+          <img src="__PUBLIC__/Home/images/return.png" alt="">
+        </a>
+			</div>
+			<div class="title_right">
+				<p>{$detail.title}</p>
+			</div>
+		</div>
+	</div>
+  <!-- 商品图片 -->
+  <div class="goods_img">
+    <img src="__ROOT__/Uploads/{$detail.img}" alt="{$detail.key_words}" style="width:100%;">
+  </div>
+<!-- 商品详细开始 -->
+  <div class="container">
+    <div class="section_1">
+      {$str}
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

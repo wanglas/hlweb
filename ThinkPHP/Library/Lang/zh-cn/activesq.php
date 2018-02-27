@@ -1,0 +1,1 @@
+<?php$array = array(    'ACTIVESQ' => '活动申请管理',    'ACTIVESQ_INDEX' => '活动申请列表',    'ACTIVESQ_ADD' => '活动申请添加',    'ACTIVESQ_EDIT' => '活动申请修改');return $array;?>

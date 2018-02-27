@@ -1,0 +1,1 @@
+<?php$array = array(    'CITY' => '商户配送地址管理',    'CITY_INDEX' => '商户配送地址列表',    'CITY_ADD' => '商户配送地址添加',    'CITY_EDIT' => '商户配送地址修改');return $array;?>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title我的话题</title>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/my_words.css">
+    <link href="__PUBLIC__/Home/font/fontAwesome/font-awesome.css" rel="stylesheet">
+    <script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+    <style>
+        @font-face {
+            font-family: "FontAwesome";
+            font-style: normal;
+            font-weight: normal;
+            src: url("__PUBLIC__/Home/font/fontAwesome/font/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+            url("__PUBLIC__/Home/font/fontAwesome/font/fontawesome-webfont.woff") format("woff"),
+            url("__PUBLIC__/Home/font/fontAwesome/font/fontawesome-webfont.ttf") format("truetype"),
+            url("__PUBLIC__/Home/font/fontAwesome/font/fontawesome-webfont.svgz#FontAwesomeRegular") format("svg"),
+            url("__PUBLIC__/Home/font/fontAwesome/font/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+            url("__PUBLIC__/Home/font/想去.svg") format("svg");
+        }
+        .myicon01{
+            font-family:"FontAwesome" ;
+            font-size: 50px;
+        }
+        .icon-pencil{
+        }
+        .bt_fb{
+          width: 10rem;
+          height: 4rem;
+          float: right;
+          font-size: 3rem;
+        }
+        .fb{
+         height: 4rem;
+        }
+        a{
+          color:black;
+          -webkit-tap-highlight-color:transparent;
+        }
+        img[src=""]{
+          opacity: 0;
+          height: 0rem;
+        }
+        img[src="0"]{
+          opacity: 0;
+          height: 0rem;
+        }
+    </style>
+    <script>
+    //  点击添加评论框
+        $(function (){
+            $(".heart").click(function(){
+                $(this).css("background-image","url(__PUBLIC__/Home/img/qietu/comment/heart_on.png)");
+                var cid=$(this).attr('id');
+                var data={
+                  cid:cid,
+                };
+                var dz_num=$(this).next();
+                $.ajax({
+            				type:"post",
+            				dataType:"json",
+            				url:"{:U('Comment/dz')}",
+                    data:data,
+            				async : true,            //异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行
+                    success:function(data){
+                      dz_num.html(data)
+                    }
+            });
+          });
+          // $(function(){
+          //   $(".c_img_detail").click(function(){
+          //     $(this).toggleClass('max');
+          //     $(this).toggleClass('min');
+          //   });
+          // });
+          //简陋版
+            $(".icon-comment").click(function(){
+                // $(this).parent().parent().parent().parent().css({height: "40rem"});
+                $(this).parent().parent().parent().next().css({display: "block"});
+                $(this).parent().parent().parent().next().find('textarea.hf').focus();
+            });
+
+        })
+
+    </script>
+
+</head>
+<body>
+    <div id="all">
+      <div id="title">
+          <div id="zuojianjiao">
+            <p style="line-height:8rem;">
+              <a href="{:U('User/my_comment')}">
+                <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+              </a>
+            </p>
+          </div>
+          <div>
+            <p style="line-height:8rem;">
+              我的话题
+            </p>
+          </div>
+      </div>
+        <!----------------------------------------->
+        <div id="content">
+          <foreach item="la" name="list">
+            <if condition="$la['pid'] eq 0">
+            <div id="con-one">
+                <div id="con-one-top">
+                    <div><img src="{$la.img}" alt="{$la.uname}" style="width: 6rem;height: 6rem;border-radius:400px;"></div>
+                    <div>
+                        <p style="font-size:2.5rem;font-weight:bold;margin-top:0.5rem">{$la.user_name}</p>
+                        <p style="margin-top:0.5rem;color:grey;">{$la.c_time|date="m-d H:i",###}</p>
+                    </div>
+                </div>
+                <div id="con-one-bottom">
+                    <p style="margin-top:50px;font-size:2.0rem;font-weight:bold; margin-bottom: 1rem;">{$la.content}</p>
+                    <div class="c_img">
+                      <div class="c_img_one">
+                        <if condition="$la['cimg'] neq null">
+                          <foreach name="la['cimg']" item="ccimg">
+                            <img class="c_img_detail" src="{$ccimg}" alt="">
+                          </foreach>
+                        <else/>
+                        </if>
+                      </div>
+                    </div>
+                </div>
+                <!-- 点击跳转二级页面 -->
+                <a href="{:U('User/show_detail',array('id'=>$la[cid]))}">
+                <div id="dianzan-1">
+                  <div style="float: left;width: 49%;height:60%;margin-left:1%;">
+                    <div class="myicon01">
+                      <div class="say" style="float: left"></div>
+                      <nobr style="font-size: 2.5rem;margin-left: 1.5rem;margin-top: -0.5rem">{$la.pl_num}</nobr>
+                    </div>
+                  </div>
+                </a>
+                <!-- 跳转链接结束 -->
+                    <div style="float: left;width: 49%;height:60%;height:100%;">
+                      <div class="myicon01">
+                        <div id="{$la.cid}" class="heart" style="float: left" ></div>
+                        <nobr class="dz_num" style="font-size: 2.5rem;margin-left: 1.5rem;margin-top: -0.5rem;line-height: 100%;height: 100%;">{$la.dz_num}</nobr>
+                      </div>
+                    </div>
+                </div>
+                <!-- 二级评论框 -->
+            </div>
+          </if>
+          </foreach>
+        </div>
+    </div>
+</body>
+</html>

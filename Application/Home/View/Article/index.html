@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>诚心家品</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/health.css">
+<script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
+</head>
+
+<body>
+<!--该盒子一直包括到店长推荐-->
+<script>
+</script>
+<div class="width100 hidden bj_fff" style="">
+	<!--搜索框-->
+	<div class="width100 hidden bj_fff" style="height:3rem;background-color:#00ccff;">
+		<div class="title">
+			<div class="title_left">
+        <a href="javascript:history.go(-1);">
+          <img src="__PUBLIC__/Home/images/return.png" alt="">
+        </a>
+			</div>
+			<div class="title_right">
+				<p>健康常识</p>
+			</div>
+		</div>
+	</div>
+<!-- 商品列表开始 -->
+<foreach name="list" item="list">
+<div class="one">
+  <div class="one_left">
+    <img src="__ROOT__/Uploads/{$list.img}" alt="{$list.key_words}">
+  </div>
+  <a href="{:U('Article/detail',array('id'=>$list['id']))}" style="color: black;">
+    <div class="one_right">
+      <p class="p_1">{$list.title}</p>
+      <p class="p_2">{$list.main}</p>
+    </div>
+  </a>
+</div>
+</div>
+</foreach>
+<div id="footer">
+	<a href="{:U('Index/index')}" class="on">
+    	<p >
+				<i>
+					<img src="__PUBLIC__/Home/images/bot_1_s.png" alt="" >
+				</i>
+			</p>
+        <span style="color:black;">首页</span>
+    </a>
+    <a>
+      <p >
+				<i>
+					<img src="__PUBLIC__/Home/images/health_s.png" alt="" >
+				</i>
+			</p>
+        <span style="color:#00ccff">健康</span>
+    </a>
+    <a href="{:U('Cart/index')}">
+      <p >
+				<i>
+					<img src="__PUBLIC__/Home/images/bot_3.png" alt="" >
+				</i>
+			</p>
+        <span>购物车</span>
+    </a>
+    <a href="{:U('User/index')}">
+      <p >
+				<i>
+					<img src="__PUBLIC__/Home/images/bot_4.png" alt="" >
+				</i>
+			</p>
+        <span>我的</span>
+    </a>
+</div>
+<script type="text/javascript">
+	$('.one:last').css({
+		'margin-bottom':'5rem',
+	});
+</script>
+</body
+</html>

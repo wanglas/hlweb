@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>快递回收</title>
+    <link href="__PUBLIC__/Home/css/kuaidihuishou.css" rel="stylesheet">
+    <style media="screen">
+      a{
+        -webkit-tap-highlight-color:transparent;
+      }
+    </style>
+</head>
+<body>
+    <div id="all">
+      <div id="title">
+          <div id="zuojianjiao">
+            <p style="line-height:8rem;">
+              <a href="{:U('Index/index',array('id'=>1))}">
+                <img src="__PUBLIC__/Home/img/qietu/secondphonerecover/second_01.jpg" style="margin-left:1rem;">
+              </a>
+            </p>
+          </div>
+          <div>
+            <p style="line-height:8rem;">
+              手机回收
+            </p>
+          </div>
+      </div>
+        <!--------------------------------------------->
+
+        <div id="top">
+            <div>
+                <ul>
+                    <li>邮寄机器</li>
+                    <li> > </li>
+                    <li>个人中心填写快递单号</li>
+                    <li> > </li>
+                    <li>质检确认最终价</li>
+                    <li> > </li>
+                    <li>快递收藏到钱包</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="con-one">
+                <span><img src="__PUBLIC__/Home/img/qietu/phonegujia/1.png" style="width: 4rem;height: 4rem;background: 100% 100%"></span>
+                <span>
+                    <p>成功提交订单</p>
+                    <p>订单金额：<nobr style="color: orangered">￥{$order.total_price}</nobr></p>
+                </span>
+                <span>
+                    <p>钱款已打入您的钱包账户(待入账金额)</p>
+                </span>
+            </div>
+            <div id="con-two">
+                <div id="con-two-con">
+                    <div>
+                        <span>
+                           <p>请将机器有几种易快手机维修进行质检</p>
+                           <p>邮寄地址：某某人 024-0000-1111</p>
+                           <p>辽宁省沈阳市白塔路156号科技孵化中心714室</p>
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            请尽快寄出机器，机器7天保价，超出7天价格会根据市场变化而变化
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="con-three">
+                <div>邮寄机器前您需要</div>
+                <div>
+                    <span>
+                        <img src="__PUBLIC__/Home/img/qietu/phonegujia/1.png" style="width:8rem;height:6rem;background: 100% 100%;float: left;display: block">
+                    </span>
+                    <span>备份数据并最好回复出厂设置</span>
+                </div>
+                <div>
+                    <span>
+                        <img src="__PUBLIC__/Home/img/qietu/phonegujia/1.png" style="width:8rem;height:6rem;background: 100% 100%;float: left;display: block">
+                    </span>
+                    <span>解锁开机密码并注销账户</span>
+                </div>
+                <div>
+                    <span>
+                        <img src="__PUBLIC__/Home/img/qietu/phonegujia/1.png" style="width:8rem;height:6rem;background: 100% 100%;float: left;display: block">
+                    </span>
+                    <span>下单时手机号填至快递单上</span>
+                </div>
+            </div>
+
+            <div id="con-four">
+                <a href="{:U('Recover/pocket')}" target="_self">
+                    <div>设置钱包</div>
+                </a>
+                <a href="{:U('Recover/detail',array("id"=>$id))}" target="_self">
+                    <div>查看订单</div>
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+</html>

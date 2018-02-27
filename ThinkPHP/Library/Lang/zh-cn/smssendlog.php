@@ -1,0 +1,1 @@
+<?phpreturn array(    'SMSSENDLOG' => '短信操作日志',    'SMSSENDLOG_INDEX' => '短信日志列表',    'SMSSENDLOG_EDIT' => '查看日志',    'SMSSENDLOG_SEND_MOBILE'=>'电话');return $array;?>

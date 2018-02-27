@@ -1,0 +1,1 @@
+<?php$array = array(	'HOME'=>'首页',        'HOME_INDEX'=>'快捷操作',        'HOME_ADD'=>'添加客服',);return $array;?>

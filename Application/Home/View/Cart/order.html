@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>诚心家品</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/confirm_order.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_403143_nbpgsnnn79tqpvi.css">
+<script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/layer.js"></script>
+<style media="screen">
+  .one_left img{
+    margin: 10px 10px 0px 10px;
+  }
+</style>
+</head>
+<body>
+<!--该盒子一直包括到店长推荐-->
+<script>
+$("body").css({background:"#f4f4f4"})
+</script>
+<div class="width100 hidden bj_fff" style="">
+	<!--搜索框-->
+	<div class="width100 hidden bj_fff" style="height:3rem;background-color:#00ccff;">
+		<div class="title">
+			<div class="title_left">
+        <a href="javascript:history.go(-1);">
+          <img src="__PUBLIC__/Home/images/return.png" alt="">
+        </a>
+			</div>
+			<div class="title_right">
+				<p>确认订单</p>
+			</div>
+		</div>
+	</div>
+<!-- 商品列表开始 -->
+<form class="" action="{:U('Orders/cart_build_order')}" method="post">
+<foreach name="cart" item="detail">
+  <div class="one">
+  	  <div class="one_left">
+  	    <img src="__ROOT__/Uploads/{$detail['goods_info']['img']}" alt="{$detail.name}">
+  	  </div>
+      <div class="one_right">
+        <p class="p_1">{$detail.name}</p>
+  			<p style="display:none;" id="price" data-id="{$detail.price}"></p>
+        <p class="p_3">
+  				<ul class="btn-numbox" style="height: 30px;">
+  				            <li>
+												<span class="number" style="margin-right: 2rem;">数量
+												<span style="color:#140696;font-weight: bold;">{$detail.num}</span>
+													({$detail.goods_info.sale_way_name})
+												</span>
+											</li>
+  				　　　  </ul>
+  			</p>
+      </div>
+      <p style="float:right;margin-right:1rem;">合计:<span style="color:orange" id="total">￥{$detail.total}</span></p>
+  </div>
+</foreach>
+<div class="address">
+  <p style="float:left">选择地址</p>
+  <a href="javascript:void(0)" class="sel_mask"><img src="__PUBLIC__/Home/images/arrow_down.png" style="width:1rem;margin-top:0.3rem;">
+      <select  class="sel" name="aid" value="0">
+					<option value="0" selected="selected">请选择一个地址</option>
+				<foreach name="list" item="list">
+          <option value="{$list.id}">{$list.location}/{$list.detail}</option>
+				</foreach>
+      </select>
+  </a>
+</div>
+<div class="info">
+  <p class="p_4">配送方式</p>
+  <p class="p_5">快递 免邮</p>
+</div>
+<div class="info">
+  <p class="p_4">运费险</p>
+  <p class="p_5">￥0.00</p>
+</div>
+<div class="info">
+  <p class="p_4">客服电话</p>
+  <p class="p_5">024-55667</p>
+</div>
+
+  <div class="info" style="height:10rem;">
+    <p class="p_4">买家留言</p>
+      <div class="words">
+        <textarea type="text" id="content" name="content" value="" placeholder="如果您有什么其他要求，请填写在这里。"></textarea>
+      </div>
+  </div>
+
+<div class="info">
+  <p class="p_5"><span style="color:orange" id="total_2">￥{$total}</span></p>
+  <p class="p_5">合计</p>
+</div>
+<input type="text" name="gid" value="{$detail.id}" style="display:none;">
+<div class="btn_whole" id="sm">
+  <p style="line-height:2rem;text-align: center;">
+    确认下单
+  </p>
+</div>
+</form>
+</div>
+<script>
+$(function () {
+		$('#sm').click(function(){
+			var address=$('.sel').val();
+			var content=$('#content').text();
+			if(address=='0'){
+				layer.confirm('亲，您还没有选择地址,要去新增一个地址吗？', {
+					title:false,
+					btn: ['确认','取消'], //按钮
+					shade:false,
+				},
+				function(index){
+					window.location.href="{:U('User/address_add')}";
+				},
+				function(){
+				}
+			);
+		}else if(content==''){
+				layer.confirm('亲，没有其他要求那就下单喽~？', {
+					title:false,
+					btn: ['确认','取消'], //按钮
+					shade:false,
+				},
+				function(){
+					$('form').submit();
+				},
+				function(){
+				}
+			);
+		}
+	});
+
+});
+
+</script>
+</body>
+
+</html>

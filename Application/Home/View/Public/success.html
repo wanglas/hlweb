@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>诚心家品</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/suggest.css">
+<script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
+<style>
+	p{
+		margin-top: 1rem;
+	}
+</style>
+</head>
+<body style="text-align:center;">
+<!--该盒子一直包括到店长推荐-->
+<div class="width100 hidden bj_fff" style="  background-color: #f3f3f3;">
+	<!--搜索框-->
+	<div class="width100 hidden bj_fff" style="height:3rem;background-color:#00ccff;">
+		<div class="title">
+			<div class="title_left">
+        <a href="javascript:history.go(-1);">
+          <img src="__PUBLIC__/Home/images/return.png" alt="">
+        </a>
+			</div>
+			<div class="title_right">
+				<p>操作成功</p>
+			</div>
+		</div>
+	</div>
+	<div class="success">
+			<img src="__PUBLIC__/Home/images/true.png" alt="正确" style="margin: 0 auto;margin-top:3rem;">
+	</div>
+		<p>
+			<?php echo($message); ?>
+		</p>
+		<p>
+			<a id="href" href="<?php echo($jumpUrl); ?>">如果你的浏览器没有自动跳转，请点击这里...</a>
+		</p>
+		<p>
+			<b id="wait"><?php echo($waitSecond); ?></b>
+		</p>
+</div>
+<script type="text/javascript">
+    (function(){
+    var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+    var interval = setInterval(function(){
+    var time = --wait.innerHTML;
+    if(time <= 0) {
+    location.href = href;
+    clearInterval(interval);
+    };
+	}, 1000);
+    })();
+  </script>
+
+</body>
+
+</html>

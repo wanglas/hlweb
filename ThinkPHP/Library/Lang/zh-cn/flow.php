@@ -1,0 +1,1 @@
+<?php$array = array(    'FLOW' => '直接订单',    'FLOW_INDEX' => '订单列表',    'FLOW_EDIT' => '订单编辑',);return $array;?>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>诚心家品</title>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/login.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/magic.css">
+    <script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js" charset="utf-8"></script>
+</head>
+<script type="text/javascript">
+  function qiehuan(){
+    $('#yzm').css('display','none');
+    $('#passwd').css('display','block');
+    $('#login1').css('display','none');
+    $('#login2').css('display','block');
+  }
+  function qiehuan2(){
+    $('#yzm').css('display','block');
+    $('#passwd').css('display','none');
+    $('#login1').css('display','block');
+    $('#login2').css('display','none');
+  }
+</script>
+<body>
+    <div id="all">
+        <div id="background">
+            <div id="content">
+                <div id="logo">
+                  <img src="__PUBLIC__/Home/images/login/logo.png" style="width:18rem;height:18rem;">
+                </div>
+                  <form id="new_entry" action="" method="post">
+                    <div id="con-bottom" >
+                      <div class="input_order">
+                        <span class="tubiao"><img src="__PUBLIC__/Home/images/login/2.png" alt=""></span>
+                        <input type="text" placeholder="手机号" name="tel" onblur="cktel();">
+                        <span class="ts" id="cktel"></span>
+                      </div>
+                      <div class="input_order" id="yzm">
+                        <span class="tubiao"><img src="__PUBLIC__/Home/images/login/3.png" alt=""></span>
+                        <input type="text" name="yzm" placeholder="验证码" onblur="ckyzm();">
+                        <span class="yz" onclick="sm1();">验证码</span>
+                        <p class="ts" id="ckyzm"></p>
+                      </div>
+                      <div class="input_order" id="passwd" style="display:none;">
+                        <span class="tubiao"><img src="__PUBLIC__/Home/images/login/3.png" alt=""></span>
+                        <input type="password" name="passwd" placeholder="密码" onblur="ckpasswd();">
+                        <p class="ts" id="ckpasswd"></p>
+                      </div>
+                      <div id="login1">
+                        <a id="sm" class="lg_button" onclick="sm2();">
+                          登录
+                        </a>
+                      </div>
+                      <div id="login2" style="display:none;">
+                        <a id="sm" class="lg_button" onclick="sm3();">
+                          登录
+                        </a>
+                      </div>
+                    </form>
+                    <div class="qiehuan">
+                      <p onclick="qiehuan();" style="font-size:30px;color:#434343;float:left; margin-left: 20rem;">密码登陆|</p>
+                      <p onclick="qiehuan2();" style="font-size:30px;color:#434343;float:left;">验证码注册/登陆</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="xieyi">
+            <!-- <input class="magic-checkbox" type="radio" name="radio" id="xieyi" style="display:block;height: 90%;float:left;width: 36px;margin-left: 14rem;"> -->
+            <div class="">
+              <img src="__PUBLIC__/Home/images/login/4.png" alt=""style="display:block;height: 90%;float:left;width: 36px;margin-left: 14rem;">
+            </div>
+            <p style="margin-left:1rem;float:left;">登陆即表示您同意<a style="font-size:2.0rem;">《用户协议》</a></p>
+        </div>
+        <div class="jy">
+          <a href="{:U('Index/index')}">返回首页</a>
+        </div>
+    </div>
+</body>
+<!-- js部分 -->
+<script type="text/javascript">
+// 验证码登陆js
+
+function sm2(){
+    cktel();
+    ckyzm();
+    var Name = document.getElementById('cktel').innerHTML;
+    if(Name=="√"){
+      document.getElementById("new_entry").action="{:U('Public/check_login')}";
+      document.getElementById("new_entry").submit();
+    }
+}
+// 密码登陆js
+function sm3(){
+    cktel();
+    ckpasswd();
+    var Name = document.getElementById('cktel').innerHTML;
+    if(Name=="√"){
+      var tel= $('[name="tel"]').val();
+      var passwd= $('[name="passwd"]').val();
+      var data={
+        tel:tel,
+        passwd:passwd,
+      };
+    var msgObj = document.getElementById('ckpasswd');
+      $.ajax({
+         url:"{:U('Public/check_login2')}",
+         type:"post",
+         data:data,
+         success:function(data){
+         // window.clearInterval(timer);
+           if (data=='手机号或密码错误') {
+             msgObj.style.color="red";
+             msgObj.innerHTML=data;
+           }else{
+             window.location.href="{:U('User/index')}";
+           }
+         }
+      });
+    }
+}
+//获取验证码
+function sm1(){
+	 var Name = $('[name="tel"]').val();
+     var msgObj = document.getElementById('cktel');
+     if(Name==null || Name==""){
+		     msgObj.style.color="red";
+	       msgObj.innerHTML="手机号不能为空";
+         return false;
+	   } else if(!(/^1[34578]\d{9}$/.test(Name))){
+         msgObj.style.color="red";
+         msgObj.innerHTML="请填写正确手机号";
+         return false;
+       }else {
+         var data_tel={
+           tel:Name
+         };
+		 　$.ajax({
+		              url:"{:U('Api/registerApi')}",
+		              type:"post",
+		              data:data_tel,
+		              success:function(data){
+		                  // window.clearInterval(timer);
+                      // msgObj.style.color="green";
+		                  // msgObj.innerHTML=data;
+                      $('.yz').html('已发送');
+                    },
+                  error:function(){
+                    alert('请求失败');
+                  },
+		 });
+		//  msgObj.innerHTML="发送成功";
+	  }
+}
+function ckyzm(){
+	  var Name = $('[name="yzm"]').val();
+	  var msgObj = document.getElementById('ckyzm');
+	   if(Name==null || Name==""){
+		   msgObj.style.color="red";
+	    	msgObj.innerHTML="请填写验证码";
+	   } else {
+		   msgObj.style.color="green";
+		   msgObj.innerHTML="√";
+	  }
+}
+function ckpasswd(){
+	  var Name = $('[name="passwd"]').val();
+	  var msgObj = document.getElementById('ckpasswd');
+	   if(Name==null || Name==""){
+		   msgObj.style.color="red";
+	    	msgObj.innerHTML="请填写密码";
+	   } else {
+		   msgObj.style.color="green";
+		   msgObj.innerHTML="√";
+	  }
+}
+function cktel(){
+	  var Name = $('[name="tel"]').val();
+	  var msgObj = document.getElementById('cktel');
+	   if(Name==null || Name==""){
+		   msgObj.style.color="red";
+	    	msgObj.innerHTML="请填写手机号";
+   } else if(!(/^1[34578]\d{9}$/.test(Name))){
+       msgObj.style.color="red";
+       msgObj.innerHTML="请填写正确手机号";
+   }else{
+       msgObj.style.color="green";
+       msgObj.innerHTML="√";
+   }
+}
+</script>
+</html>

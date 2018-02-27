@@ -1,0 +1,21 @@
+.ts:nth-child(1){
+	width:49%;
+	}
+.ts:nth-child(1) img{
+	width:100%
+	}
+.ts:nth-child(2){
+	width:49%;
+	float:right;
+	margin-bottom:2%;
+	}
+.ts:nth-child(2) img{
+	width:100%
+	}
+.ts:nth-child(3){
+	width:49%;
+	float:right;
+	}
+.ts:nth-child(3) img{
+	width:100%
+	}	
