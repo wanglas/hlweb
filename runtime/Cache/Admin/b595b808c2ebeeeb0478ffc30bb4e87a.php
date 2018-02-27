@@ -92,7 +92,7 @@ SUBMENU_CONFIG = {
                         "id": "76",
                         "pid": "75",
                         "icon": "",
-                        "name": "\u4ea7\u54c1\u5206\u7c7b",
+                        "name": "\u5206\u7c7b\u5217\u8868\u000d\u000a",
                         "url": "<?php echo U('OrderGoods/index');?>"
                     },
                 }
