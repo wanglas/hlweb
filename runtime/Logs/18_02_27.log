@@ -706,3 +706,2436 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.002007s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002121s ]
 
+[ 2018-02-27T10:39:22+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.040593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.012313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012426s ]
+
+[ 2018-02-27T10:39:24+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.075430s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.006573s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.050824s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000606s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.048389s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001057s ]
+
+[ 2018-02-27T10:43:04+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000312s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000456s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.079280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.007378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010608s ]
+
+[ 2018-02-27T10:43:06+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.063922s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.054345s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.055819s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.001337s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000219s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.046840s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000947s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001096s ]
+
+[ 2018-02-27T10:43:56+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001507s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000374s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000582s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.041808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000886s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001091s ]
+
+[ 2018-02-27T10:43:57+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001743s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.018252s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.003087s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.068177s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.025464s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000711s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2018-02-27T10:54:37+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.071847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.010795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010902s ]
+
+[ 2018-02-27T10:54:38+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.019250s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.015009s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000417s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.078414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078492s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001088s ]
+
+[ 2018-02-27T10:54:56+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001759s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.089300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089481s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002003s ]
+
+[ 2018-02-27T10:54:56+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.051517s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.020195s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000592s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000408s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.056814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000871s ]
+
+[ 2018-02-27T10:55:02+08:00 ] ::1 /hlweb/index.php/Admin/Adv/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001107s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_adv` [ RunTime:0.069118s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_adv` LIMIT 1   [ RunTime:0.004001s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_adv` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.001039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.104370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000654s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000923s ]
+
+[ 2018-02-27T10:55:28+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001506s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000242s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.053750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001216s ]
+
+[ 2018-02-27T10:55:29+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.063686s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.005709s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.021053s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.004221s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.049884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001232s ]
+
+[ 2018-02-27T10:55:35+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.047978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048067s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.087653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.087841s ]
+
+[ 2018-02-27T10:55:36+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.053448s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.004715s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.020594s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.021020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.044729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000940s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001057s ]
+
+[ 2018-02-27T10:55:42+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.050611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000879s ]
+
+[ 2018-02-27T10:55:43+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.045458s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.013411s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.020536s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.001132s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000218s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.050418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002158s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002290s ]
+
+[ 2018-02-27T11:02:52+08:00 ] ::1 /hlweb/index.php/Admin/Cate/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.120298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.120380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001805s ]
+
+[ 2018-02-27T11:02:54+08:00 ] ::1 /hlweb/index.php/Admin/Cate/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_cate` [ RunTime:0.022820s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_cate` LIMIT 1   [ RunTime:0.000525s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_cate` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.000797s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 30 行.
+NOTIC: [8] Undefined variable: name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 56 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 58 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 59 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.117363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.117505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001283s ]
+
+[ 2018-02-27T11:04:07+08:00 ] ::1 /hlweb/index.php/Admin/Article/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002665s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.285858s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_article` LIMIT 1   [ RunTime:0.007406s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_article` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.004670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 107 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 108 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.145753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145848s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2018-02-27T11:05:17+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002481s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000314s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000715s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.056813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000901s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001006s ]
+
+[ 2018-02-27T11:05:18+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.021204s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.002681s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.015316s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000479s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.041444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000979s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001103s ]
+
+[ 2018-02-27T11:05:20+08:00 ] ::1 /hlweb/index.php/Admin/Cate/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_cate` [ RunTime:0.038152s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_cate` LIMIT 1   [ RunTime:0.000371s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_cate` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.000441s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 30 行.
+NOTIC: [8] Undefined variable: name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 56 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 58 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 59 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1537dc1a60bf3f0c8cba043c2989173b.php 第 107 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.021073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002407s ]
+
+[ 2018-02-27T11:05:23+08:00 ] ::1 /hlweb/index.php/Admin/Cate/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.056065s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000683s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2018-02-27T11:05:29+08:00 ] ::1 /hlweb/index.php/Admin/Goods/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+NOTIC: [2048] Declaration of Admin\Controller\GoodsController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\xamp\htdocs\hlweb\Application\Admin\Controller\GoodsController.class.php 第 4 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_goods` [ RunTime:0.112321s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_goods` LIMIT 1   [ RunTime:0.000363s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_goods` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.002227s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 104 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 104 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 105 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 109 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 110 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 104 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 104 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 105 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 109 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 110 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 104 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 104 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 105 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 109 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 110 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.106250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001323s ]
+
+[ 2018-02-27T11:05:31+08:00 ] ::1 /hlweb/index.php/Admin/Goods/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001471s ]
+NOTIC: [2048] Declaration of Admin\Controller\GoodsController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\xamp\htdocs\hlweb\Application\Admin\Controller\GoodsController.class.php 第 4 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_cate` [ RunTime:0.032759s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_cate`  [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `wx_city` [ RunTime:0.066179s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_city`  [ RunTime:0.000484s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.071270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002734s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002857s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001169s ]
+
+[ 2018-02-27T11:05:33+08:00 ] ::1 /hlweb/index.php/Admin/City/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+NOTIC: [2048] Declaration of Admin\Controller\CityController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\xamp\htdocs\hlweb\Application\Admin\Controller\CityController.class.php 第 86 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_city` [ RunTime:0.026019s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_city` LIMIT 1   [ RunTime:0.009910s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_city` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.006430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 30 行.
+NOTIC: [8] Undefined variable: name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 56 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 58 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 59 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 102 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 103 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\f8c2417b5d036e20f93d54c2e317806d.php 第 107 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.092884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2018-02-27T11:05:35+08:00 ] ::1 /hlweb/index.php/Admin/Supplier/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001323s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_supplier` [ RunTime:0.096897s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_supplier` LIMIT 1   [ RunTime:0.000491s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_supplier` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.000685s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 107 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\fbec3079295b2d9b47502feb02e070b6.php 第 108 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.113405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2018-02-27T11:05:47+08:00 ] ::1 /hlweb/index.php/Admin/Activity/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_activity` [ RunTime:0.141164s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_activity` LIMIT 1   [ RunTime:0.001903s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_activity` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.000464s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 107 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 108 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 107 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 108 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 107 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\c8d84a2d51a6dbf36e8ef99e6375e8a9.php 第 108 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.116904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116975s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2018-02-27T11:06:29+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000395s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.040773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004507s ]
+
+[ 2018-02-27T11:06:31+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.043261s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.040732s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.032529s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.041003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.050616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001672s ]
+
+[ 2018-02-27T11:07:16+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000303s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000405s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.039979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040051s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000364s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001096s ]
+
+[ 2018-02-27T11:07:18+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002356s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.024643s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.008225s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.066141s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.017572s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.068243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002145s ]
+
+[ 2018-02-27T11:08:31+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.036520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002801s ]
+
+[ 2018-02-27T11:08:32+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001448s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.023449s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.001605s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.015337s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000465s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.116848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002467s ]
+
+[ 2018-02-27T11:09:39+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001327s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.049734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001497s ]
+
+[ 2018-02-27T11:09:41+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.059843s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.019764s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000687s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.095407s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.095502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002234s ]
+
+[ 2018-02-27T11:10:20+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.045230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.005178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005385s ]
+
+[ 2018-02-27T11:10:22+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.076334s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.015937s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.058792s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.015744s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.049881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001668s ]
+
+[ 2018-02-27T11:12:55+08:00 ] ::1 /hlweb/index.php/Admin/Article/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003543s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.092257s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_article` LIMIT 1   [ RunTime:0.032251s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_article` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.007741s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 107 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 108 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.018621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001204s ]
+
+[ 2018-02-27T11:12:57+08:00 ] ::1 /hlweb/index.php/Admin/Article/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.097690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2018-02-27T11:14:07+08:00 ] ::1 /hlweb/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.027094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001508s ]
+
+[ 2018-02-27T11:14:13+08:00 ] ::1 /hlweb/index.php/Admin/Public/checklogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004389s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_base` [ RunTime:0.061370s ]
+ERR: 1146:Table 'cxjp.wx_base' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `wx_base`
+SQL: SHOW COLUMNS FROM `wx_adminer` [ RunTime:0.259621s ]
+SQL: SELECT * FROM `wx_adminer` WHERE ( `name` = 'admin' ) LIMIT 1   [ RunTime:0.020989s ]
+
+[ 2018-02-27T11:14:20+08:00 ] ::1 /hlweb/index.php/Admin/Public/checklogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_base` [ RunTime:0.064743s ]
+ERR: 1146:Table 'cxjp.wx_base' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `wx_base`
+SQL: SHOW COLUMNS FROM `wx_adminer` [ RunTime:0.111327s ]
+SQL: SELECT * FROM `wx_adminer` WHERE ( `name` = 'root' ) LIMIT 1   [ RunTime:0.004129s ]
+
+[ 2018-02-27T11:14:29+08:00 ] ::1 /hlweb/index.php/Admin/Public/checklogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_base` [ RunTime:0.037210s ]
+ERR: 1146:Table 'cxjp.wx_base' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `wx_base`
+SQL: SHOW COLUMNS FROM `wx_adminer` [ RunTime:0.083228s ]
+SQL: SELECT * FROM `wx_adminer` WHERE ( `name` = 'admin' ) LIMIT 1   [ RunTime:0.002595s ]
+
+[ 2018-02-27T11:14:36+08:00 ] ::1 /hlweb/index.php/Admin/Public/checklogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003926s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004089s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_base` [ RunTime:0.046739s ]
+ERR: 1146:Table 'cxjp.wx_base' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `wx_base`
+SQL: SHOW COLUMNS FROM `wx_adminer` [ RunTime:0.078216s ]
+SQL: SELECT * FROM `wx_adminer` WHERE ( `name` = 'root' ) LIMIT 1   [ RunTime:0.030310s ]
+
+[ 2018-02-27T11:14:37+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.010014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011175s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000593s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000898s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.681818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.681919s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.019768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.019869s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001170s ]
+
+[ 2018-02-27T11:14:38+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.117062s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.007431s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.034310s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.012057s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000291s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000418s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.075401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075481s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000396s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002822s ]
+
+[ 2018-02-27T11:53:38+08:00 ] ::1 /hlweb/index.php/Admin/Adv/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_adv` [ RunTime:0.031000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_adv` LIMIT 1   [ RunTime:0.000527s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_adv` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.000491s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001215s ]
+
+[ 2018-02-27T11:53:43+08:00 ] ::1 /hlweb/index.php/Admin/Article/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.065046s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_article` LIMIT 1   [ RunTime:0.000666s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_article` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.000763s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 107 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 108 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.081598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081684s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2018-02-27T11:58:14+08:00 ] ::1 /hlweb/index.php/Admin/Db/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.015689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015822s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\469d7f247be4673b28a88138b00bf41e.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\469d7f247be4673b28a88138b00bf41e.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\469d7f247be4673b28a88138b00bf41e.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\469d7f247be4673b28a88138b00bf41e.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.062519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000918s ]
+
+[ 2018-02-27T11:58:15+08:00 ] ::1 /hlweb/index.php/Admin/Db/db_backup.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001382s ]
+NOTIC: [2] fread(): Length parameter must be greater than 0 E:\xamp\htdocs\hlweb\Application\Admin\Controller\DbController.class.php 第 33 行.
+
+[ 2018-02-27T11:59:45+08:00 ] ::1 /hlweb/index.php/Admin/Db/db_backup.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+NOTIC: [2] fread(): Length parameter must be greater than 0 E:\xamp\htdocs\hlweb\Application\Admin\Controller\DbController.class.php 第 33 行.
+
+[ 2018-02-27T12:00:49+08:00 ] ::1 /hlweb/index.php/Admin/Db/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\469d7f247be4673b28a88138b00bf41e.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\469d7f247be4673b28a88138b00bf41e.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\469d7f247be4673b28a88138b00bf41e.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\469d7f247be4673b28a88138b00bf41e.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.062151s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000883s ]
+
+[ 2018-02-27T13:09:40+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.311901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.311995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001553s ]
+
+[ 2018-02-27T13:09:41+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000830s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.116980s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.001083s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.017564s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000595s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.099623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099716s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001123s ]
+
+[ 2018-02-27T13:13:12+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.007680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.058328s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000814s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.007390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007520s ]
+
+[ 2018-02-27T13:13:14+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.094721s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.019917s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.066959s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000468s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000214s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.048324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000945s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001077s ]
+
+[ 2018-02-27T13:13:44+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001888s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.047708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000843s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000928s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.011585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011701s ]
+
+[ 2018-02-27T13:13:46+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001672s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.118208s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.081498s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.283677s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.013320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000276s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000470s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.076599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002239s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002464s ]
+
+[ 2018-02-27T13:13:50+08:00 ] ::1 /hlweb/index.php/Admin/OrderGoods/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.134615s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_order_goods` LIMIT 1   [ RunTime:0.003205s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_order_goods` LIMIT 0,25   [ RunTime:0.008377s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 30 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.131833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000787s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2018-02-27T13:25:27+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.079162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079253s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004679s ]
+
+[ 2018-02-27T13:25:28+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.067687s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.013807s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.055157s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000402s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.050976s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001127s ]
+
+[ 2018-02-27T13:28:04+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000606s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000587s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2018-02-27T13:28:05+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.032706s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000592s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.041658s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000476s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.064470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064546s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2018-02-27T13:30:42+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.040599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040703s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001008s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001248s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001382s ]
+
+[ 2018-02-27T13:30:44+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.029234s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.016820s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.052665s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.001581s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.050445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000955s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001409s ]
+
+[ 2018-02-27T13:36:24+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003472s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.053885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.011991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012098s ]
+
+[ 2018-02-27T13:36:25+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001117s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.051038s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.026742s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.001032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.050998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000999s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001819s ]
+
+[ 2018-02-27T13:36:29+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.038142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038227s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001659s ]
+
+[ 2018-02-27T13:36:30+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001236s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.036314s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.064477s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000426s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.049833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003105s ]
+
+[ 2018-02-27T13:36:46+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.054580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001234s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001340s ]
+
+[ 2018-02-27T13:36:46+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.025706s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000736s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.012572s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.002203s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.042893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001203s ]
+
+[ 2018-02-27T13:37:19+08:00 ] ::1 /hlweb/index.php/Admin/OrderGoods/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.060591s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_order_goods` LIMIT 1   [ RunTime:0.001708s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_order_goods` LIMIT 0,25   [ RunTime:0.001663s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 30 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 117 行.
+NOTIC: [8] Use of undefined constant rstatus - assumed 'rstatus' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+NOTIC: [8] Undefined index: rstatus E:\xamp\htdocs\hlweb\runtime\Cache\Admin\5d453fc5b9952bcec93dda0c58d9e164.php 第 128 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.180480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.180556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000762s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001281s ]
+
+[ 2018-02-27T13:38:26+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.106178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000831s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2018-02-27T13:38:28+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.112331s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.009786s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.041894s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.002785s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.067494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000994s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001107s ]
+
+[ 2018-02-27T13:39:35+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.075457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000961s ]
+
+[ 2018-02-27T13:39:37+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.077215s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.020972s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.115955s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.043374s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000412s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.042225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001197s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001304s ]
+
+[ 2018-02-27T13:39:43+08:00 ] ::1 /hlweb/index.php/Admin/Adv/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_adv` [ RunTime:0.039807s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_adv` LIMIT 1   [ RunTime:0.011616s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_adv` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.001728s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 74 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\eecf382ac8a01f2a78856b93a7109daf.php 第 79 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.209374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.209504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2018-02-27T13:40:09+08:00 ] ::1 /hlweb/index.php/Admin/Article/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001635s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.061358s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_article` LIMIT 1   [ RunTime:0.000577s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_article` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.001860s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 103 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 107 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 108 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2018-02-27T13:40:17+08:00 ] ::1 /hlweb/index.php/Admin/Article/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.252212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.252293s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000737s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2018-02-27T13:46:36+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.047914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000670s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.011107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011216s ]
+
+[ 2018-02-27T13:46:37+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.134531s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.008911s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.041452s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.027491s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000214s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.083837s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2018-02-27T15:20:42+08:00 ] ::1 /hlweb/index.php/Admin/Adminer/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_adminer` [ RunTime:0.050342s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_adminer` LIMIT 1   [ RunTime:0.000877s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT * FROM `wx_adminer` ORDER BY create_time DESC LIMIT 0,25   [ RunTime:0.000556s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 30 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 72 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 72 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\xamp\htdocs\hlweb\runtime\Cache\Admin\ebe27b394f526df1f7bd81ba1acf4f2d.php 第 77 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.189466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.189556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001205s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001318s ]
+
+[ 2018-02-27T15:26:46+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.045722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.015143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015251s ]
+
+[ 2018-02-27T15:28:14+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001098s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043890s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.011511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011647s ]
+
+[ 2018-02-27T15:28:16+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.078743s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.001398s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.148011s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.015209s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.045919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000617s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001531s ]
+
+[ 2018-02-27T15:28:54+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.005655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005778s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000360s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.069323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000692s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001795s ]
+
+[ 2018-02-27T15:28:56+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.048224s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.021785s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.010441s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.099663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001662s ]
+
+[ 2018-02-27T15:28:57+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000339s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000443s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.121527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000701s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000778s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001198s ]
+
+[ 2018-02-27T15:28:59+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001414s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.032924s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.020604s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000403s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000268s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000535s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.075682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075844s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000921s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001176s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001286s ]
+
+[ 2018-02-27T15:29:32+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.042544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001109s ]
+
+[ 2018-02-27T15:29:34+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001256s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.072229s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.025155s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.086366s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000490s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.078178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001245s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001350s ]
+
+[ 2018-02-27T15:33:08+08:00 ] ::1 /hlweb/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003683s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000315s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000501s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.072497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.012319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012430s ]
+
+[ 2018-02-27T15:33:10+08:00 ] ::1 /hlweb/index.php/Admin/Index/shouye.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001166s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `wx_order_goods` [ RunTime:0.032605s ]
+SQL: SELECT SUM(order_money) AS tp_sum FROM `wx_order_goods` WHERE ( `pay_status` = 2 ) LIMIT 1   [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `wx_orders` [ RunTime:0.035223s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\xamp\htdocs\hlweb\ThinkPHP\Library\Think\Db.class.php 第 425 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_orders` LIMIT 1   [ RunTime:0.000536s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000219s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000483s ]
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 29 行.
+NOTIC: [8] Undefined variable: module_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: action_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+NOTIC: [8] Undefined variable: group_name E:\xamp\htdocs\hlweb\runtime\Cache\Admin\128ab25a5bcea3f3f4aba13f4e94dcd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.066447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066530s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001269s ]
+

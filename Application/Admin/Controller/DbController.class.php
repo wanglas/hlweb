@@ -15,7 +15,7 @@ class DbController extends CommonAdminController {
     //数据库配置
     $cfg_dbuser='root';
     $cfg_dbpwd='54wanglas';
-    $cfg_dbname='ykwx';
+    $cfg_dbname='cxjp';
     // 设置SQL文件保存文件名
     $filename=date("Y-m-d_H-i-s")."-".$cfg_dbname.".sql";
     $folder='db';
