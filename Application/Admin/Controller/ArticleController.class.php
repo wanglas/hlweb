@@ -30,7 +30,7 @@ class ArticleController extends CommonAdminController {
         // 上传文件
         $info   =   $upload->upload();
         if(!$info) {// 上传错误提示错误信息
-            $this->error($upload->getError());
+            // $this->error($upload->getError());
         }else{// 上传成功 获取上传文件信息
             foreach($info as $file){
                 echo $file['savepath'].$file['savename'];
@@ -42,7 +42,9 @@ class ArticleController extends CommonAdminController {
             $this->error($article->getError());
         }
         $article->img=$imgurl;
-        $article->create_time=date('Y-m-d H:i:s');
+        $cid=I('post.cid');
+        $article->cname=get_name('article_cate',$cid);
+        $article->create_time=time();
         $list=$article->add();
         if($list==false){
             $this->error(L('ADD_ERROR'));
@@ -50,6 +52,10 @@ class ArticleController extends CommonAdminController {
           $this->success(L('ADD_SUCCESS'))
         );
       }else{
+        // 分类列
+        $article_cate=M('article_cate');
+        $article_cate_list=$article_cate->field('id,name')->where(1)->select();
+        $this->assign('article_cate_list',$article_cate_list);
         $this->display();
       }
     }
@@ -78,16 +84,24 @@ class ArticleController extends CommonAdminController {
           $this->error($article->getError());
       }
       $article->img=$imgurl;
-      $article->update_time=date('Y-m-d H:i:s');
+      $cid=I('post.cid');
+      print_r($cid);
+      exit();
+      $article->cname=get_name('article_cate',$cid);
+      $article->update_time=time();
       $list=$article->save();
       if($list==false){
           $this->error(L('EDIT_ERROR'));
-      }else(
-        $this->success(L('EDIT_SUCCESS'))
-      );
+      }else{
+        $this->success(L('EDIT_SUCCESS'));
+      }
     }else{
       $id=I('id');
       $article_detail=$article->where('id='.$id)->find();
+      // 分类列
+      $article_cate=M('article_cate');
+      $article_cate_list=$article_cate->field('id,name')->where(1)->select();
+      $this->assign('article_cate_list',$article_cate_list);
       $this->assign('article_detail',$article_detail);
       $this->display();
     }
@@ -96,7 +110,7 @@ class ArticleController extends CommonAdminController {
   public function delete(){
     $article=M('article');
     $id=I('id');
-    $delete=$article->where('id='.$id)->setField('status',-1);
+    $delete=$article->where('id='.$id)->delete();
     if($delete==false){
         $this->error(L('REMOVE_ERROR'));
     }else(

@@ -28,5 +28,5 @@ require './ThinkPHP/ThinkPHP.php';
 
 /**
 *  Auth: wanglas
-*  Date:2018.1.6
+*  Date:2018.1.17
 **/

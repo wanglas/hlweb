@@ -37,7 +37,7 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
 <link rel="stylesheet" href="/hlweb/Public/kindeditor/themes/default/default.css" />
 <script charset="utf-8" src="/hlweb/Public/kindeditor/kindeditor-min.js"></script>
 <script charset="utf-8" src="/hlweb/Public/kindeditor/lang/zh_CN.js"></script>
-<form class="J_ajaxForms" name="form" id="form" action="<?php echo U('Article/add');?>" method="POST" enctype="multipart/form-data">
+<form class="J_ajaxForms" name="form" id="form" action="<?php echo U('Article/edit');?>" method="post" enctype="multipart/form-data">
 	<div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-sm-12">
@@ -53,66 +53,68 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                             </a>
                         </div>
                     </div>
-                    <div class="ibox-content  form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">文章名称</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="title" class="form-control requireinput" value="">
-                            </div>
-                        </div>
+										<div class="ibox-content  form-horizontal">
+												<div class="form-group">
+														<label class="col-sm-2 control-label">文章名称</label>
+														<div class="col-sm-10">
+																<input type="text" name="title" class="form-control requireinput" value="<?php echo ($article_detail["title"]); ?>">
+														</div>
+												</div>
 										<div class="hr-line-dashed"></div>
-		 									<div class="form-group">
-		 										<label class="col-sm-2 control-label">文章分类</label>
-		 											<div class="col-sm-10">
-		 												<select name="cid" class="form-control">
-		 													<!-- 在select中添加multiple="multiple"属性，name改为数组name[],可以实现多选。 -->
-		 														<option value="0">==请选择==</option>
-		 															<?php if(is_array($article_cate_list)): foreach($article_cate_list as $key=>$acl): ?><option value="<?php echo ($acl["id"]); ?>" ><?php echo ($acl["name"]); ?></option><?php endforeach; endif; ?>
-		 												</select>
-		 											</div>
-		 									</div>
-                    <div class="hr-line-dashed"></div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label">文章分类</label>
+													<div class="col-sm-10">
+														<select name="cid" class="form-control">
+															<!-- 在select中添加multiple="multiple"属性，name改为数组name[],可以实现多选。 -->
+															<option value="<?php echo ($article_detail["cid"]); ?>"><?php echo ($article_detail["cname"]); ?></option>
+																<?php if(is_array($article_cate_list)): foreach($article_cate_list as $key=>$acl): ?><option value="<?php echo ($acl["id"]); ?>" ><?php echo ($acl["name"]); ?></option><?php endforeach; endif; ?>
+													</select>
+												</div>
+											</div>
+										<div class="hr-line-dashed"></div>
 												<div class="form-group">
 														<label class="col-sm-2 control-label">主要简介</label>
 														<div class="col-sm-10">
-																<input type="text" name="main" class="form-control requireinput" value="">
+																<input type="text" name="main" class="form-control requireinput" value="<?php echo ($article_detail["main"]); ?>">
 														</div>
 												</div>
 										<div class="hr-line-dashed"></div>
 												<div class="form-group">
 														<label class="col-sm-2 control-label">关键词</label>
 														<div class="col-sm-10">
-																<input type="text" name="key_words" class="form-control requireinput" value="">
+																<input type="text" name="key_words" class="form-control requireinput" value="<?php echo ($article_detail["key_words"]); ?>">
 														</div>
 												</div>
 										<div class="hr-line-dashed"></div>
 											<div class="form-group">
 													<label class="col-sm-2 control-label">文章头图</label>
 													<div class="col-sm-10">
+														<img style="width:80px;height:60px;" src="/hlweb/Uploads/<?php echo ($article_detail["img"]); ?>" alt="<?php echo ($article_detail["key_words"]); ?>">（如果没有重新上传图片，也需要重新上传原来的的图片，否则无法上传。）
 															<input type="file" name="img" value="">
 													</div>
 											</div>
 										<div class="hr-line-dashed"></div>
 												<div class="form-group">
-														<label class="col-sm-2 control-label">文章内容('如果发布后格式错乱，请点击清除html代码')</label>
+														<label class="col-sm-2 control-label">文章内容</label>
 														<div class="col-sm-10">
-															<textarea name="content" style="width:700px;height:200px;"></textarea>
+																<textarea name="content" rows="8" cols="80"><?php echo ($article_detail["content"]); ?></textarea>
 														</div>
 												</div>
 										<div class="hr-line-dashed"></div>
-                        <div class="form-group">
-                                <label class="col-sm-2 control-label">是否显示</label>
-
-                                <div class="col-sm-10">
-                                    <input type="radio" name="status" value="1">显示&nbsp;&nbsp;
-																		<input type="radio" name="status" value="0">不显示
-                                </div>
-                            </div>
-                    <div class="hr-line-dashed"></div>
+												<div class="form-group">
+																<label class="col-sm-2 control-label">是否显示</label>
+																<div class="col-sm-10">
+																		<input type="radio" name="status" value="1"<?php if($article_detail[status]==1) echo ' checked="checked"'; ?>>显示&nbsp;&nbsp;
+																		<input type="radio" name="status" value="0"<?php if($article_detail[status]==0) echo ' checked="checked"'; ?>>不显示
+																</div>
+														</div>
+										<div class="hr-line-dashed"></div>
                 	    <div class="form-group">
                             <div class="col-sm-4 col-sm-offset-2">
-                                <input type="submit" class="btn btn-w-m btn-success" " />
-                                <input type="reset" class="btn btn-w-m btn-default" " />
+                                <input name="id" value="<?php echo ($article_detail["id"]); ?>" type="hidden" />
+                                <input type="submit" class="btn btn-w-m btn-success" value="提交" />
+                                <input type="reset" class="btn btn-w-m btn-default" value="重置" />
+                                <!-- <button class="btn btn-white" type="reset">取消</button> -->
                             </div>
                         </div>
                     </div>

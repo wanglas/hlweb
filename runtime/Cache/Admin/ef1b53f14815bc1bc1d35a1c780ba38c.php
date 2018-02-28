@@ -26,7 +26,7 @@
 <script type="text/javascript">
 <!--
 //指定当前组模块URL地址
-var URL = '/hlweb/index.php/Admin/Article';var PUBLIC = '/hlweb/Public';var ROOT_PATH = '/hlweb';var APP = '/hlweb/index.php'+'/'+'<?php echo ($group_name); ?>';var STATIC = '__TMPL__Static';
+var URL = '/hlweb/index.php/Admin/ArticleCate';var PUBLIC = '/hlweb/Public';var ROOT_PATH = '/hlweb';var APP = '/hlweb/index.php'+'/'+'<?php echo ($group_name); ?>';var STATIC = '__TMPL__Static';
 var CURR_MODULE = '<?php echo ($module_name); ?>';var CURR_ACTION = '<?php echo ($action_name); ?>';var CURR_GROUP = '<?php echo ($group_name); ?>';
 //定义JS中使用的语言变量
 var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '<?php echo (L("AJAX_LOADING")); ?>';var AJAX_ERROR = '<?php echo (L("AJAX_ERROR")); ?>';var ALREADY_REMOVE = '<?php echo (L("ALREADY_REMOVE")); ?>';var SEARCH_LOADING = '<?php echo (L("SEARCH_LOADING")); ?>';var CLICK_EDIT_CONTENT = '<?php echo (L("CLICK_EDIT_CONTENT")); ?>';
@@ -37,13 +37,13 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
 <link rel="stylesheet" href="/hlweb/Public/kindeditor/themes/default/default.css" />
 <script charset="utf-8" src="/hlweb/Public/kindeditor/kindeditor-min.js"></script>
 <script charset="utf-8" src="/hlweb/Public/kindeditor/lang/zh_CN.js"></script>
-<form class="J_ajaxForms" name="form" id="form" action="<?php echo U('Article/add');?>" method="POST" enctype="multipart/form-data">
+<form class="J_ajaxForms" name="form" id="form" action="<?php echo U('ArticleCate/add');?>" method="POST" enctype="multipart/form-data">
 	<div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5><a href="<?php echo U('Article/index');?>">返回列表</a></h5>
+                        <h5><a href="<?php echo U('ArticleCate/index');?>">返回列表</a></h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -55,48 +55,16 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                     </div>
                     <div class="ibox-content  form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">文章名称</label>
+                            <label class="col-sm-2 control-label">分类名称</label>
                             <div class="col-sm-10">
-                                <input type="text" name="title" class="form-control requireinput" value="">
+                                <input type="text" name="name" class="form-control requireinput" value="">
                             </div>
                         </div>
-										<div class="hr-line-dashed"></div>
-		 									<div class="form-group">
-		 										<label class="col-sm-2 control-label">文章分类</label>
-		 											<div class="col-sm-10">
-		 												<select name="cid" class="form-control">
-		 													<!-- 在select中添加multiple="multiple"属性，name改为数组name[],可以实现多选。 -->
-		 														<option value="0">==请选择==</option>
-		 															<?php if(is_array($article_cate_list)): foreach($article_cate_list as $key=>$acl): ?><option value="<?php echo ($acl["id"]); ?>" ><?php echo ($acl["name"]); ?></option><?php endforeach; endif; ?>
-		 												</select>
-		 											</div>
-		 									</div>
                     <div class="hr-line-dashed"></div>
 												<div class="form-group">
-														<label class="col-sm-2 control-label">主要简介</label>
+														<label class="col-sm-2 control-label">排序</label>
 														<div class="col-sm-10">
-																<input type="text" name="main" class="form-control requireinput" value="">
-														</div>
-												</div>
-										<div class="hr-line-dashed"></div>
-												<div class="form-group">
-														<label class="col-sm-2 control-label">关键词</label>
-														<div class="col-sm-10">
-																<input type="text" name="key_words" class="form-control requireinput" value="">
-														</div>
-												</div>
-										<div class="hr-line-dashed"></div>
-											<div class="form-group">
-													<label class="col-sm-2 control-label">文章头图</label>
-													<div class="col-sm-10">
-															<input type="file" name="img" value="">
-													</div>
-											</div>
-										<div class="hr-line-dashed"></div>
-												<div class="form-group">
-														<label class="col-sm-2 control-label">文章内容('如果发布后格式错乱，请点击清除html代码')</label>
-														<div class="col-sm-10">
-															<textarea name="content" style="width:700px;height:200px;"></textarea>
+																<input type="text" name="sort" class="form-control requireinput" value="">
 														</div>
 												</div>
 										<div class="hr-line-dashed"></div>
@@ -120,25 +88,4 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
         </div>
     </div>
 </form>
-<script type="text/javascript">
-$(function(){
-	var editor;
-	KindEditor.ready(function(K) {
-			editor = K.create('textarea[name="content"]', {
-					allowFileManager : true,
-					autoHeightMode : true,
-					afterCreate : function() {
-							this.loadPlugin('autoheight');
-					},
-					afterUpload : function(url) {
-							var firstimageoption = '<option value="' + url + '">' + url + '</option>';
-							var selectoption = '<option value="' + url + '" selected="selected">' + url + '</option>';
-							$("#firstimage").append(firstimageoption);
-							$("#images").append(selectoption);
-					}
-			});
-});
-});
-
-</script>
 </html>

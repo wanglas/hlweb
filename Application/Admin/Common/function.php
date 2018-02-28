@@ -17,38 +17,18 @@
      return $result;
    }
  }
- /**
-  * 根据id获取该条信息所在表的name字段
-  *
-  * @access  public
-  * @param   $table表名   $id
-  *
-  * @return $name 单独一个name字段
-  */
-   function get_name($table,$id){
-    $model=M($table);
-    $map['status']=1;
-    $map['id']=$id;
-    $result=$model->where($map)->find();
-    $name=$result['name'];
-    if(empty($result)){
-      $this->error();
-    }else{
-      return $name;
-    }
-  }
   /**
-   * 根据id获取商品表的name字段
+   * 根据id获取表的name字段
    *
    * @access  public
-   * @param    $id
+   * @param    $id  $table
    *
    * @return $name 单独一个name字段
    */
-    function get_good_name($id){
-     $model=M('goods');
+    function get_name($table,$id){
+     $model=M($table);
      $map['id']=$id;
-     $result=$model->where($map)->find();
+     $result=$model->filed('id,name')->where($map)->find();
      $name=$result['name'];
      if(empty($result)){
        $this->error();
@@ -96,7 +76,7 @@
      }
    }
    /**
-    * 根据传入信息准确搜索(查询准确数据，唯一纯在)
+    * 根据传入信息准确搜索(查询准确数据，唯一存在)
     *
     * @access  public
     * @param   $table表名   $info   输入信息

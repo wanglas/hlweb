@@ -26,7 +26,7 @@
 <script type="text/javascript">
 <!--
 //指定当前组模块URL地址
-var URL = '/hlweb/index.php/Admin/Article';var PUBLIC = '/hlweb/Public';var ROOT_PATH = '/hlweb';var APP = '/hlweb/index.php'+'/'+'<?php echo ($group_name); ?>';var STATIC = '__TMPL__Static';
+var URL = '/hlweb/index.php/Admin/ArticleCate';var PUBLIC = '/hlweb/Public';var ROOT_PATH = '/hlweb';var APP = '/hlweb/index.php'+'/'+'<?php echo ($group_name); ?>';var STATIC = '__TMPL__Static';
 var CURR_MODULE = '<?php echo ($module_name); ?>';var CURR_ACTION = '<?php echo ($action_name); ?>';var CURR_GROUP = '<?php echo ($group_name); ?>';
 //定义JS中使用的语言变量
 var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '<?php echo (L("AJAX_LOADING")); ?>';var AJAX_ERROR = '<?php echo (L("AJAX_ERROR")); ?>';var ALREADY_REMOVE = '<?php echo (L("ALREADY_REMOVE")); ?>';var SEARCH_LOADING = '<?php echo (L("SEARCH_LOADING")); ?>';var CLICK_EDIT_CONTENT = '<?php echo (L("CLICK_EDIT_CONTENT")); ?>';
@@ -38,7 +38,7 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
         <div class="row">
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
-                    <div class="ibox-title">
+                    <!-- <div class="ibox-title">
                         <h5>搜索	</h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
@@ -50,14 +50,14 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                         </div>
                     </div>
                     <div class="ibox-content">
-                        <form action="<?php echo U('Article/index');?>" role="form" class="form-inline" method="post">
+                        <form action="<?php echo U('ArticleCate/index');?>" role="form" class="form-inline" method="post">
                             <div class="form-group">
                             <label for="exampleInputEmail2" class="sr-only">名称</label>
                             <input type="text" placeholder="文章标题"  name="name" value="" class="form-control">
                             </div>
                             <input class="btn btn-w-m btn-success" type="submit" value="搜索" />
                         </form>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -68,7 +68,7 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                     <div class="ibox-title">
                         <h5>
                             <div class="btn btn-success">
-                              <a href="<?php echo U('Article/add');?>" style="color:white;"><span class="bold">新增</span></a>
+                              <a href="<?php echo U('ArticleCate/add');?>" style="color:white;"><span class="bold">新增</span></a>
                             </div>
 
                             </h5>
@@ -87,9 +87,9 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                           <tread>
                             <tr width="100%">
                               <th width="5%">编号</th>
-                              <th width="15%">文章名称</th>
-                              <th width="15%">所属分类</th>
-                              <th width="15%">发布时间</th>
+                              <th width="15%">分类名称</th>
+                              <th width="15%">排序</th>
+                              <th width="15%">创建时间</th>
                               <th width="10%">是否启用</th>
                               <th width="15%">操作</th>
                             </tr>
@@ -97,15 +97,15 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                           <tbody>
                             <?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr>
                                 <td><?php echo ($vo["id"]); ?></td>
-                                <td><?php echo ($vo["title"]); ?></td>
-                                <td><?php echo ($vo["key_words"]); ?></td>
-                                <td><?php echo ($vo["create_time"]); ?></td>
+                                <td><?php echo ($vo["name"]); ?></td>
+                                <td><?php echo ($vo["sort"]); ?></td>
+                                <td><?php echo (date('Y/m/d H:i',$vo["create_time"])); ?></td>
                                 <td><?php if ($vo[status]==1){echo '启用';} if ($vo[status]==0) {echo '禁用';} ?></td>
                                 <!-- <td><?php if($vo[status] == 1): ?>启用<else condition="$vo[status] eq 0" />禁用<?php endif; ?> </td> -->
                                 <!-- 用[] -->
                                 <td>
-                                    <a href="<?php echo U('Article/edit',array('id'=>$vo[id]));?>">编辑</a>&nbsp;&nbsp;
-                                    <a href="<?php echo U('Article/delete',array('id'=>$vo[id]));?>">删除</a>
+                                    <a href="<?php echo U('ArticleCate/edit',array('id'=>$vo[id]));?>">编辑</a>&nbsp;&nbsp;
+                                    <a href="<?php echo U('ArticleCate/delete',array('id'=>$vo[id]));?>">删除</a>
                                 </td>
                               </tr><?php endforeach; endif; ?>
                           </tbody>
@@ -114,6 +114,6 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                 </div>
             </div>
         </div>
-	<div class="page1"><?php echo ($page); ?></div>
+	<div class="pager"><?php echo ($page); ?></div>
 </div>
 </html>

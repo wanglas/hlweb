@@ -37,11 +37,11 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
 
     <div class="middle-box text-center animated fadeInDown">
         <h2><?php echo ($msgTitle); ?></h2>
-        <h3 class="font-bold"><?php echo ($message); ?></h3>
+        <h3 class="font-bold"><?php echo ($error); ?></h3>
         <div class="error-desc">
             
-                               您的操作已经完成...
-            <?php if(!isset($closeWin)): ?><br/>系统将在 <strong style="color:blue;" class="wait-second"><?php echo ($waitSecond); ?></strong> 秒后自动返回
+                               服务器好像出错了...
+           <?php if(!isset($closeWin)): ?><br/>系统将在 <strong style="color:blue;" class="wait-second"><?php echo ($waitSecond); ?></strong> 秒后自动返回
             <p><a href="<?php echo($jumpUrl); ?>" class="btn btn-primary m-t">返回</a></p><?php endif; ?>
         </div>
     </div>

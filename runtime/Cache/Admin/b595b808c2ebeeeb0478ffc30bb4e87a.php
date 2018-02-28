@@ -84,7 +84,7 @@ SUBMENU_CONFIG = {
             "75": {
                 "id": "75",
                 "pid": "74",
-                "icon": "fa-pencil",
+                "icon": "fa-list",
                 "name": "\u4ea7\u54c1\u7c7b\u522b",
                 "url": "\/index.php\/Admin\/Orders\/menuid\/75.html",
                 "child": {
@@ -100,7 +100,7 @@ SUBMENU_CONFIG = {
             "77": {
                 "id": "77",
                 "pid": "74",
-                "icon": "fa-pencil",
+                "icon": "fa-info-circle",
                 "name": "\u4ea7\u54c1\u4fe1\u606f",
                 "url": "\/index.php\/Admin\/Orders\/menuid\/75.html",
                 "child": {
@@ -132,7 +132,7 @@ SUBMENU_CONFIG = {
           "7901": {
               "id": "7901",
               "pid": "79",
-              "icon": "fa-pencil",
+              "icon": "fa-list",
               "name": "\u65b0\u95fb\u5206\u7c7b",
               "url": "\/index.php\/Admin\/Orders\/menuid\/75.html",
               "child": {
@@ -141,21 +141,21 @@ SUBMENU_CONFIG = {
                       "pid": "7901",
                       "icon": "",
                       "name": "\u5206\u7c7b\u5217\u8868",
-                      "url": "<?php echo U('Article/index');?>"
+                      "url": "<?php echo U('ArticleCate/index');?>"
                   },
                   "790102": {
                       "id": "790102",
                       "pid": "7901",
                       "icon": "",
                       "name": "\u65b0\u589e\u5206\u7c7b",
-                      "url": "<?php echo U('Article/add');?>"
+                      "url": "<?php echo U('ArticleCate/add');?>"
                   },
               }
           },
             "7902": {
                 "id": "7902",
                 "pid": "79",
-                "icon": "fa-pencil",
+                "icon": "fa-file",
                 "name": "\u65b0\u95fb\u6c47\u603b",
                 "url": "\/index.php\/Admin\/Orders\/menuid\/75.html",
                 "child": {
