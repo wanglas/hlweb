@@ -99,7 +99,7 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                                 <td><?php echo ($vo["id"]); ?></td>
                                 <td><?php echo ($vo["name"]); ?></td>
                                 <td><?php echo ($vo["sort"]); ?></td>
-                                <td><?php echo (date('Y/m/d H:i',$vo["create_time"])); ?></td>
+                                <td><?php echo (date('Y/m/d H:i:s',$vo["create_time"])); ?></td>
                                 <td><?php if ($vo[status]==1){echo '启用';} if ($vo[status]==0) {echo '禁用';} ?></td>
                                 <!-- <td><?php if($vo[status] == 1): ?>启用<else condition="$vo[status] eq 0" />禁用<?php endif; ?> </td> -->
                                 <!-- 用[] -->
@@ -114,6 +114,6 @@ var CONFIRM_DELETE = '<?php echo (L("CONFIRM_DELETE")); ?>';var AJAX_LOADING = '
                 </div>
             </div>
         </div>
-	<div class="pager"><?php echo ($page); ?></div>
+	<div class="page1"><?php echo ($page); ?></div>
 </div>
 </html>

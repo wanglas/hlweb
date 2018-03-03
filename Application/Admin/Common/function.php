@@ -28,7 +28,7 @@
     function get_name($table,$id){
      $model=M($table);
      $map['id']=$id;
-     $result=$model->filed('id,name')->where($map)->find();
+     $result=$model->field('id,name')->where($map)->find();
      $name=$result['name'];
      if(empty($result)){
        $this->error();

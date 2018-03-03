@@ -83,13 +83,14 @@ class ArticleController extends CommonAdminController {
       if (false === $article->create()) {
           $this->error($article->getError());
       }
-      $article->img=$imgurl;
+      //获取分类名称和id
       $cid=I('post.cid');
-      print_r($cid);
-      exit();
-      $article->cname=get_name('article_cate',$cid);
+      $cname=get_name('article_cate',$cid);
+      $article->img=$imgurl;
+      $article->cname=$cname;
       $article->update_time=time();
       $list=$article->save();
+      echo 1;
       if($list==false){
           $this->error(L('EDIT_ERROR'));
       }else{

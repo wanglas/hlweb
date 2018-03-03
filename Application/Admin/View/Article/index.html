@@ -65,7 +65,7 @@
                                 <td>{$vo.id}</td>
                                 <td>{$vo.title}</td>
                                 <td>{$vo.key_words}</td>
-                                <td>{$vo.create_time}</td>
+                                <td>{$vo.create_time|date="Y/m/d H:i:s",###}</td>
                                 <td><php>if ($vo[status]==1){echo '启用';}</php><php>if ($vo[status]==0) {echo '禁用';}</php></td>
                                 <!-- <td><if condition="$vo[status] eq 1">启用<else condition="$vo[status] eq 0" />禁用</if> </td> -->
                                 <!-- 用[] -->
