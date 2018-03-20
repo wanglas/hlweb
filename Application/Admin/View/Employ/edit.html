@@ -1,0 +1,85 @@
+<include file="Public:header" />
+<link rel="stylesheet" href="__PUBLIC__/kindeditor/themes/default/default.css" />
+<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+<form class="J_ajaxForms" name="form" id="form" action="{:U('Employ/edit')}" method="post">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5><a href="{:U('Employ/index')}">返回列表</a></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+										<div class="ibox-content  form-horizontal">
+												<div class="form-group">
+														<label class="col-sm-2 control-label">岗位名称</label>
+														<div class="col-sm-10">
+																<input type="text" name="name" class="form-control requireinput" value="{$employ_detail.name}">
+														</div>
+												</div>
+										<div class="hr-line-dashed"></div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label">人数</label>
+													<div class="col-sm-10">
+														<input type="text" name="num" class="form-control requireinput" value="{$employ_detail.num}">
+													</div>
+											</div>
+										<div class="hr-line-dashed"></div>
+												<div class="form-group">
+														<label class="col-sm-2 control-label">文章内容</label>
+														<div class="col-sm-10">
+																<textarea name="content" rows="8" cols="80">{$employ_detail.content}</textarea>
+														</div>
+												</div>
+										<div class="hr-line-dashed"></div>
+												<div class="form-group">
+																<label class="col-sm-2 control-label">是否显示</label>
+																<div class="col-sm-10">
+																		<input type="radio" name="status" value="1"<php>if($employ_detail[status]==1) echo ' checked="checked"';</php>>启用&nbsp;&nbsp;
+																		<input type="radio" name="status" value="0"<php>if($employ_detail[status]==0) echo ' checked="checked"';</php>>不启用
+																</div>
+														</div>
+										<div class="hr-line-dashed"></div>
+                	    <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <input name="id" value="{$employ_detail.id}" type="hidden" />
+                                <input type="submit" class="btn btn-w-m btn-success" value="提交" />
+                                <input type="reset" class="btn btn-w-m btn-default" value="重置" />
+                                <!-- <button class="btn btn-white" type="reset">取消</button> -->
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+$(function(){
+	var editor;
+	KindEditor.ready(function(K) {
+			editor = K.create('textarea[name="content"]', {
+					allowFileManager : true,
+					autoHeightMode : true,
+					afterCreate : function() {
+							this.loadPlugin('autoheight');
+					},
+					afterUpload : function(url) {
+							var firstimageoption = '<option value="' + url + '">' + url + '</option>';
+							var selectoption = '<option value="' + url + '" selected="selected">' + url + '</option>';
+							$("#firstimage").append(firstimageoption);
+							$("#images").append(selectoption);
+					}
+			});
+});
+});
+
+</script>
+<include file="Public:footer" />

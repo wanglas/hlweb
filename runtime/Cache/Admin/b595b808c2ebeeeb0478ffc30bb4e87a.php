@@ -196,7 +196,7 @@ SUBMENU_CONFIG = {
                         "pid": "112",
                         "icon": "",
                         "name": "\u5c97\u4f4d\u5217\u8868",
-                        "url": "<?php echo U('Comment/index');?>"
+                        "url": "<?php echo U('Employ/index');?>"
                     },
                 }
             },
