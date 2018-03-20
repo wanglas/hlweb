@@ -221,8 +221,8 @@ SUBMENU_CONFIG = {
                         "id": "140",
                         "pid": "139",
                         "icon": "",
-                        "name": "\u57ce\u5e02\u5217\u8868",
-                        "url": "m2.php?m=DealCity&a=index&"
+                        "name": "\u670d\u52a1\u5668\u4fe1\u606f",
+                        "url": "http://localhost/hlweb/serverinfo.php"
                     },
                 }
             },
