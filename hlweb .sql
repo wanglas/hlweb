@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-06 03:28:14
+-- Generation Time: 2018-03-22 10:12:58
 -- 服务器版本： 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cxjp`
+-- Database: `hlweb`
 --
 
 -- --------------------------------------------------------
@@ -40,8 +40,8 @@ CREATE TABLE `wx_adminer` (
 --
 
 INSERT INTO `wx_adminer` (`id`, `name`, `pwd`, `create_time`, `update_time`, `status`) VALUES
-(1, 'admin2', 'admin2', 0, 1502078035, 1),
-(2, 'wanglas', '964c626716f3264666fced3f344edc84', 1502693822, 0, 1);
+(2, 'wanglas', '964c626716f3264666fced3f344edc84', 1502693822, 0, 1),
+(3, 'root', '932b19338fc62c7b98a1050be794b206', 1520049943, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -77,9 +77,11 @@ CREATE TABLE `wx_article` (
   `id` int(10) NOT NULL,
   `title` varchar(100) NOT NULL,
   `main` varchar(100) NOT NULL COMMENT '简介',
-  `content` varchar(1000) NOT NULL,
-  `create_time` varchar(100) NOT NULL,
-  `update_time` varchar(100) NOT NULL,
+  `content` text NOT NULL,
+  `cid` tinyint(5) NOT NULL COMMENT '文章分类id',
+  `cname` varchar(50) NOT NULL COMMENT '分类名称',
+  `create_time` int(10) NOT NULL,
+  `update_time` int(10) NOT NULL,
   `view_num` int(11) NOT NULL COMMENT '浏览量',
   `status` int(10) NOT NULL COMMENT '状态',
   `img` varchar(1000) NOT NULL COMMENT '图片路径',
@@ -90,8 +92,132 @@ CREATE TABLE `wx_article` (
 -- 转存表中的数据 `wx_article`
 --
 
-INSERT INTO `wx_article` (`id`, `title`, `main`, `content`, `create_time`, `update_time`, `view_num`, `status`, `img`, `key_words`) VALUES
-(3, '吃什么好', '吃吃吃吃吃', '阴虚体质者要注意自己的情绪，不要经常上火发怒，在饮食上要多吃甘凉滋润的食物，少吃哪些辛辣、燥热的食物，下面我们来看看阴虚体质的饮食调理方法。\r\n\r\n　　阴虚体质宜忌原则\r\n\r\n　　适宜的食物\r\n\r\n　　凡阴虚体质者，宜多吃些清补类食物，宜食甘凉滋润、生津养阴的食品，宜吃新鲜蔬菜水果或纤维素及维生素较高的食物，宜吃含优质蛋白质丰富的食品，如糯米、绿豆、藕、马兰头、大白菜、黑木耳、银耳、豆腐、甘蔗、梨、西瓜、黄瓜、百合、山药、乌贼等。这些食品性味多甘寒性凉，都有滋补机体阴气的功效。可适当配合补阴药膳有针对性地调养。\r\n\r\n　　忌吃食物\r\n\r\n　　忌吃辛辣刺激性食品，火锅最好少吃，鸡肉也不要多吃，忌吃温热香燥食品，忌吃煎炸炒爆的物品，忌吃性热上火食物，忌吃脂肪、碳水化合物含量过高的食物。阴虚火旺的人，应少吃辛辣的东西，煎、炸、爆、烤的食物也应少吃些，水果中龙眼肉、荔枝能不吃就不吃。阴虚是惟一不用忌食冷饮的，冷饮对阴虚有调整作用，当然，鼓励多吃但也不能过。\r\n\r\n　　阴虚之人宜常吃下列食物：\r\n\r\n　　1、铁皮石斛\r\n\r\n　　金元四大家之首，养阴派学说创始人朱丹溪指出：“人，阴常不足，阳常有余;阴虚难治，阳虚易补”，并在滋阴的药材中，首推铁皮石斛为“滋阴圣品”。在唐代医学经典《道藏》中，铁皮石斛被列为“中华九大仙草之首”，铁皮石斛能够滋养人体心、肝、脾、肺、肾五脏的阴虚，自唐宋以来，就一直被列为皇室贡品。上世纪八十年代，铁皮石斛被国家列为重点保护的珍惜濒危药用植物。目前由国家质检总局批准的唯一实施地理标志产品保护的铁皮石斛为位于浙江临安的天目山铁皮石斛。\r\n\r\n　　2、银耳\r\n\r\n　　有滋阴养胃、生津润燥的作用。银耳含有丰富的胶质、多种维生素和17种氨基酸、银耳多糖和蛋白质等营养物质，为民间最常用的清补食品，尤其是对肺阴虚和胃阴虚者，最为适宜。\r\n\r\n　　3、梨\r\n\r\n　　有生津、润燥、清热的作用，对肺阴虚，或热病后阴伤者最宜。《本草通玄》：“熟者滋五脏之阴”。《重庆堂随笔》：“温热燥病，及阴虚火炽，津液燔涸者，捣汁饮之立效。”\r\n\r\n　　4、鸭肉\r\n\r\n　　能滋阴养胃。《本草汇》：“滋阴除蒸”。《随息居饮食谱》：“滋五脏之阴，清虚劳之热，养胃生津”。民间也认为鸭是最理想的清补之物，阴虚体质宜食之。\r\n\r\n　　5、桑椹\r\n\r\n　　有滋阴补血之功，最能补肝肾之阴。《本草述》：', '2017-11-02 ', '2017-11-02 14:01:06', 0, 1, 'article/2017-11-02/59fab32f12fd2.jpg', '吃货');
+INSERT INTO `wx_article` (`id`, `title`, `main`, `content`, `cid`, `cname`, `create_time`, `update_time`, `view_num`, `status`, `img`, `key_words`) VALUES
+(6, '宝顺安恭贺新春2', '嘻嘻', '&lt;p style=&quot;background:white;&quot;&gt;\r\n	&lt;strong&gt;尊敬的客户：&lt;/strong&gt; \r\n&lt;/p&gt;\r\n&lt;p style=&quot;background:white;&quot;&gt;\r\n	您好&lt;span&gt;!&lt;/span&gt; \r\n&lt;/p&gt;\r\n&lt;p style=&quot;text-indent:25.0pt;background:white;&quot;&gt;\r\n	新年甫至，紫气东来，万象更新。沈阳宝顺安安全设备有限公司全体员工怀着无比感恩的心情，向您致以最亲切的问候和最诚挚的谢意&lt;span&gt;!&lt;/span&gt;在此，宝顺安给您拜年了！&lt;span&gt;&lt;/span&gt; \r\n&lt;/p&gt;\r\n&lt;p class=&quot;MsoNormal&quot;&gt;\r\n	&lt;img src=&quot;/hlweb/Public/Uploads/image/20180228/20180228092623_14097.jpg&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;168&quot; title=&quot;&quot; align=&quot;&quot; /&gt; \r\n&lt;/p&gt;\r\n&lt;p class=&quot;MsoNormal&quot; style=&quot;text-indent:25.0pt;&quot;&gt;\r\n	回望&lt;span&gt;2017&lt;/span&gt;年，在各界伙伴的鼎力相助下&lt;span&gt;,&lt;/span&gt;沈阳宝顺安安全设备有限公司得到了长足的发展，销售业绩蒸蒸日上，业务范围也进一步得到了扩展，这使我们对未来充满信心，并从中感受到收获的喜悦，也深深感谢支持我们的新朋老友！&lt;span&gt;&lt;/span&gt; \r\n&lt;/p&gt;\r\n&lt;p class=&quot;MsoNormal&quot; style=&quot;text-indent:25.0pt;&quot;&gt;\r\n	2017年是呼吸防护行业\r\n&lt;/p&gt;', 1, '行业动态', 1519804301, 1520049444, 0, 1, 'article/2018-02-28/5a965f8d49b4a.jpg', '新春快乐'),
+(8, '测试', '', '', 1, '行业动态', 1520049685, 0, 0, 0, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_article_cate`
+--
+
+CREATE TABLE `wx_article_cate` (
+  `id` int(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `sort` tinyint(5) NOT NULL COMMENT '排序',
+  `pid` int(11) NOT NULL,
+  `status` tinyint(2) NOT NULL COMMENT '状态',
+  `create_time` int(10) NOT NULL,
+  `update_time` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_article_cate`
+--
+
+INSERT INTO `wx_article_cate` (`id`, `name`, `sort`, `pid`, `status`, `create_time`, `update_time`) VALUES
+(1, '行业动态', 3, 0, 1, 1519783415, 1519790636),
+(2, '招聘计划', 2, 0, 1, 1519783441, 1519790653);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_auth_group`
+--
+
+CREATE TABLE `wx_auth_group` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `title` char(100) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `rules` text COMMENT '规则id'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户组表';
+
+--
+-- 转存表中的数据 `wx_auth_group`
+--
+
+INSERT INTO `wx_auth_group` (`id`, `title`, `status`, `rules`) VALUES
+(1, '超级管理员', 1, '6,96,20,1,2,3,4,5,64,21,7,8,9,10,11,12,13,14,15,16,123,124,125,19,104,105,106,107,108,118,109,110,111,112,117'),
+(2, '产品管理员', 1, '6,96,1,2,3,4,56,57,60,61,63,71,72,65,67,74,75,66,68,69,70,73,77,78,82,83,88,89,90,99,91,92,97,98,104,105,106,107,108,118,109,110,111,112,117,113,114'),
+(4, '文章编辑', 1, '6,96,57,60,61,63,71,72,65,67,74,75,66,68,69,73,79,80,78,82,83,88,89,90,99,100,97,98,104,105,106,107,108,118,109,110,111,112,117,113,114');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_auth_group_access`
+--
+
+CREATE TABLE `wx_auth_group_access` (
+  `uid` int(11) UNSIGNED NOT NULL COMMENT '用户id',
+  `group_id` int(11) UNSIGNED NOT NULL COMMENT '用户组id'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户组明细表';
+
+--
+-- 转存表中的数据 `wx_auth_group_access`
+--
+
+INSERT INTO `wx_auth_group_access` (`uid`, `group_id`) VALUES
+(88, 1),
+(89, 2),
+(89, 4);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_auth_rule`
+--
+
+CREATE TABLE `wx_auth_rule` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `pid` int(11) UNSIGNED NOT NULL DEFAULT '0' COMMENT '父级id',
+  `name` char(80) NOT NULL DEFAULT '' COMMENT '规则唯一标识',
+  `title` char(20) NOT NULL DEFAULT '' COMMENT '规则中文名称',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '状态：为1正常，为0禁用',
+  `type` tinyint(1) UNSIGNED NOT NULL DEFAULT '1',
+  `condition` char(100) NOT NULL DEFAULT '' COMMENT '规则表达式，为空表示存在就验证，不为空表示按照条件验证'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='规则表';
+
+--
+-- 转存表中的数据 `wx_auth_rule`
+--
+
+INSERT INTO `wx_auth_rule` (`id`, `pid`, `name`, `title`, `status`, `type`, `condition`) VALUES
+(1, 20, 'Admin/ShowNav/nav', '菜单管理', 1, 1, ''),
+(2, 1, 'Admin/Nav/index', '菜单列表', 1, 1, ''),
+(3, 1, 'Admin/Nav/add', '添加菜单', 1, 1, ''),
+(4, 1, 'Admin/Nav/edit', '修改菜单', 1, 1, ''),
+(5, 1, 'Admin/Nav/delete', '删除菜单', 1, 1, ''),
+(21, 0, 'Admin/ShowNav/rule', '权限控制', 1, 1, ''),
+(7, 21, 'Admin/Rule/index', '权限管理', 1, 1, ''),
+(8, 7, 'Admin/Rule/add', '添加权限', 1, 1, ''),
+(9, 7, 'Admin/Rule/edit', '修改权限', 1, 1, ''),
+(10, 7, 'Admin/Rule/delete', '删除权限', 1, 1, ''),
+(11, 21, 'Admin/Rule/group', '用户组管理', 1, 1, ''),
+(12, 11, 'Admin/Rule/add_group', '添加用户组', 1, 1, ''),
+(13, 11, 'Admin/Rule/edit_group', '修改用户组', 1, 1, ''),
+(14, 11, 'Admin/Rule/delete_group', '删除用户组', 1, 1, ''),
+(15, 11, 'Admin/Rule/rule_group', '分配权限', 1, 1, ''),
+(16, 11, 'Admin/Rule/check_user', '添加成员', 1, 1, ''),
+(19, 21, 'Admin/Rule/admin_user_list', '管理员列表', 1, 1, ''),
+(20, 0, 'Admin/ShowNav/config', '系统设置', 1, 1, ''),
+(6, 0, 'Admin/Index/index', '后台首页', 1, 1, ''),
+(64, 1, 'Admin/Nav/order', '菜单排序', 1, 1, ''),
+(96, 6, 'Admin/Index/welcome', '欢迎界面', 1, 1, ''),
+(104, 0, 'Admin/ShowNav/posts', '文章管理', 1, 1, ''),
+(105, 104, 'Admin/Posts/index', '文章列表', 1, 1, ''),
+(106, 105, 'Admin/Posts/add_posts', '添加文章', 1, 1, ''),
+(107, 105, 'Admin/Posts/edit_posts', '修改文章', 1, 1, ''),
+(108, 105, 'Admin/Posts/delete_posts', '删除文章', 1, 1, ''),
+(109, 104, 'Admin/Posts/category_list', '分类列表', 1, 1, ''),
+(110, 109, 'Admin/Posts/add_category', '添加分类', 1, 1, ''),
+(111, 109, 'Admin/Posts/edit_category', '修改分类', 1, 1, ''),
+(112, 109, 'Admin/Posts/delete_category', '删除分类', 1, 1, ''),
+(117, 109, 'Admin/Posts/order_category', '分类排序', 1, 1, ''),
+(118, 105, 'Admin/Posts/order_posts', '文章排序', 1, 1, ''),
+(123, 11, 'Admin/Rule/add_user_to_group', '设置为管理员', 1, 1, ''),
+(124, 11, 'Admin/Rule/add_admin', '添加管理员', 1, 1, ''),
+(125, 11, 'Admin/Rule/edit_admin', '修改管理员', 1, 1, '');
 
 -- --------------------------------------------------------
 
@@ -222,6 +348,29 @@ INSERT INTO `wx_comment` (`id`, `uid`, `uname`, `pid`, `oid`, `content`, `img`, 
 (101, 5, 'Yasuo', 92, 0, '用户中心下二级评论测试', '0', 0, 0, 1505619000, '', 1),
 (102, 5, 'Yasuo', 92, 0, '二次测试', '/yikuai/Uploads/comment/2017-09-17/59bdee7225a66.png', 0, 0, 1505619570, '', 1),
 (103, 5, 'Yasuo', 92, 0, '哈哈', '/yikuai/Uploads/comment/2017-09-17/59bdef2a75307.png', 0, 0, 1505619754, '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_employ`
+--
+
+CREATE TABLE `wx_employ` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL COMMENT '姓名',
+  `num` int(10) NOT NULL COMMENT '数量',
+  `content` text NOT NULL COMMENT '要求',
+  `status` tinyint(4) NOT NULL,
+  `create_time` int(10) NOT NULL COMMENT '创建时间',
+  `update_time` int(10) NOT NULL COMMENT '更新时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_employ`
+--
+
+INSERT INTO `wx_employ` (`id`, `name`, `num`, `content`, `status`, `create_time`, `update_time`) VALUES
+(1, '2', 2, '2', 1, 1521535219, 1521536003);
 
 -- --------------------------------------------------------
 
@@ -721,6 +870,33 @@ ALTER TABLE `wx_article`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `wx_article_cate`
+--
+ALTER TABLE `wx_article_cate`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_auth_group`
+--
+ALTER TABLE `wx_auth_group`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_auth_group_access`
+--
+ALTER TABLE `wx_auth_group_access`
+  ADD UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
+  ADD KEY `uid` (`uid`),
+  ADD KEY `group_id` (`group_id`);
+
+--
+-- Indexes for table `wx_auth_rule`
+--
+ALTER TABLE `wx_auth_rule`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
+
+--
 -- Indexes for table `wx_bank`
 --
 ALTER TABLE `wx_bank`
@@ -736,6 +912,12 @@ ALTER TABLE `wx_cate`
 -- Indexes for table `wx_comment`
 --
 ALTER TABLE `wx_comment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_employ`
+--
+ALTER TABLE `wx_employ`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -806,7 +988,7 @@ ALTER TABLE `wx_user`
 -- 使用表AUTO_INCREMENT `wx_adminer`
 --
 ALTER TABLE `wx_adminer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- 使用表AUTO_INCREMENT `wx_adv`
 --
@@ -816,7 +998,22 @@ ALTER TABLE `wx_adv`
 -- 使用表AUTO_INCREMENT `wx_article`
 --
 ALTER TABLE `wx_article`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- 使用表AUTO_INCREMENT `wx_article_cate`
+--
+ALTER TABLE `wx_article_cate`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- 使用表AUTO_INCREMENT `wx_auth_group`
+--
+ALTER TABLE `wx_auth_group`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- 使用表AUTO_INCREMENT `wx_auth_rule`
+--
+ALTER TABLE `wx_auth_rule`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 --
 -- 使用表AUTO_INCREMENT `wx_bank`
 --
@@ -832,6 +1029,11 @@ ALTER TABLE `wx_cate`
 --
 ALTER TABLE `wx_comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+--
+-- 使用表AUTO_INCREMENT `wx_employ`
+--
+ALTER TABLE `wx_employ`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- 使用表AUTO_INCREMENT `wx_goods`
 --
