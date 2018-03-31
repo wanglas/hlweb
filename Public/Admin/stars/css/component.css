@@ -18,7 +18,7 @@
 	padding: 35px;
 	color: #EEE;
 	position: absolute;
-	left: 50%;
+	left: 70%;
 	top:50%;
 	margin-left: -200px;
 	margin-top: -250px;
@@ -27,7 +27,7 @@
 	text-align: center;
 	height: 20px;
 	font: 20px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei",sans-serif;
-	color: #FFFFFF;
+	color: black;
 	height: 20px;
 	line-height: 20px;
 	padding:0 0 35px 0;
@@ -48,7 +48,8 @@
 	margin-bottom: 30px;
 	border-radius: 50px;
 	position: relative;
-	border: rgba(255,255,255,0.2) 2px solid !important;
+	/* border: rgba(255,255,255,0.2) 2px solid !important; */
+	background-color: white;
 }
 .u_user{
 	width: 25px;

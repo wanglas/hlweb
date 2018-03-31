@@ -238,21 +238,21 @@ SUBMENU_CONFIG = {
                         "pid": "144",
                         "icon": "",
                         "name": "\u6743\u9650\u5217\u8868\u000d\u000a",
-                        "url": "<?php echo U('Adminer/index');?>"
+                        "url": "<?php echo U('Rule/index');?>"
                     },
                     "146": {
                         "id": "146",
                         "pid": "144",
                         "icon": "",
                         "name": "\u7528\u6237\u7ec4 ",
-                        "url": "<?php echo U('Adminer/index');?>"
+                        "url": "<?php echo U('Rule/group');?>"
                     },
                     "147": {
                         "id": "147",
                         "pid": "144",
                         "icon": "",
                         "name": "\u7ba1\u7406\u5458\u5217\u8868",
-                        "url": "<?php echo U('Adminer/index');?>"
+                        "url": "<?php echo U('Rule/admin_user_list');?>"
                     }
                 }
             },
@@ -377,7 +377,7 @@ $('#side-menu li:first > ul li:first a').click();
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold"></strong></span>
-                                <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+                                <span class="text-muted text-xs block"><?php echo ($name); ?><b class="caret"></b></span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">

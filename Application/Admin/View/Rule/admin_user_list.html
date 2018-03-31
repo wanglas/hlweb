@@ -5,9 +5,9 @@
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <h5>
-                            <!-- <div class="btn btn-success">
-                              <a href="{:U('Suggest/add')}" style="color:white;"><span class="bold">新增</span></a>
-                            </div> -->
+                            <div class="btn btn-success">
+                              <a href="{:U('Rule/add_admin')}" style="color:white;"><span class="bold">新增</span></a>
+                            </div>
 
                             </h5>
                         <div class="ibox-tools">
@@ -24,25 +24,24 @@
                         <table class="table">
                           <tread>
                             <tr width="100%">
-                              <th width="10%">编号</th>
-                              <th width="25%">内容</th>
-                              <th width="20%">是否查阅</th>
+                              <!-- <th width="5%">编号</th> -->
+                              <th width="25%">用户名</th>
+                              <th width="25%">用户组</th>
                               <th width="20%">操作</th>
                             </tr>
                           </tread>
                           <tbody>
-                            <foreach name="list" item="vo">
-                              <tr>
-                                <td>{$vo.id}</td>
-                                <td>{$vo.content}</td>
-                                <td><php>if ($vo[status]==1){echo '未回复';}</php><php>if ($vo[status]==2) {echo '已回复';}</php></td>
-                                <!-- <td><if condition="$vo[status] eq 1">启用<else condition="$vo[status] eq 0" />禁用</if> </td> -->
-                                <!-- 用[] -->
-                                <td>
-                                    <a href="{:U('Suggest/edit',array('id'=>$vo[id]))}">编辑</a>&nbsp;&nbsp;
-                                    <a href="{:U('Suggest/delete',array('id'=>$vo[id]))}">删除</a>
-                                </td>
-                              </tr>
+                            <foreach name="data" item="v">
+                                <tr>
+                                  <!-- <td>{$vo.id}</td> -->
+                                  <td>{$v.username}</td>
+                                  <td>{$v.title}</td>
+                                  <!-- <td><if condition="$vo[status] eq 1">启用<else condition="$vo[status] eq 0" />禁用</if> </td> -->
+                                  <!-- 用[] -->
+                                  <td>
+                                    <a href="{:U('Admin/Rule/edit_admin',array('id'=>$v['id']))}">修改权限或密码</a>
+                                  </td>
+                                </tr>
                           </foreach>
                           </tbody>
                         </table>
@@ -52,4 +51,4 @@
         </div>
 	<div class="pager">{$page}</div>
 </div>
-<include file="Public:footer" />
+<include file="Public:footer"/>

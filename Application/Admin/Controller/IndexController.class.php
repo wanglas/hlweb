@@ -4,6 +4,8 @@ use Think\Controller;
 class IndexController extends CommonAdminController {
 //首页框架加载
     public function index(){
+      $name=session('admin_name');
+      $this->assign('name',$name);
 	    $this->display();
     }
 //默认首页

@@ -14,12 +14,12 @@ class CommonAdminController extends Controller {
       if(null==session("admin_name")){
           $this->redirect('Public/login');
         }
-          // $auth=new \Think\Auth();
-          // $rule_name=MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME;
-          // $result=$auth->check($rule_name,$_SESSION['user']['id']);
-          // if(!$result){
-          //   $this->error('您没有权限访问');
-          // }
+          $auth=new \Think\Auth();
+          $rule_name=MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME;
+          $result=$auth->check($rule_name,session('uid'));
+          if(!$result){
+            $this->error('您没有权限访问,请联系管理员！');
+          }
     }
 
   //   上线之后修改锁定ip登陆

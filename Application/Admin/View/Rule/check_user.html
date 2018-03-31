@@ -1,0 +1,81 @@
+<include file="Public:header" />
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>搜索	</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                  <form class="form-inline" action="">
+                    <div class="form-group">
+                    <label for="exampleInputEmail2" class="sr-only">用户名</label>
+                    <input class="form-control" type="text" name="username" value="{$Think.get.username}" />
+                    <input class="btn btn-sm btn-success" type="submit" value="搜索" />
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="ibox float-e-margins">
+                      <div class="ibox-title">
+                          <h5>
+
+                              </h5>
+                          <div class="ibox-tools">
+                              <a class="collapse-link">
+                                  <i class="fa fa-chevron-up"></i>
+                              </a>
+                              <a class="close-link">
+                                  <i class="fa fa-times"></i>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="ibox-content">
+                          <!-- addData_attribute:{$Think.lang.ADD}:id, -->
+                          <table class="table">
+                            <tread>
+                              <tr width="100%">
+                                <!-- <th width="5%">编号</th> -->
+                                <th width="25%">用户名</th>
+                                <th width="20%">操作</th>
+                              </tr>
+                            </tread>
+                            <tbody>
+                              <foreach name="user_data" item="v">
+                                  <tr>
+                                    <!-- <td>{$vo.id}</td> -->
+                                    <td>{$v['username']}</td>
+                                    <!-- <td><if condition="$vo[status] eq 1">启用<else condition="$vo[status] eq 0" />禁用</if> </td> -->
+                                    <!-- 用[] -->
+                                    <td>
+                                      <if condition="in_array($v['id'],$uids)">
+                                        已经是{$group_name}
+                                       <else />
+                                       <a href="{:U('Admin/Rule/add_user_to_group',array('uid'=>$v['id'],'group_id'=>$_GET['group_id'],'username'=>$_GET['username']))}">设为{$group_name}</a>
+                                      </if>
+                                    </td>
+                                  </tr>
+                            </foreach>
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  	<div class="pager">{$page}</div>
+  </div>
+
+  <include file="Public:footer"/>

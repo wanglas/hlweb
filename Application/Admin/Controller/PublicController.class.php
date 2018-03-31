@@ -10,14 +10,15 @@ class PublicController extends Controller{
   public function checklogin(){
     if(!empty($_POST)){
       $admin = new \Admin\Model\BaseModel;   //注意大小写
-      $name=I('post.name');
-      $pwd=MD5(I('post.pwd'));
+      $name=I('post.username');
+      $pwd=MD5(I('post.password'));
       $rst = $admin->checkNamePwd($name,$pwd);
       //  == 全等于
         if ($rst === false) {
             echo '用户名或密码错误';
           } else {
-            session("admin_name", $rst['name']);
+            session("admin_name", $rst['username']);
+            $_SESSION['uid']=$rst['id'];
             $this->redirect('Index/index', 0);
           }
       }
