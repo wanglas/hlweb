@@ -1,210 +1,171 @@
-
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>诚心家品</title>
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/index.css">
-<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_403143_nbpgsnnn79tqpvi.css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/swiper-3.4.2.min.css">
-<script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
-<script src="__PUBLIC__/Home/js/swiper-3.4.2.jquery.min.js"></script>
-<script src="__PUBLIC__/Home/js/jquery.lazyload.min.js"></script>
-<script type="text/javascript">
-		$(function(){
-      $('.swiper-slide').click(function(){
-        var url=$(this).attr('data-url');
-				window.location.href=url;
-      });
-    })
-		function chatQQ(){
-	window.location.href = "mqqwpa://im/chat?chat_type=wpa&uin=741105652&version=1&src_type=web&web_src=bjhuli.com";
-	}
-</script>
-<style media="screen">
-	.kefu{
-		height: 3rem;
-		float: right;
-	}
-	.kefu img{
-		float: left;
-    width: 1.5rem;
-    margin-top: 0.6rem;
-    margin-right: 1rem;
-	}
-</style>
-</head>
-<body>
-<!--该盒子一直包括到店长推荐-->
-<script>
-$("body").css({background:"#f4f4f4"})
-</script>
-<div class="width100 hidden bj_fff" style="">
-	<!--搜索框-->
-	<div class="width100 hidden bj_fff" style="height:88px;background-color:#00ccff;z-index:3;">
-		<div class="title">
-			<div class="title_left">
-				<img src="__PUBLIC__/Home/images/position.png" alt="">
-				<p id="position"></p>
-			</div>
-			<div class="title_right">
-				<p>诚心家品</p>
-			</div>
-			<a href="javascript:void(0);" onclick="chatQQ();">
-				<div class="kefu">
-					<img src="__PUBLIC__/Home/images/kefu.png" alt="">
-				</div>
-			</a>
-		</div>
-		<a href="{:U('Search/index')}">
-			<div class="center width96 border font14 c_66 hidden" style=" border:#00ccff;height:30px;margin-top:5px;border-radius:15px;line-height:28px;text-indent:10px;color:white;background-color:#87dff8;">
-				搜索/特色/蔬菜类
-				<img src="__PUBLIC__/Home/images/search.png" width="20" height="20" class="right" style="margin-top:5px;margin-right:10px;">
-			</div>
-		</a>
-	</div>
-<!--banner-->
-<div class="width100 hidden swiper-container" id="swiper1" style="max-height:197px;z-index:2;">
-	<div id="box" class="swiper-wrapper">
-		<foreach item="adv" name="adv">
-    	<img src="__ROOT__/Uploads/{$adv.img}" class="swiper-slide" alt="{$adv.name}" data-url="{$adv.url}">
-		</foreach>
-	  </div>
-    <div class="swiper-pagination"></div>
-</div>
-<script>
-$(function(){
-$("#box img").css({opacity:1})
-var mySwiper = new Swiper('#swiper1', {
-	pagination:'.swiper-pagination',
-	autoplay : 1000,
-	})
-})
-</script>
-  <!-- 区域块 -->
-	<div class="cate">
-		<div class="cate_in">
-			<p>品牌辽宁</p>
-		</div>
-	</div>
-<!-- 品牌辽宁 -->
-<div class="liaoning">
-		<a href="{:U('Map/map')}">
-			<img src="__PUBLIC__/Home/images/1.jpg" alt="品牌辽宁">
-		</a>
-</div>
-
-<!-- 千乡百品 -->
-<div class="cate">
-	<div class="cate_in_2">
-		<p>千乡百品</p>
-	</div>
-</div>
-<!-- 具体分类 -->
-	<div class="total_cate">
-		<foreach item="cate" name="cate">
-			<div class="total_cate_one">
-				<a href="{:U('Goods/index',array('id'=>$cate['id']))}">
-					<img src="__ROOT__/Uploads/{$cate.img}" alt="">
-					<div class="words">
-						<p>{$cate.name}</p>
-					</div>
-				</a>
-			</div>
-		</foreach>
-	</div>
-<!-- 礼尚往来 -->
-	<div class="cate">
-		<div class="cate_in_3" style="float:left;margin-bottom: 1rem;">
-			<p>礼上往来</p>
-		</div>
-	</div>
-	<!-- 内容 -->
-	<foreach item="al" name="activity_list">
-	<a href="{:U('Activity/index',array('gid'=>$al['gid']))}">
-		<div class="lswl_one">
-			<div class="img_c">
-				<img src="__ROOT__/Uploads/{$al.img}" alt="">
-			</div>
-			<div class="lswl_contain">
-				<div class="lswl_words">
-					<p>{$al.title}</p>
-					<p>截止日期：{$al.nosaletime|date='Y-m-d H:i:s',###}</p>
-				</div>
-				<p class="words_right">{$al.discount}折优惠</p>
-			</div>
-		</div>
-	</a>
-</foreach>
-</div>
-<div style="margin-top:5rem;">
-
-</div>
-<div id="footer">
-	<a href="{:U('Index/index')}" class="on">
-    	<p >
-				<i>
-					<img src="__PUBLIC__/Home/images/bot_1.png" alt="" >
-				</i>
-			</p>
-        <span style="color:#00ccff">首页</span>
-    </a>
-    <a href="{:U('Article/index')}">
-    	<p>
-				<i>
-					<img src="__PUBLIC__/Home/images/health.png" alt="" >
-				</i>
-			</p>
-        <span>健康</span>
-    </a>
-    <a href="{:U('Cart/index')}">
-			<p >
-				<i>
-					<img src="__PUBLIC__/Home/images/bot_3.png" alt="" >
-				</i>
-			</p>
-        <span>购物车</span>
-    </a>
-    <a href="{:U('User/index')}">
-			<p >
-				<i>
-					<img src="__PUBLIC__/Home/images/bot_4.png" alt="" >
-				</i>
-			</p>
-        <span>我的</span>
-    </a>
-</div>
-<!-- 定位模块 -->
-<script src="__PUBLIC__/Home/js/lazyload.js"></script>
-<div id="allmap" style="display:none;"></div>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FbzOyQ4YujPrZsxiQKoB07aB"></script>
-<script type="text/javascript">
-
-// 百度地图API功能
-var map = new BMap.Map("allmap");
-var point = new BMap.Point(116.331398,39.897445);
-map.centerAndZoom(point,12);
-  $('#position').html('定位中');
-var geolocation = new BMap.Geolocation();
-geolocation.getCurrentPosition(function(r){
-  if(this.getStatus() == BMAP_STATUS_SUCCESS){
-    var mk = new BMap.Marker(r.point);
-    map.addOverlay(mk);
-    map.panTo(r.point);
-    var gc = new BMap.Geocoder();
-    gc.getLocation(r.point, function(rs){
-       var addComp = rs.addressComponents;
-       var city=addComp.city;
-       $('#position').html(city);
-    });
-  }
-  else {
-    alert('failed'+this.getStatus());
-  }
-},{enableHighAccuracy: true})
-</script>
-</body>
-
-</html>
+<include file="Public:header" />
+      <!-- 导航条结束 -->
+      <!-- 轮播图 -->
+      <section class="cd-hero">
+        <ul class="cd-hero-slider">
+          <li class="selected">
+            <img src="__PUBLIC__/Home/images/eg1.jpg" alt="产品详情" class="lunbo">
+          </li>
+          <li>
+            <img src="__PUBLIC__/Home/images/eg2.jpg" alt="产品详情" class="lunbo">
+          </li>
+          <li>
+              <img src="__PUBLIC__/Home/images/eg3.jpg" alt="办公环境" class="lunbo">
+          </li>
+        </ul> <!-- .cd-hero-slider -->
+        <div class="cd-slider-nav">
+          <nav>
+            <span class="cd-marker item-1"></span>
+            <ul>
+              <li class="selected"><a href="#0" class="banner-product">产品介绍</a></li>
+              <li><a href="#0" class="banner-eq">设备介绍</a></li>
+              <li><a href="#0" class="banner-work">办公环境</a></li>
+            </ul>
+          </nav>
+        </div> <!-- .cd-slider-nav -->
+      </section> <!-- .cd-hero -->
+    <script src="__PUBLIC__/Home/js/main.js"></script> <!-- Resource jQuery -->
+    <!-- 轮播图结束 -->
+    <!-- 主要版块 -->
+    <div class="container">
+      <div class="row">
+        <!-- 关于我们 -->
+        <div class="col-md-3 aboutus">
+          <div class="aboutus-header">
+            <span class="title">
+              关于我们
+            </span>
+            <span class="title-eng">
+              /about us
+            </span>
+          </div>
+          <div class="aboutus-img">
+            <img src="__PUBLIC__/Home/images/aboutus.png" alt="关于我们">
+          </div>
+          <p class="aboutus-introduction">
+            <span class="title-two">企业文化：企业携手员工，同心共赢齐发展</span>
+            <span></span>
+          </p>
+          <p class="aboutus-introduction">
+            <span class="title-two">工作理念：为顾客所思，为顾客所想</span>
+            <span></span>
+          </p>
+          <p class="aboutus-introduction" style="margin-bottom:30px;">
+            <span class="title-two">竞争理念：没有忧患意识，就是忧患</span>
+            <span></span>
+          </p >
+        </div>
+        <!-- 新闻动态 -->
+        <div class="col-md-5 news">
+          <div class="news-header">
+            <span class="title">
+              新闻动态
+            </span>
+            <span class="title-eng">
+              /news information
+            </span>
+          </div>
+          <foreach name="news" item="vo">
+            <div class="news-single">
+              <p class="title-two-news">{$vo.title}({$vo.create_time|date="m月d日",###})</p>
+              <p class="title-two-news-word">{$vo.main}</p>
+            </div>
+            <div class="line"></div>
+          </foreach>
+        </div>
+        <!-- 图片轮播 -->
+        <div class="col-md-4 photo">
+          <video class="covervid-video" autoplay loop id="video" style="width:100%;margin-top: 10%;">
+             <source src="__PUBLIC__/Home/video/view.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="row">
+        <!-- 产品展示 -->
+        <div class="col-md-8 productshow">
+          <div class="productshow-header">
+            <span class="title">
+              产品展示
+            </span>
+            <span class="title-eng">
+              /product display
+            </span>
+          </div>
+          		<div class="container lunbo2">
+          		  <div id="single" class="carousel slide" data-ride="carousel" data-shift="1">
+          		    <div class="carousel-inner">
+          		      <ul class="row item active">
+          		        <li class="col-md-4 one">
+          		          <img src="__PUBLIC__/Home/images/product_1.png"  >
+          		        </li>
+          		        <li class="col-md-4 two">
+          		          <img src="__PUBLIC__/Home/images/product_2.png"  >
+          		        </li>
+          		        <li class="col-md-4 three">
+          		          <img src="__PUBLIC__/Home/images/product_3.png"  >
+          		        </li>
+          		      </ul>
+          		      <ul class="row item">
+          		        <li class="col-md-4 four">
+          		          <img src="__PUBLIC__/Home/images/product_1.png"  >
+          		        </li>
+          		        <li class="col-md-4 five">
+          		          <img src="__PUBLIC__/Home/images/product_2.png"  >
+          		        </li>
+          		        <li class="col-md-4 six">
+          		          <img src="__PUBLIC__/Home/images/product_3.png"  >
+          		        </li>
+          		      </ul>
+          		    </div>
+          		    <a class="carousel-control left" href="#single" data-slide="prev" style="background-image: none!important;"></a>
+          		    <a class="carousel-control right" href="#single" data-slide="next" style="background-image: none!important;"></a>
+          		  </div>
+          		</div>
+        </div>
+        <!-- 联系我们 -->
+        <div class="col-md-4 contactus">
+          <div class="contactus-header">
+            <span class="title">
+              联系我们
+            </span>
+            <span class="title-eng">
+              /contact us
+            </span>
+          </div>
+          <div class="contactus-img">
+            <img src="__PUBLIC__/Home/images/contactus.png" alt="联系我们">
+          </div>
+          <p class="title-two-contactus" style="margin-top:10px;">
+            <span class="title-two">公司地址：辽宁省沈阳市于洪区洪湖北街</span>
+            <span></span>
+          </p>
+          <p class="title-two-contactus">
+            <span class="title-two">联系电话：024-81083610</span>
+            <span></span>
+          </p>
+          <p class="title-two-contactus">
+            <span class="title-two">公司传真：</span>
+            <span></span>
+          </p >
+          <p style="margin-bottom:30px;">
+            <span class="title-two">公司邮箱：</span>
+            <span></span>
+          </p >
+        </div>
+      </div>
+      <div class="row">
+        <!-- 服务流程 -->
+        <div class="col-md-12 serviceflow">
+          <div class="serviceflow-header">
+            <span class="title">
+              服务流程
+            </span>
+            <span class="title-eng">
+              /service flow
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 主要版块结束 -->
+<include file="Public:footer" />

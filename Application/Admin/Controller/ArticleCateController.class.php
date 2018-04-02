@@ -56,7 +56,7 @@ class ArticleCateController extends CommonAdminController {
   public function delete(){
     $article_cate=M('article_cate');
     $id=I('id');
-    $delete=$article_cate->where('id='.$id)->setField('status',-1);
+    $delete=$article_cate->where('id='.$id)->delete();
     if($delete==false){
         $this->error(L('REMOVE_ERROR'));
     }else(

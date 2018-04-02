@@ -1,0 +1,59 @@
+<include file="Public:header" />
+    <!-- 导航条结束 -->
+    <!-- 招聘英才-->
+    <div class="container-fluid contactus-bg">
+      <div class="container-fluid contactus-content" style="margin-bottom:80px;">
+        <div class="col-md-12">
+          <p class="title-contactus-one">招聘英才</p>
+          <span class="title-contactus-two">recruiting talent</span>
+          <div>
+            <div class="container">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <foreach name="employ" item="vo">
+                  <li role="presentation" ><a href="#{$vo.id}" aria-controls="{$vo.id}" role="tab" data-toggle="tab">{$vo.name}</a></li>
+                </foreach>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <foreach name="employ" item="vo">
+                  <div role="tabpanel" class="tab-pane" id="{$vo.id}">
+                    <div class="employ-content">
+                      <p class="employ-req">
+                        <span>招聘人数：</span><span>{$vo.num}人</span>
+                      </p>
+                      <p class="employ-req">
+                        <span>工作地点：</span><span>沈阳市于洪区洪湖北街102-47号。</span>
+                      </p>
+                      <p class="employ-req">
+                        <span>福利待遇：</span><span>提供午餐，缴纳意外伤害险。</span>
+                      </p>
+                      <p class="employ-req">
+                        <span>任职要求：</span><span>{$vo.content}</span>
+                      </p>
+                    </div>
+                  </div>
+                </foreach>
+              </div>
+              <!-- 底部地址 -->
+              <div class="employ-add-info">
+                <div class="employ-add-info-1">
+                  <p>电话：024-81083610</p>
+                </div>
+                <div class="employ-add-info-2">
+                  <p>地址：辽宁省沈阳市于洪区洪湖北街</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部板块 -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.nav-tabs li:first').addClass('active');
+      $('.tab-pane:first').addClass('active');
+    });
+    </script>
+<include file="Public:footer" />

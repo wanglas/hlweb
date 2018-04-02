@@ -9,13 +9,10 @@
 
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class ProductController extends Controller {
     //首页
     public function index(){
-      $part='index';
-      //新闻数据
-      $news=M('article')->where('status=1')->limit('4')->order('create_time Desc')->select();
-      $this->assign('news',$news);
+      $part='product';
       $this->assign('name',$part);
 	    $this->display();
     }
@@ -40,8 +37,6 @@ class IndexController extends Controller {
     //招聘
     public function employ(){
       $part='employ';
-      $employ=M('employ')->where('status=1')->order('create_time Asc')->select();
-      $this->assign('employ',$employ);
       $this->assign('name',$part);
       $this->display();
     }
