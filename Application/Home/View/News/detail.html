@@ -1,56 +1,95 @@
-
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>诚心家品</title>
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/health_detail.css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/special/beauty.css">
-<script src="__PUBLIC__/Home/js/jquery-1.12.1.min.js"></script>
-<style media="screen">
-	body{
-		    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
-	}
-	p{    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;}
-</style>
-</head>
-
-<body>
-<!--该盒子一直包括到店长推荐-->
-<script>
-$("body").css({background:""})
-</script>
-<div class="width100 hidden bj_fff" style="">
-	<!--搜索框-->
-	<div class="width100 hidden bj_fff" style="height:3rem;background-color:#00ccff;">
-		<div class="title">
-			<div class="title_left">
-        <a href="javascript:history.go(-1);">
-          <img src="__PUBLIC__/Home/images/return.png" alt="">
-        </a>
-			</div>
-			<div class="title_right">
-				<p>{$detail.title}</p>
-			</div>
-		</div>
-	</div>
-  <!-- 商品图片 -->
-  <div class="goods_img">
-    <img src="__ROOT__/Uploads/{$detail.img}" alt="{$detail.key_words}" style="width:100%;">
-  </div>
-<!-- 商品详细开始 -->
-  <div class="container">
-    <div class="section_1">
-      {$str}
+<include file="Public:header2" />
+  <!-- 导航条结束 -->
+  <!-- 公司介绍 -->
+  <div class="container" style="min-height:650px;">
+   <div class="container-fluid successplan-content">
+    <div class="row successplan-row">
+     <div class="col-md-9 timeline " style="text-align:left;margin-top:30px;margin-bottom: 50px;" >
+      <!-- 案例header -->
+      <div class="successplan-header">
+       <span class="success-title"> 新闻动态 </span>
+       <span class="title-eng"> /news information </span>
+       <span class="success-small-title"> &middot; 首页 &gt; 新闻动态 &gt; 引导塑料制造行业的几个发展趋势</span>
+      </div>
+      <!-- 新闻内容 -->
+        <div class="page">
+					<div class="news-detail-title">
+						<p>引导塑料制造行业的几个发展趋势</p>
+					</div>
+					<div class="">
+						内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要内容概要
+					</div>
+        </div>
+     </div>
+     <!-- 重大事件 -->
+     <div class="col-md-3  important-event">
+       <div class="event-header">
+         重大事件
+       </div>
+       <div class="important-event-part">
+         <div class="event-one">
+           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
+           <div class="event-one-bg">
+             <p class="event-title">标题标题</p>
+             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
+             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
+           </div>
+         </div>
+         <div class="event-one">
+           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
+           <div class="event-one-bg">
+             <p class="event-title">标题标题</p>
+             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
+             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
+           </div>
+         </div>
+         <div class="event-one">
+           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
+           <div class="event-one-bg">
+             <p class="event-title">标题标题</p>
+             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
+             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
+           </div>
+         </div>
+         <div class="event-one">
+           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
+           <div class="event-one-bg">
+             <p class="event-title">标题标题</p>
+             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
+             <p class="event-look"><a href="detail.html">点击查看</a></p>
+           </div>
+         </div>
+         <div class="event-one">
+           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
+           <div class="event-one-bg">
+             <p class="event-title">标题标题</p>
+             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
+             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
+           </div>
+         </div>
+         <div class="event-one">
+           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
+           <div class="event-one-bg">
+             <p class="event-title">标题标题</p>
+             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
+             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
+           </div>
+         </div>
+         <div class="event-one">
+           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
+           <div class="event-one-bg">
+             <p class="event-title">标题标题</p>
+             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
+             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
+           </div>
+         </div>
+       </div>
+      	<div class="event-footer">
+           滑动查看更多
+         </div>
+      </div>
     </div>
+   </div>
   </div>
-</div>
-</body>
-
-</html>
+  <!-- 底部板块 -->
+<include file="Public:footer" />

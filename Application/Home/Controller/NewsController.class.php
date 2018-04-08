@@ -5,9 +5,11 @@ use Think\Controller;
 class NewsController extends Controller {
     // 文章首页
     public function index(){
+      $part='news';
       $article=M('article');
       $list=$article->where('status=1')->select();
       $this->assign('list',$list);
+      $this->assign('name',$part);
 	    $this->display();
     }
     // 文章首页

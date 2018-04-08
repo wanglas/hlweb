@@ -75,9 +75,23 @@
         </div>
         <!-- 图片轮播 -->
         <div class="col-md-4 photo">
-          <video class="covervid-video" autoplay loop id="video" style="width:100%;margin-top: 10%;">
-             <source src="__PUBLIC__/Home/video/view.mp4" type="video/mp4">
-          </video>
+          <div class="productshow-header">
+            <span class="title">
+              视频展示
+            </span>
+            <span class="title-eng">
+              /video display
+            </span>
+          </div>
+          <!-- <video id="my-video" class="video-js" controls preload="metadata" width="400" height="360"
+      		  poster="m.png" data-setup="{}">
+      			<source src="__PUBLIC__/Home/video/view.mp4" type="video/mp4">
+      		  </video> -->
+              <video class="covervid-video" autoplay loop id="video" style="width:100%;margin-top: 3%;">
+                <source src="__PUBLIC__/Home/video/view.mp4" type="video/mp4">
+                <source src="__PUBLIC__/Home/video/view.ogg" type="video/ogg">
+                <source src="__PUBLIC__/Home/video/view.mkv" type="video/mkv">
+              </video>
         </div>
       </div>
       <div class="row">
@@ -168,4 +182,12 @@
       </div>
     </div>
     <!-- 主要版块结束 -->
+    <!-- <script src="__PUBLIC__/Home/js/video.min.js"></script>
+    <script type="text/javascript">
+    var myPlayer = videojs('my-video');
+    videojs("my-video").ready(function(){
+      var myPlayer = this;
+      myPlayer.play();
+    });
+  </script> -->
 <include file="Public:footer" />

@@ -88,9 +88,9 @@ class ArticleController extends CommonAdminController {
       $cname=get_name('article_cate',$cid);
       $article->img=$imgurl;
       $article->cname=$cname;
+      $article->is_imp=I('post.is_imp');
       $article->update_time=time();
       $list=$article->save();
-      echo 1;
       if($list==false){
           $this->error(L('EDIT_ERROR'));
       }else{

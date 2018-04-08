@@ -93,7 +93,7 @@ SUBMENU_CONFIG = {
                         "pid": "75",
                         "icon": "",
                         "name": "\u5206\u7c7b\u5217\u8868\u000d\u000a",
-                        "url": "<?php echo U('OrderGoods/index');?>"
+                        "url": "<?php echo U('Cate/index');?>"
                     },
                 }
             },
@@ -109,14 +109,14 @@ SUBMENU_CONFIG = {
                         "pid": "77",
                         "icon": "",
                         "name": "\u4ea7\u54c1\u5217\u8868",
-                        "url": "<?php echo U('OrderGoods/index');?>"
+                        "url": "<?php echo U('Goods/index');?>"
                     },
                     "7702": {
                         "id": "7702",
                         "pid": "77",
                         "icon": "",
                         "name": "\u65b0\u589e\u4ea7\u54c1",
-                        "url": "<?php echo U('OrderGoods/index');?>"
+                        "url": "<?php echo U('Goods/add');?>"
                     },
                 }
             },

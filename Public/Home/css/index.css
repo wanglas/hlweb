@@ -456,9 +456,15 @@
 }
 /* 新闻动态 */
 .important-event{
-    margin-top: 100px;
+    margin-top: 40px;
     border:3px solid #36acff;
     padding: 0px;
+    overflow: hidden;
+}
+.important-event-part{
+  height: 900px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .event-header{
   font-size: 22px;
@@ -503,6 +509,13 @@
 }
 .event-look a{
     color: white;
+}
+/* 新闻动态详情页面 */
+.news-detail-title{
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 /* 手机尺寸适配 */
 @media(max-width:1170px) {

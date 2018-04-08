@@ -16,28 +16,4 @@ class ProductController extends Controller {
       $this->assign('name',$part);
 	    $this->display();
     }
-    //公司介绍
-    public function introduction(){
-      $part='introduction';
-      $this->assign('name',$part);
-      $this->display();
-    }
-    //成功案例
-    public function successplan(){
-      $part='successplan';
-      $this->assign('name',$part);
-      $this->display();
-    }
-    //联系我们
-    public function contactus(){
-      $part='contactus';
-      $this->assign('name',$part);
-      $this->display();
-    }
-    //招聘
-    public function employ(){
-      $part='employ';
-      $this->assign('name',$part);
-      $this->display();
-    }
 }
