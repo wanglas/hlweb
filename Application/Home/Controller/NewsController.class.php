@@ -14,12 +14,14 @@ class NewsController extends Controller {
     }
     // 文章首页
     public function detail(){
+      $part='news';
       $article=M('article');
       $id=I('id');
       $detail=$article->where('id='.$id)->find();
       $str=changeContent($detail['content']);
       $this->assign('detail',$detail);
       $this->assign('str',$str);
+      $this->assign('name',$part);
       $this->display();
     }
 }

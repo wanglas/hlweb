@@ -1,7 +1,7 @@
 <?php
 return array(
   /* URL访问方式设置 */
-  'URL_MODEL' => 1,
+  'URL_MODEL' => 2,
   'URL_HTML_SUFFIX' => '.html', // URL伪静态后缀设置
   'URL_ROUTER_ON'   => true,
   'URL_PATHINFO_DEPR' => '/', // PATHINFO模式下，各参数之间的分割符号

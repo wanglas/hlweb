@@ -1,4 +1,8 @@
 /* 顶部图片 */
+/* body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+} */
 #logo1{
   width: 300px;
   margin:20px 0px 0px 30px;
@@ -210,7 +214,7 @@
 .title-two-introduction-word{
   font-weight:bold;
   margin:20px 0px 150px 0px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* 联系我们页面 */
@@ -360,6 +364,10 @@
   background-image: url(../images/product-bg.png);
   background-size: cover;
 }
+.product-detail-bg{
+  background-image: none;
+  background-size: cover;
+}
 .product-row{
   background-color: white;
   text-align:left;
@@ -404,6 +412,12 @@
 }
 .product-bg-2{
   background-color:transparent;
+}
+.product-detail-bg-2{
+  background-color:white;
+}
+.product-detail-img{
+  width: 100%;
 }
 .product-all{
   font-size: 18px;
@@ -516,6 +530,11 @@
   text-align: center;
   font-size: 24px;
   font-weight: bold;
+}
+.news-detail-des{
+  color: #bbb;
+  text-align: right;
+  margin-right: 10%;
 }
 /* 手机尺寸适配 */
 @media(max-width:1170px) {
@@ -701,7 +720,7 @@
     padding:0px!important;
   }
   .page{
-    display: flex!important;
+    display: block;
   }
   .part-img-1{
     width: 100%;
@@ -709,6 +728,9 @@
   }
   .employ-add-info{
     min-height: 130px;
+  }
+  .timeline{
+    padding-right: 0px;
   }
 }
 /* 正常尺寸 */
