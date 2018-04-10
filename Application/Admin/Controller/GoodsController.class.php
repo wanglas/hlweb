@@ -21,8 +21,9 @@ class GoodsController extends CommonAdminController {
     }
 //添加
     public function add(){
+        $cate=M('cate');
       if(IS_POST){
-        $goods=D('goods');
+        $goods=M('goods');
 
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize   =     3145728 ;// 设置附件上传大小
@@ -42,9 +43,8 @@ class GoodsController extends CommonAdminController {
         if (false === $goods->create()) {
             $this->error($goods->getError());
         }
-        //插入数据
         $goods->img=$imgurl;
-        $goods->create_time=get_date();
+        $goods->create_time=time();
         $list=$goods->add();
         if($list==false){
             $this->error(L('ADD_ERROR'));
@@ -53,7 +53,6 @@ class GoodsController extends CommonAdminController {
         );
       }else{
         // 分类列
-        $cate=M('cate');
         $cates_list=$cate->where(1)->select();
         //城市列
         $city=M('city');
@@ -89,7 +88,7 @@ class GoodsController extends CommonAdminController {
       }
       //更新数据
       $goods->img=$imgurl;
-      $goods->update_time=get_date();
+      $goods->update_time=time();
       $list=$goods->save();
       if($list==false){
           $this->error(L('EDIT_ERROR'));
@@ -99,16 +98,10 @@ class GoodsController extends CommonAdminController {
     }else{
       $id=I('id');
       $good_detail=$goods->where('id='.$id)->find();
-      $catename=$cate->where('id='.$good_detail['cid'])->find();
+      $catename=$cate->where('id='.$good_detail['bid'])->find();
       $cates_list=$cate->where(1)->select();
-      //城市列
-      $city=M('city');
-      $city_list=$city->where(1)->select();
-      $cityname=$city->where('id='.$good_detail['city_id'])->find();
-      $this->assign('city_list',$city_list);
       $this->assign('cates_list',$cates_list);
       $this->assign('catename',$catename);
-      $this->assign('cityname',$cityname);
       $this->assign('good_detail',$good_detail);  //该手机信息
       $this->display();
     }

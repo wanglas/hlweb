@@ -3,6 +3,10 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 } */
+/* img:hover{
+  transition: all 0.6s;
+  transform: scale(1.1);
+} */
 #logo1{
   width: 300px;
   margin:20px 0px 0px 30px;
@@ -477,7 +481,6 @@
 }
 .important-event-part{
   height: 900px;
-  overflow-y: auto;
   overflow-x: hidden;
 }
 .event-header{
@@ -721,6 +724,7 @@
   }
   .page{
     display: block;
+    width: 100%;
   }
   .part-img-1{
     width: 100%;

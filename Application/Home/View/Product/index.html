@@ -5,30 +5,23 @@
         <div class="container-fluid product-bg-2">
         <div class="col-md-1 product-list">
           <div class="product-all">
-            <p>全部</p>
+            <a href="{:U('Product/index')}" style="color:white;">
+              <p>
+                全部
+              </p>
+            </a>
           </div>
-          <div class="product-type">
-            <div class="">
-              <div class="list-header">
-                <p>型号一</p>
-              </div>
-              <div class="list-item">
-                <p>LJ05</p>
-                <p>LJ06</p>
+          <foreach name="cate" item="vo">
+            <div class="product-type">
+              <div class="">
+                <div class="list-header">
+                  <a href="{:U('Product/index',array('bid'=>$vo[id]))}" style="color:white;">
+                    <p>{$vo.name}</p>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="product-type">
-            <div class="">
-              <div class="list-header">
-                <p>型号二</p>
-              </div>
-              <div class="list-item">
-                <p>LJ07</p>
-                <p>LJ08</p>
-              </div>
-            </div>
-          </div>
+          </foreach>
         </div>
           <div class="col-md-6 product-row">
             <!-- 案例header -->
@@ -44,206 +37,32 @@
               </span>
             </div>
             <!-- 具体产品 -->
-            <div class="product-one">
-              <a href="detail.html">
-                <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              </a>
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
-            <div class="product-one">
-              <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
-            <div class="product-one">
-              <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
-            <div class="product-one">
-              <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
-            <div class="product-one">
-              <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
-            <div class="product-one">
-              <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
-            <div class="product-one">
-              <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
-            <div class="product-one">
-              <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
-            <div class="product-one">
-              <img src="__PUBLIC__/Home/images/p-1.png" alt="" >
-              <p>阀座</p>
-              <table class="table table-bordered">
-                <tr>
-                  <td>零件代码</td>
-                  <td>LJ05</td>
-                </tr>
-                <tr>
-                  <td>材质</td>
-                  <td>聚丙烯</td>
-                </tr>
-                <tr>
-                  <td>颜色</td>
-                  <td>淡蓝色</td>
-                </tr>
-                <tr>
-                  <td>重量</td>
-                  <td>11（±0.2g）</td>
-                </tr>
-              </table>
-            </div>
+            <foreach name="list" item="vo">
+              <div class="product-one">
+                <a href="{:U('Product/detail',array('id'=>$vo[id]))}">
+                  <img src="__ROOT__/Uploads/{$vo.img}" alt="{$vo.name}" >
+                </a>
+                <p>{$vo.gname}</p>
+                <table class="table table-bordered">
+                  <tr>
+                    <td>零件代码</td>
+                    <td>{$vo.code}</td>
+                  </tr>
+                  <tr>
+                    <td>材质</td>
+                    <td>{$vo.caizhi}</td>
+                  </tr>
+                  <tr>
+                    <td>颜色</td>
+                    <td>{$vo.color}</td>
+                  </tr>
+                  <tr>
+                    <td>重量</td>
+                    <td>{$vo.weight}）</td>
+                  </tr>
+                </table>
+              </div>
+            </foreach>
           </div>
         </div>
       </div>

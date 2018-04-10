@@ -65,13 +65,17 @@
               /news information
             </span>
           </div>
-          <foreach name="news" item="vo">
-            <div class="news-single">
-              <p class="title-two-news">{$vo.title}({$vo.create_time|date="m月d日",###})</p>
-              <p class="title-two-news-word">{$vo.main}</p>
-            </div>
-            <div class="line"></div>
-          </foreach>
+            <marquee behavior="slide" direction="up">
+              <foreach name="news" item="vo">
+                <div class="news-single">
+                  <a href="{:U('News/detail',array('id'=>$vo[id]))}" style="color:black;">
+                    <p class="title-two-news">{$vo.title}({$vo.create_time|date="m月d日",###})</p>
+                    <p class="title-two-news-word">{$vo.main}</p>
+                  </a>
+                </div>
+                <div class="line"></div>
+              </foreach>
+            </marquee>
         </div>
         <!-- 图片轮播 -->
         <div class="col-md-4 photo">
@@ -160,11 +164,11 @@
             <span></span>
           </p>
           <p class="title-two-contactus">
-            <span class="title-two">公司传真：</span>
+            <span class="title-two">公司传真：024-81083610-5809</span>
             <span></span>
           </p >
           <p style="margin-bottom:30px;">
-            <span class="title-two">公司邮箱：</span>
+            <span class="title-two">公司邮箱：postmaster@honglicorp.com</span>
             <span></span>
           </p >
         </div>

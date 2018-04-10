@@ -53,9 +53,9 @@
                             <tr width="100%">
                               <th width="15%">编号</th>
                               <th width="15%">产品名称</th>
-                              <td width="10%">售卖价格</td>
-                              <td width="10%">市场价格</td>
-                              <th width="15%">是否上架</th>
+                              <th width="10%">产品代码</th>
+                              <th width="10%">材质</th>
+                              <th width="15%">是否显示</th>
                               <th width="15%">图片</th>
                               <th width="15%">操作</th>
                             </tr>
@@ -65,9 +65,9 @@
                               <tr>
                                 <td>{$vo.id}</td>
                                 <td>{$vo.name}</td>
-                                <td>￥{$vo.price}</td>
-                                <td>￥{$vo.market_price}</td>
-                                <td><php>if ($vo[status]==1){echo '上架';}</php><php>if ($vo[status]==0) {echo '下架';}</php></td>
+                                <td>{$vo.code}</td>
+                                <td>{$vo.caizhi}</td>
+                                <td><php>if ($vo[status]==1){echo '显示';}</php><php>if ($vo[status]==0) {echo '不显示';}</php></td>
                                 <!-- <td><if condition="$vo[status] eq 1">启用<else condition="$vo[status] eq 0" />禁用</if> </td> -->
                                 <!-- 用[] -->
                                 <td ><img style="width:80px;height:90px;"src="__ROOT__/Uploads/{$vo.img}" alt="{$vo.name}"></td>

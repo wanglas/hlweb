@@ -18,6 +18,6 @@ return array(
     'PAGE_LISTROWS'    => 30,     // 分页每页显示记录数
     'URL_HTML_SUFFIX'=>'html',
 		//自定义success和error的提示页面模板
-		'TMPL_ACTION_SUCCESS'=>'Public:success',
-		'TMPL_ACTION_ERROR'=>'Public:error',
+		'TMPL_ACTION_SUCCESS'=>'Public:dispatch_jump',
+		'TMPL_ACTION_ERROR'=>'Public:dispatch_jump',
 );

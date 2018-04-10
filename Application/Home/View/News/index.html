@@ -4,7 +4,7 @@
   <div class="container" style="min-height:650px;">
    <div class="container-fluid successplan-content">
     <div class="row successplan-row">
-     <div class="col-md-9 timeline " style="height:1100px;text-align:left;margin-top:30px;margin-bottom: 50px;overflow-y:auto;overflow-x:hidden;" >
+     <div class="col-md-9 timeline " style="height:1100px;text-align:left;margin-top:30px;margin-bottom:50px;overflow-x: hidden;" id="news-list" >
       <!-- 案例header -->
       <div class="successplan-header">
        <span class="success-title"> 新闻动态 </span>
@@ -132,72 +132,54 @@
      <!-- 重大事件 -->
      <div class="col-md-3  important-event">
        <div class="event-header">
-         重大事件
+         重大新闻
        </div>
-       <div class="important-event-part">
-         <div class="event-one">
-           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
-           <div class="event-one-bg">
-             <p class="event-title">标题标题</p>
-             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
+       <div class="important-event-part" id="important-event-list">
+         <foreach name="imp_list" item="imp">
+           <div class="event-one">
+             <img src="__ROOT__/Uploads/{$imp.img}" alt="">
+             <div class="event-one-bg">
+               <p class="event-title">{$imp.title}</p>
+               <span class="event-words">{$imp.main|mb_substr=0,30}……</span>
+               <p class="event-look"><a href="{:U('News/detail',array('id'=>$imp[id]))}">点击查看</a></p>
+             </div>
            </div>
-         </div>
-         <div class="event-one">
-           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
-           <div class="event-one-bg">
-             <p class="event-title">标题标题</p>
-             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
-           </div>
-         </div>
-         <div class="event-one">
-           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
-           <div class="event-one-bg">
-             <p class="event-title">标题标题</p>
-             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
-           </div>
-         </div>
-         <div class="event-one">
-           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
-           <div class="event-one-bg">
-             <p class="event-title">标题标题</p>
-             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-             <p class="event-look"><a href="detail.html">点击查看</a></p>
-           </div>
-         </div>
-         <div class="event-one">
-           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
-           <div class="event-one-bg">
-             <p class="event-title">标题标题</p>
-             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
-           </div>
-         </div>
-         <div class="event-one">
-           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
-           <div class="event-one-bg">
-             <p class="event-title">标题标题</p>
-             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
-           </div>
-         </div>
-         <div class="event-one">
-           <img src="__PUBLIC__/Home/images/news-1.png" alt="">
-           <div class="event-one-bg">
-             <p class="event-title">标题标题</p>
-             <span class="event-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-             <p class="event-look"><a href="{:U('News/detail')}">点击查看</a></p>
-           </div>
-         </div>
+         </foreach>
        </div>
-      <div class="event-footer">
-           滑动查看更多
-         </div>
+       <if condition="$imp_status eq 0">
+         <div class="event-footer">
+             暂无更多
+          </div>
+        <else/>
+          <div class="event-footer">
+             滑动查看更多
+           </div>
+         </if>
        </div>
     </div>
    </div>
   </div>
   <!-- 底部板块 -->
+<script src="__PUBLIC__/Home/js/jquery.nicescroll.js" charset="utf-8"></script>
+<script type="text/javascript">
+    $('#news-list').niceScroll({
+        cursorcolor: "#ccc",//#CC0071 光标颜色
+        cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+        touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+        cursorwidth: "5px", //像素光标的宽度
+        cursorborder: "0", // 	游标边框css定义
+        cursorborderradius: "5px",//以像素为光标边界半径
+        autohidemode: true //是否隐藏滚动条
+    });
+    $('#important-event-list').niceScroll({
+        cursorcolor: "#ccc",//#CC0071 光标颜色
+        cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+        touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+        cursorwidth: "5px", //像素光标的宽度
+        cursorborder: "0", // 	游标边框css定义
+        cursorborderradius: "5px",//以像素为光标边界半径
+        autohidemode: true //是否隐藏滚动条
+    });
+</script>
+
 <include file="Public:footer" />

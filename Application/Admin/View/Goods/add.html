@@ -21,16 +21,16 @@
                     </div>
                     <div class="ibox-content  form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">商品名称</label>
+                            <label class="col-sm-2 control-label">产品名称</label>
                             <div class="col-sm-10">
                                 <input type="text" name="name" class="form-control requireinput" value="">
                             </div>
                         </div>
 									 <div class="hr-line-dashed"></div>
 												<div class="form-group">
-																<label class="col-sm-2 control-label">商品分类</label>
+																<label class="col-sm-2 control-label">产品分类</label>
 																<div class="col-sm-10">
-																		<select name="cid" id="cateid"  class="form-control">
+																		<select name="bid" id="cateid"  class="form-control">
 																			<!-- 在select中添加multiple="multiple"属性，name改为数组name[],可以实现多选。 -->
 																						<option value="0">==请选择==</option>
 																					<foreach name="cates_list" item="cl">
@@ -41,81 +41,57 @@
 														</div>
                     <div class="hr-line-dashed"></div>
 										<div class="form-group">
-														<label class="col-sm-2 control-label">所属城市(没有不选)</label>
-														<div class="col-sm-10">
-																<select name="city_id" id="city_id"  class="form-control">
-																	<!-- 在select中添加multiple="multiple"属性，name改为数组name[],可以实现多选。 -->
-																				<option value="0">==请选择==</option>
-																			<foreach name="city_list" item="city">
-																				<option value="{$city.id}" >{$city.city_name}</option>
-																			</foreach>
-																</select>
-														</div>
-												</div>
-								<div class="hr-line-dashed"></div>
-										<div class="form-group">
-												<label class="col-sm-2 control-label">售卖价格</label>
+												<label class="col-sm-2 control-label">零件代码</label>
 												<div class="col-sm-10">
-														<input type="text" name="price" class="form-control requireinput" value="">
+														<input type="text" name="code" class="form-control requireinput" value="">
 												</div>
 										</div>
 							 		<div class="hr-line-dashed"></div>
 											<div class="form-group">
-													<label class="col-sm-2 control-label">市场价格</label>
+													<label class="col-sm-2 control-label">材质</label>
 													<div class="col-sm-10">
-															<input type="text" name="market_price" class="form-control requireinput" value="">
+															<input type="text" name="caizhi" class="form-control requireinput" value="">
 													</div>
 											</div>
 										<div class="hr-line-dashed"></div>
 										<div class="form-group">
-												<label class="col-sm-2 control-label">售卖规格(件，个，箱)</label>
+												<label class="col-sm-2 control-label">颜色</label>
 												<div class="col-sm-10">
-														<input type="text" name="sale_way_name" class="form-control requireinput" value="">
+														<input type="text" name="color" class="form-control requireinput" value="">
 												</div>
 										</div>
-									<div class="hr-line-dashed"></div>
+										<div class="hr-line-dashed"></div>
+										<div class="form-group">
+												<label class="col-sm-2 control-label">产品重量</label>
+												<div class="col-sm-10">
+														<input type="text" name="weight" class="form-control requireinput" value="">
+												</div>
+										</div>
+										<div class="hr-line-dashed"></div>
 											<div class="form-group">
-															<label class="col-sm-2 control-label">上传图片(头图)</label>
-																<div class="col-sm-10">
-																		<input type="file" name="img" value="">
-																</div>
+													<label class="col-sm-2 control-label">产品图片</label>
+													<div class="col-sm-10">
+														<input type="file" name="img" value="">
+													</div>
 											</div>
 											<div class="hr-line-dashed"></div>
 													<div class="form-group">
 																	<label class="col-sm-2 control-label">详情</label>
 																		<div class="col-sm-10">
 																				<textarea name="content" style="width:800px;height:400px;"></textarea>
-																				<select type="mutiple" name="firstimage" id="firstimage">
-																		        <option value="">请选择</option>
-																		    </select>
 																		    <br />
-																		    <label for="images" style="display:none">
+																		    <!-- <label for="images" style="display:none">
 																			     <select name="images[]" multiple="multiple" id="images">
 																			    </select>
-																				</label>
+																				</label> -->
 																		</div>
 													</div>
-										<div class="hr-line-dashed"></div>
-												<div class="form-group">
-														<label class="col-sm-2 control-label">人气（浏览量）</label>
-														<div class="col-sm-10">
-																<input type="text" name="view_num" class="form-control requireinput" value="0">
-														</div>
-												</div>
-											<div class="hr-line-dashed"></div>
-												<div class="form-group">
-														<label class="col-sm-2 control-label">销售量</label>
-														<div class="col-sm-10">
-																<input type="text" name="sale_num" class="form-control requireinput" value="0">
-														</div>
-												</div>
 											<div class="hr-line-dashed"></div>
                         <div class="form-group">
-                                <label class="col-sm-2 control-label">是否上架</label>
-
+                                <label class="col-sm-2 control-label">是否显示</label>
                                 <div class="col-sm-10">
-                                    <input type="radio" name="status" value="1" checked="checked">上架&nbsp;&nbsp;
-																		<input type="radio" name="status" value="0">下架
+                                    <input type="radio" name="status" value="1" checked="checked">显示&nbsp;&nbsp;
+																		<input type="radio" name="status" value="0">不显示
                                 </div>
                             </div>
                     <div class="hr-line-dashed"></div>

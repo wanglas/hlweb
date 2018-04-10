@@ -126,6 +126,7 @@ blockquote {
 	-webkit-box-shadow: 0 5px 20px #CCCCCC;
 	box-shadow: 0 5px 20px #CCCCCC; */
 	margin-top: 10px;
+	width:80%;
 }
 .about {
 	box-shadow: 0;

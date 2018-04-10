@@ -9,7 +9,9 @@
             <!-- 案例header -->
             <div class="successplan-header" style="margin-bottom:30px;">
               <span class="success-title">
-                产品介绍
+                <a href="{:U('Product/Index')}">
+                  产品介绍
+                </a>
               </span>
               <span class="title-eng">
                 /product introduction
@@ -22,14 +24,14 @@
             <div class="success-one" style="padding-left:15px;padding-right:15px;">
                 <div class="">
                   <span class="success-title">
-                    产品型号：LJ05
+                    产品型号：{$detail.name}
                   </span>
                 </div>
                 <div class="">
-                  <img src="__PUBLIC__/Home/images/product_1.png" alt="" class="product-detail-img">
+                  <img src="__ROOT__/Uploads/{$detail.img}" alt="" class="product-detail-img" alt="{$detail.name}">
                 </div>
                 <div class="">
-                  <img src="__PUBLIC__/Home/images/lj05.png" alt="" class="product-detail-img">
+                  {$str}
                 </div>
             </div>
           </div>
