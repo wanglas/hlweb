@@ -155,6 +155,7 @@ Slider
   position: relative;
   /* height: 360px; */
   overflow: hidden;
+  margin-bottom: 0px;
 }
 .cd-hero-slider li {
   position: absolute;
@@ -509,7 +510,7 @@ Slider navigation
 
 -------------------------------- */
 .cd-slider-nav {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   bottom: 0;
   z-index: 2;

@@ -4,7 +4,7 @@
   <div class="container" style="min-height:650px;">
    <div class="container-fluid successplan-content">
     <div class="row successplan-row">
-     <div class="col-md-9 timeline " style="height:1100px;text-align:left;margin-top:30px;margin-bottom:50px;overflow-x: hidden;" id="news-list" >
+     <div class="col-md-11 timeline " style="height:1100px;text-align:left;margin-top:30px;margin-bottom:50px;overflow-x:inherit;" id="news-list" >
       <!-- 案例header -->
       <div class="successplan-header">
        <span class="success-title"> 新闻动态 </span>
@@ -15,104 +15,28 @@
         <div class="page">
           <div class="box">
             <ul class="event_year">
-              <li class="current"><label for="2018">2018</label></li>
-              <li><label for="2017">2017</label></li>
-              <li><label for="2016">2016</label></li>
-              <li><label for="2015">2015</label></li>
+              <foreach name="arr" item="v">
+                <li><label for="{$v.year}">{$v.year}</label></li>
+              </foreach>
             </ul>
             <ul class="event_list">
-              <div>
-                <h3 id="2018">2018</h3>
-                <li> <span>3月2日</span>
-                  <p>
-                    <span class="news-one">
-                      <img src="__PUBLIC__/Home/images/news-2.png" alt="">
-                      <span class="news-title">引领未来塑料发展的几个趋势</span>
-                      <span class="news-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-                      <span class="news-look"><a href="{:U('News/detail')}">点击查看</a></span>
-                    </span>
-                  </p>
-                </li>
-                <li> <span>2月2日</span>
-                  <p>
-                    <span class="news-one">
-                      <img src="__PUBLIC__/Home/images/news-2.png" alt="">
-                      <span class="news-title">引领未来塑料发展的几个趋势</span>
-                      <span class="news-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-                      <span class="news-look"><a href="{:U('News/detail')}">点击查看</a></span>
-                    </span>
-                  </p>
-                </li>
-                <li> <span>1月2日</span>
-                  <p>
-                    <span class="news-one">
-                      <img src="__PUBLIC__/Home/images/news-2.png" alt="">
-                      <span class="news-title">引领未来塑料发展的几个趋势</span>
-                      <span class="news-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-                      <span class="news-look"><a href="{:U('News/detail')}">点击查看</a></span>
-                    </span>
-                  </p>
-                </li>
-              </div>
-              <div>
-                <h3 id="2017">2017</h3>
-                <li> <span>12月26日</span>
-                  <p>
-                    <span class="news-one">
-                      <img src="__PUBLIC__/Home/images/news-2.png" alt="">
-                      <span class="news-title">引领未来塑料发展的几个趋势</span>
-                      <span class="news-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-                      <span class="news-look"><a href="{:U('News/detail')}">点击查看</a></span>
-                    </span>
-                  </p>
-                </li>
-              </div>
-              <div>
-                <h3 id="2016">2016</h3>
-                <li> <span>3月2日</span>
-                  <p>
-                    <span class="news-one">
-                      <img src="__PUBLIC__/Home/images/news-2.png" alt="">
-                      <span class="news-title">引领未来塑料发展的几个趋势</span>
-                      <span class="news-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-                      <span class="news-look"><a href="{:U('News/detail')}">点击查看</a></span>
-                    </span>
-                  </p>
-                </li>
-                <li> <span>3月2日</span>
-                  <p>
-                    <span class="news-one">
-                      <img src="__PUBLIC__/Home/images/news-2.png" alt="">
-                      <span class="news-title">引领未来塑料发展的几个趋势</span>
-                      <span class="news-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-                      <span class="news-look"><a href="{:U('News/detail')}">点击查看</a></span>
-                    </span>
-                  </p>
-                </li>
-              </div>
-              <div>
-                <h3 id="2015">2015</h3>
-                <li> <span>3月2日</span>
-                  <p>
-                    <span class="news-one">
-                      <img src="__PUBLIC__/Home/images/news-2.png" alt="">
-                      <span class="news-title">引领未来塑料发展的几个趋势</span>
-                      <span class="news-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-                      <span class="news-look"><a href="{:U('News/detail')}">点击查看</a></span>
-                    </span>
-                  </p>
-                </li>
-                <li> <span>3月2日</span>
-                  <p>
-                    <span class="news-one">
-                      <img src="__PUBLIC__/Home/images/news-2.png" alt="">
-                      <span class="news-title">引领未来塑料发展的几个趋势</span>
-                      <span class="news-words">新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要新闻概要</span>
-                      <span class="news-look"><a href="{:U('News/detail')}">点击查看</a></span>
-                    </span>
-                  </p>
-                </li>
-              </div>
+              <foreach name="arr" item="v2">
+                <div>
+                  <h3 id={$v2.year}>{$v2.year}</h3>
+                  <foreach name="v2['article']" item="v2_a">
+                    <li> <span>{$v2_a.create_time|date="m月d日",###}</span>
+                    <p>
+                      <span class="news-one">
+                        <img src="__ROOT__/Uploads/{$v2_a.img}" alt="" width="150px;">
+                        <span class="news-title">{$v2_a.title}</span>
+                        <span class="news-words">{$v2_a.main}</span>
+                        <span class="news-look"><a href="{:U('News/detail',array('id'=>$v2_a[id]))}">点击查看</a></span>
+                      </span>
+                    </p>
+                  </li>
+                  </foreach>
+                </div>
+              </foreach>
               <div class="clearfix"></div>
             </ul>
           </div>
@@ -130,7 +54,7 @@
         </script>
      </div>
      <!-- 重大事件 -->
-     <div class="col-md-3  important-event">
+     <!-- <div class="col-md-3  important-event">
        <div class="event-header">
          重大新闻
        </div>
@@ -155,7 +79,7 @@
              滑动查看更多
            </div>
          </if>
-       </div>
+       </div> -->
     </div>
    </div>
   </div>
@@ -169,7 +93,7 @@
         cursorwidth: "5px", //像素光标的宽度
         cursorborder: "0", // 	游标边框css定义
         cursorborderradius: "5px",//以像素为光标边界半径
-        autohidemode: true //是否隐藏滚动条
+        autohidemode: "hidden" //是否隐藏滚动条
     });
     $('#important-event-list').niceScroll({
         cursorcolor: "#ccc",//#CC0071 光标颜色
@@ -178,8 +102,10 @@
         cursorwidth: "5px", //像素光标的宽度
         cursorborder: "0", // 	游标边框css定义
         cursorborderradius: "5px",//以像素为光标边界半径
-        autohidemode: true //是否隐藏滚动条
+        autohidemode: "hidden" //是否隐藏滚动条
     });
 </script>
-
+<script type="text/javascript">
+  $('.event_year li:first').addClass('current');
+</script>
 <include file="Public:footer" />

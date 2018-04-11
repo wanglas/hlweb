@@ -39,7 +39,7 @@
             <!-- 具体产品 -->
             <foreach name="list" item="vo">
               <div class="product-one">
-                <a href="{:U('Product/detail',array('id'=>$vo[id]))}">
+                <a href="{:U('Product/detail',array('id'=>$vo[gid]))}">
                   <img src="__ROOT__/Uploads/{$vo.img}" alt="{$vo.name}" >
                 </a>
                 <p>{$vo.gname}</p>
