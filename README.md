@@ -24,5 +24,6 @@ BSA123456
 
 
 ###零碎
-{$a|mb_substr=0,x}
-{$time|date="",###}
+1.{$a|mb_substr=0,x}
+2.{$time|date="",###}
+3.carousel 动态赋值 数据不显示需要动态添加active

@@ -4,12 +4,12 @@
   <div class="container" style="min-height:650px;">
    <div class="container-fluid successplan-content">
     <div class="row successplan-row">
-     <div class="col-md-9 timeline " style="text-align:left;margin-top:30px;margin-bottom: 50px;" >
+     <div class="col-md-11 timeline " style="text-align:left;margin-top:30px;margin-bottom: 50px;" >
       <!-- 案例header -->
       <div class="successplan-header">
-       <span class="success-title"> 新闻动态 </span>
+       <span class="success-title"> <a href="{:U('News/index')}" class="a_link">新闻动态 </a></span>
        <span class="title-eng"> /news information </span>
-       <span class="success-small-title"> &middot; 首页 &gt; 新闻动态 &gt; {$detail.title}</span>
+       <span class="success-small-title"> &middot; <a href="{:U('Index/index')}" class="a_link">首页</a>&gt; <a href="{:U('News/index')}" class="a_link">新闻动态</a> &gt; {$detail.title}</span>
       </div>
       <!-- 新闻内容 -->
         <div class="page" >
@@ -26,7 +26,7 @@
         </div>
      </div>
      <!-- 重大事件 -->
-     <div class="col-md-3  important-event">
+     <!-- <div class="col-md-3  important-event">
        <div class="event-header">
          重大新闻
        </div>
@@ -51,7 +51,7 @@
              滑动查看更多
            </div>
          </if>
-       </div>
+       </div> -->
     </div>
    </div>
   </div>

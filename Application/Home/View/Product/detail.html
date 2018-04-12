@@ -9,7 +9,7 @@
             <!-- 案例header -->
             <div class="successplan-header" style="margin-bottom:30px;">
               <span class="success-title">
-                <a href="{:U('Product/Index')}">
+                <a href="{:U('Product/Index')}" class="a_link">
                   产品介绍
                 </a>
               </span>
@@ -17,17 +17,17 @@
                 /product introduction
               </span>
               <span class="success-small-title" >
-                · 首页 > 产品详情
+                · <a href="{:U('Index/index')}" class="a_link">首页</a> > <a href="{:U('Product/Index')}" class="a_link">产品列表</a> > {$detail.name}
               </span>
             </div>
             <!-- 产品模块-->
-            <div class="success-one" style="padding-left:15px;padding-right:15px;">
-                <div class="">
+            <div class="success-one" style="padding-left:15px;padding-right:15px;margin-bottom:30px;">
+                <div class="" style="margin-bottom:20px;">
                   <span class="success-title">
                     产品型号：{$detail.name}
                   </span>
                 </div>
-                <div class="">
+                <div class="" style="margin-bottom:20px;">
                   <img src="__ROOT__/Uploads/{$detail.img}" alt="" class="product-detail-img" alt="{$detail.name}">
                 </div>
                 <div class="">

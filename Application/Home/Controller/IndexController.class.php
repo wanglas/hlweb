@@ -15,6 +15,17 @@ class IndexController extends Controller {
       $part='index';
       //新闻数据
       $news=M('article')->where('status=1')->limit('4')->order('create_time Desc')->select();
+      //产品轮播
+      $goods=M('goods')->where('status=1')->order('create_time Desc')->select();
+      $arr=array();
+      $length=count($goods)/3;
+      for($i=0;$i<$length;$i++)
+      {
+            $arr[] = array_slice($goods, $i * 3 ,3);
+      }
+      // print_r($arr);
+      // exit;
+      $this->assign('arr',$arr);
       $this->assign('news',$news);
       $this->assign('name',$part);
 	    $this->display();

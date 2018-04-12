@@ -93,11 +93,6 @@
       			  <source src="__PUBLIC__/Home/video/view.mp4" type="video/mp4">
               <source src="__PUBLIC__/Home/video/view.mkv" type="video/mkv">
       		  </video>
-              <!-- <video class="covervid-video" autoplay loop id="video" style="width:100%;margin-top: 3%;">
-                <source src="__PUBLIC__/Home/video/view.mp4" type="video/mp4">
-                <source src="__PUBLIC__/Home/video/view.ogg" type="video/ogg">
-                <source src="__PUBLIC__/Home/video/view.mkv" type="video/mkv">
-              </video> -->
         </div>
       </div>
       <div class="row">
@@ -114,28 +109,17 @@
           		<div class="container lunbo2">
           		  <div id="single" class="carousel slide" data-ride="carousel" data-shift="1">
           		    <div class="carousel-inner">
-          		      <ul class="row item active">
-          		        <li class="col-md-4 one">
-          		          <img src="__PUBLIC__/Home/images/product_1.png"  >
-          		        </li>
-          		        <li class="col-md-4 two">
-          		          <img src="__PUBLIC__/Home/images/product_2.png"  >
-          		        </li>
-          		        <li class="col-md-4 three">
-          		          <img src="__PUBLIC__/Home/images/product_3.png"  >
-          		        </li>
-          		      </ul>
-          		      <ul class="row item">
-          		        <li class="col-md-4 four">
-          		          <img src="__PUBLIC__/Home/images/product_1.png"  >
-          		        </li>
-          		        <li class="col-md-4 five">
-          		          <img src="__PUBLIC__/Home/images/product_2.png"  >
-          		        </li>
-          		        <li class="col-md-4 six">
-          		          <img src="__PUBLIC__/Home/images/product_3.png"  >
-          		        </li>
-          		      </ul>
+                    <foreach name="arr" item="vo">
+            		      <ul class="row item">
+                        <foreach name="vo" item="p_vo">
+              		        <li class="col-md-4">
+              		          <a href="{:U('Product/detail',array('id'=>$p_vo[id]))}">
+                              <img src="__ROOT__/Uploads/{$p_vo.img}" style="width:100%;">
+                            </a>
+              		        </li>
+                        </foreach>
+            		      </ul>
+                    </foreach>
           		    </div>
           		    <a class="carousel-control left" href="#single" data-slide="prev" style="background-image: none!important;"></a>
           		    <a class="carousel-control right" href="#single" data-slide="next" style="background-image: none!important;"></a>
@@ -168,22 +152,9 @@
             <span></span>
           </p >
           <p style="margin-bottom:30px;">
-            <span class="title-two">公司邮箱：postmaster@honglicorp.com</span>
+            <span class="title-two">公司邮箱：hongli@honglicorp.com</span>
             <span></span>
           </p >
-        </div>
-      </div>
-      <div class="row">
-        <!-- 服务流程 -->
-        <div class="col-md-12 serviceflow">
-          <div class="serviceflow-header">
-            <span class="title">
-              服务流程
-            </span>
-            <span class="title-eng">
-              /service flow
-            </span>
-          </div>
         </div>
       </div>
     </div>
@@ -195,5 +166,6 @@
       var myPlayer = this;
       myPlayer.play();
     });
+    $('.carousel-inner ul:first').addClass('active');
   </script>
 <include file="Public:footer" />

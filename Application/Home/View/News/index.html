@@ -24,7 +24,7 @@
                 <div>
                   <h3 id={$v2.year}>{$v2.year}</h3>
                   <foreach name="v2['article']" item="v2_a">
-                    <li> <span>{$v2_a.create_time|date="m月d日",###}</span>
+                    <li> <span>{$v2_a.create_time|date="m/d",###}</span>
                     <p>
                       <span class="news-one">
                         <img src="__ROOT__/Uploads/{$v2_a.img}" alt="" width="150px;">
