@@ -10,7 +10,7 @@ class PublicController extends Controller {
       }else{
         $this->redirect('User/index');
       }
-      }      
+      }
   //登陆加注册核对   判断是否已有该用户
    public function check_login(){
      $user=M('user');

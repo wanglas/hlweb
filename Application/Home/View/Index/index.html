@@ -70,7 +70,7 @@
                 <div class="news-single">
                   <a href="{:U('News/detail',array('id'=>$vo[id]))}" style="color:black;">
                     <p class="title-two-news">{$vo.title}({$vo.create_time|date="m月d日",###})</p>
-                    <p class="title-two-news-word">{$vo.main}</p>
+                    <p class="title-two-news-word">{$vo.main|mb_substr=0,65}……</p>
                   </a>
                 </div>
                 <div class="line"></div>
