@@ -11,8 +11,8 @@ root
 54wanglas
 
 ###后台密码
-root
-BSA123456
+wanglas
+54wanglas
 
 ###开发
 1.新闻模块，注意文章是否需要头图，缩率图等，等前台页面。
@@ -27,3 +27,7 @@ BSA123456
 1.{$a|mb_substr=0,x}
 2.{$time|date="",###}
 3.carousel 动态赋值 数据不显示需要动态添加active
+
+###
+网站public/Uploads下是editor上传的图片。
+网站Uploads/下是头图地址 {$.img}

@@ -24,7 +24,6 @@ class GoodsController extends CommonAdminController {
         $cate=M('cate');
       if(IS_POST){
         $goods=M('goods');
-
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize   =     3145728 ;// 设置附件上传大小
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
@@ -116,16 +115,5 @@ class GoodsController extends CommonAdminController {
     }else(
       $this->success(L('REMOVE_SUCCESS'))
     );
-  }
-  //手机属性预览
-  public function show(){
-    $id=I('id');   //手机id
-    $goods_property=D('goods_property');
-    $goods=D('goods');
-    $goodname=$goods->where('id='.$id)->find();   //手机表对应行
-    $list=$goods_property->where('gid='.$id)->select();
-    $this->assign('list',$list);
-    $this->assign('goodname',$goodname);
-    $this->display();
   }
 }
