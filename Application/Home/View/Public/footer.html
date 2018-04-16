@@ -14,14 +14,14 @@
         <li><span class="glyphicon glyphicon-hand-right"></span> 跟踪服务</li>
         <li><span class="glyphicon glyphicon-hand-right"></span> 疑难解答</li>
       </div>
-      <div class="col-md-3 col-sm-6 col-xs-6 footer-1-words" >
-        <h3>职务与晋级</h3>
-        <li><span class="glyphicon glyphicon-hand-right"></span> 营销经理</li>
-        <li><span class="glyphicon glyphicon-hand-right"></span> 质销经理</li>
-        <li><span class="glyphicon glyphicon-hand-right"></span> 技术研发</li>
+      <div class="col-md-3 col-sm-6 col-xs-6 footer-1-words">
+        <h3>招聘岗位</h3>
+        <foreach name="employ" item="e_l">
+          <li><span class="glyphicon glyphicon-hand-right"></span><a href="{:U('Employ/detail',array('id'=>$e_l[id]))}" class="a_link" style="color:white;">{$e_l.name}</a></li>
+        </foreach>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 footer-1-words" >
-        <h3>标准与认证</h3>
+        <h3>认证标准</h3>
         <li><span class="glyphicon glyphicon-hand-right"></span> LA</li>
         <li><span class="glyphicon glyphicon-hand-right"></span> ISO9000</li>
         <li><span class="glyphicon glyphicon-hand-right"></span> GB2826-2006</li>

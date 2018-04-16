@@ -19,4 +19,8 @@ class IndexController extends CommonAdminController {
      $this->assign('total_money',$total_money);
      $this->display();
    }
+   public function del(){
+     delFileByDir(RUNTIME_PATH);
+     $this->success('删除缓存成功！');
+   }
 }
