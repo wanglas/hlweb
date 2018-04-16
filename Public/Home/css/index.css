@@ -392,14 +392,15 @@
   margin-top: 80px;
 }
 .product-one{
-  width: 25%;
+  width: 245px;
   margin-top: 10px;
   margin-right: 40px;
-  margin-left: 20px;
+  margin-left: 8px;
   text-align: center;
   font-size: 14px;
   font-weight:bold;
   float:left;
+  min-height: 320px;
 }
 .product-one img{
   margin-bottom: 3px;

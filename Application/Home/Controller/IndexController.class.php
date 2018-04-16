@@ -23,11 +23,12 @@ class IndexController extends Controller {
       {
             $arr[] = array_slice($goods, $i * 3 ,3);
       }
-      $employ=M('employ')->where('status=1')->order('create_time Asc')->select();
+      //底部雇佣信息
+      // $employ=M('employ')->where('status=1')->order('create_time Asc')->select();
       // print_r($arr);
       // exit;
       $this->assign('arr',$arr);
-      $this->assign('employ',$employ);
+      // $this->assign('employ',$employ);
       $this->assign('news',$news);
       $this->assign('name',$part);
 	    $this->display();
